@@ -1,4 +1,4 @@
-## Collagen - Final Project
+## Collagen - Final Project (Frontend Developer)
   
 #### Name of member  
 - M. Shafwan Maulana

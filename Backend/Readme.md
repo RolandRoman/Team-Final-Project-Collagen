@@ -1,4 +1,4 @@
-## Collagen - Final Project
+## Collagen - Final Project (Backend Developer)
   
 #### Name of member  
 - Kenneth Sebastian
