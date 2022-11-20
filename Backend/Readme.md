@@ -1,6 +1,6 @@
-## Collagen - Final Project for Backend
-  
-#### Name of member  
+## Collagen - Final Project (Backend Developer)
+
+### Members
 - Kenneth Sebastian
 - Krisna Humanis
 - Roland Topuh
