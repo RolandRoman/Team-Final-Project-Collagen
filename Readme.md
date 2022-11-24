@@ -9,7 +9,7 @@
   Logo App
 </h1>
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/89505830/202909363-95de68da-434a-4ad9-974a-db0d71459c3c.png">
+  <img width="414" alt="Logo" src="https://user-images.githubusercontent.com/89505830/203560615-ee921e57-b061-470f-8939-cf06df9a45a0.png">
 </p>
 
 <h1 align="Center">
