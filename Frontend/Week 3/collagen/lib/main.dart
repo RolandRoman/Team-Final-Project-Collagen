@@ -1,4 +1,3 @@
-import 'package:collagen/Screens/Login/LoginScreen.dart';
 import 'package:collagen/SplashScreen_View.dart';
 import 'package:collagen/routes.dart';
 import 'package:collagen/theme.dart';
