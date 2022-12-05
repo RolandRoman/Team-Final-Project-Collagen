@@ -7,5 +7,12 @@ final Map<String, WidgetBuilder> routes = {
   LoginScreen.routeName: (context) => LoginScreen(),
   SignupScreen.routeName: (context) => SignupScreen(),
   InputDataScreen.routeName: (context) => InputDataScreen(),
+<<<<<<< Updated upstream
 
 };
+=======
+  ForgotPassScreen.routeName: (context) => ForgotPassScreen(),
+  RecoverScreen.routeName: (context) => RecoverScreen(),
+  NewPassScreen.routeName: (context) => NewPassScreen()
+};
+>>>>>>> Stashed changes

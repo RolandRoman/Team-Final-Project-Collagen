@@ -1,3 +1,4 @@
+import 'package:collagen/Screens/Forgot_Password/ForgotPassScreen.dart';
 import 'package:collagen/Screens/Register/SignupScreen.dart';
 import 'package:collagen/utils/constants.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,12 @@ class _SignInForm extends State<SignInForm> {
             children: [Text("Password")],
           ),
           buildPassword(),
+<<<<<<< Updated upstream
           SizedBox(height: 30),
+=======
+
+          const SizedBox(height: 20),
+>>>>>>> Stashed changes
           Container(
             width: 400,
             height: 45,
@@ -100,7 +106,7 @@ class _SignInForm extends State<SignInForm> {
       decoration: InputDecoration(
         hintText: 'Masukkan Nama Pengguna',
         labelStyle:
-            TextStyle(color: focusNode.hasFocus ? mTitleColor : kPrimaryColor),
+        TextStyle(color: focusNode.hasFocus ? mTitleColor : kPrimaryColor),
         floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
     );
