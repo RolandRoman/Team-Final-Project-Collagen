@@ -21,7 +21,7 @@ class _NewPassComponent extends State<NewPassComponent> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                
+
                 const SizedBox(
                   height: 40,
                 ),
@@ -32,8 +32,8 @@ class _NewPassComponent extends State<NewPassComponent> {
                       child: Text(
                         "Buat kata sandi baru dengan minimal 6 karakter. Anda memerlukan kata sandi ini untuk login ke akun Anda.",
                         style: TextStyle(
-                          color: CupertinoColors.black,
-                          fontSize: 15
+                            color: CupertinoColors.black,
+                            fontSize: 15
                         ),
                         softWrap: true,
                         maxLines: 3,

@@ -2,14 +2,14 @@ import 'package:collagen/Components/Forgot_Password/ForgotPassForm.dart';
 import 'package:collagen/size_config.dart';
 import 'package:flutter/cupertino.dart';
 
-class FrogotPassComponent extends StatefulWidget {
-  const FrogotPassComponent({super.key});
+class ForgotPassComponent extends StatefulWidget {
+  const ForgotPassComponent({super.key});
 
   @override
   _ForgotPassComponent createState() => _ForgotPassComponent();
 }
 
-class _ForgotPassComponent extends State<FrogotPassComponent> {
+class _ForgotPassComponent extends State<ForgotPassComponent> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -21,7 +21,7 @@ class _ForgotPassComponent extends State<FrogotPassComponent> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                
+
                 const SizedBox(
                   height: 40,
                 ),
@@ -32,8 +32,8 @@ class _ForgotPassComponent extends State<FrogotPassComponent> {
                       child: Text(
                         "Masukkan email yang terdaftar ketika anda melakukan registrasi akun.",
                         style: TextStyle(
-                          color: CupertinoColors.black,
-                          fontSize: 15
+                            color: CupertinoColors.black,
+                            fontSize: 15
                         ),
                         softWrap: true,
                         maxLines: 2,

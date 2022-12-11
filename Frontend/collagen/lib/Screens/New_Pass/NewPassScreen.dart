@@ -14,7 +14,7 @@ class NewPassScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-            "Kata Sandi Baru",
+          "Kata Sandi Baru",
         ),
         // ignore: prefer_const_constructors
         leading: IconButton(

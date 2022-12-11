@@ -128,6 +128,7 @@ class _SignupForm extends State<SignupForm> {
       keyboardType: TextInputType.text,
       style: mTitleStyle,
       decoration: InputDecoration(
+        contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
         hintText: 'Masukkan Nama Pengguna',
         labelStyle:
             TextStyle(color: focusNode.hasFocus ? mTitleColor : kPrimaryColor),
@@ -142,6 +143,7 @@ class _SignupForm extends State<SignupForm> {
       keyboardType: TextInputType.text,
       style: mTitleStyle,
       decoration: InputDecoration(
+        contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
         hintText: 'Masukkan Nomor Telepon',
         labelStyle: TextStyle(
             color: focusNode.hasFocus ? mSubtitleColor : kPrimaryColor),
@@ -156,9 +158,11 @@ class _SignupForm extends State<SignupForm> {
       keyboardType: TextInputType.text,
       style: mTitleStyle,
       decoration: InputDecoration(
+        contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
         hintText: 'Contoh: xxxxx_1234@mhs.unj.ac.id',
         labelStyle: TextStyle(
-            color: focusNode.hasFocus ? mSubtitleColor : kPrimaryColor),
+            color: focusNode.hasFocus ? mSubtitleColor : kPrimaryColor
+        ),
         floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
     );
@@ -170,6 +174,7 @@ class _SignupForm extends State<SignupForm> {
       obscureText: true,
       style: mTitleStyle,
       decoration: InputDecoration(
+        contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
         hintText: 'Masukkan Kata Sandi',
         labelStyle: TextStyle(
             color: focusNode.hasFocus ? mSubtitleColor : kPrimaryColor),

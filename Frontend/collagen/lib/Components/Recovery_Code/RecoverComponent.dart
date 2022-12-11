@@ -21,7 +21,7 @@ class _RecoverComponent extends State<RecoverComponent> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                
+
                 const SizedBox(
                   height: 40,
                 ),
@@ -32,8 +32,8 @@ class _RecoverComponent extends State<RecoverComponent> {
                       child: Text(
                         "Kami telah mengirim kode  pemulihan ke sawadikap@gmail.com. Silahkan cek di kotak masuk pada E-mail tersebut.",
                         style: TextStyle(
-                          color: CupertinoColors.black,
-                          fontSize: 15
+                            color: CupertinoColors.black,
+                            fontSize: 15
                         ),
                         softWrap: true,
                         maxLines: 3,

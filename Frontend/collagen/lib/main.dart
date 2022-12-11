@@ -1,7 +1,6 @@
 import 'package:collagen/SplashScreen_View.dart';
 import 'package:collagen/routes.dart';
 import 'package:collagen/theme.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() async {

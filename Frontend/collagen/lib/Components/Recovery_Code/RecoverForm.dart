@@ -1,5 +1,3 @@
-// ignore_for_file: file_names
-
 import 'package:collagen/Screens/New_Pass/NewPassScreen.dart';
 import 'package:collagen/utils/constants.dart';
 import 'package:flutter/material.dart';
@@ -57,27 +55,19 @@ class _RecoverForm extends State<RecoverForm> {
               ),
             ),
           ),
-          
+
           const SizedBox(
             height: 240,
           ),
-          Stack(
-            children: [
-
-              Image.asset(
-                "assets/images/vektor_signin.png",
-                alignment: Alignment.bottomLeft,
-                cacheHeight: 190,
-                cacheWidth: 350,
+            Container(
+              alignment: Alignment.bottomCenter,
+              child: Image.asset(
+                "assets/images/Vector_newpass.png",
+                alignment: Alignment.bottomCenter,
+                cacheHeight: 2000,
+                cacheWidth: 3500,
               ),
-              Image.asset(
-                  "assets/images/vector_inputdata.png",
-                  alignment: Alignment.bottomLeft,
-                  cacheHeight: 190,
-                  cacheWidth: 350,
-              )
-            ],
-          )
+            )
         ],
       ),
     );
@@ -93,7 +83,7 @@ class _RecoverForm extends State<RecoverForm> {
         contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(32)),
         labelStyle:
-            TextStyle(color: focusNode.hasFocus ? mTitleColor : kPrimaryColor),
+        TextStyle(color: focusNode.hasFocus ? mTitleColor : kPrimaryColor),
         floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
     );

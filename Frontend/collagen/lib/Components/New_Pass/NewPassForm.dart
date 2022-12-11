@@ -1,5 +1,3 @@
-// ignore_for_file: file_names
-
 import 'package:collagen/Screens/Login/LoginScreen.dart';
 import 'package:collagen/utils/constants.dart';
 import 'package:flutter/material.dart';
@@ -64,17 +62,11 @@ class _NewPassForm extends State<NewPassForm> {
           Stack(
             children: [
               Image.asset(
-                "assets/images/vektor_signin.png",
+                "assets/images/Vector_newpass.png",
                 alignment: Alignment.bottomLeft,
-                cacheHeight: 190,
+                cacheHeight: 200,
                 cacheWidth: 350,
               ),
-              Image.asset(
-                "assets/images/vector_inputdata.png",
-                alignment: Alignment.bottomLeft,
-                cacheHeight: 190,
-                cacheWidth: 350,
-              )
             ],
           )
         ],

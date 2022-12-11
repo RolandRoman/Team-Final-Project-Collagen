@@ -1,7 +1,5 @@
-// ignore_for_file: file_names
-
-import 'package:project_collagen/Screens/Recovery_Code/RecoverScreen.dart';
-import 'package:project_collagen/utils/constants.dart';
+import 'package:collagen/Screens/Recovery_Code/RecoverScreen.dart';
+import 'package:collagen/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -57,7 +55,7 @@ class _ForgotPassForm extends State<ForgotPassForm> {
               ),
             ),
           ),
-          
+
           const SizedBox(
             height: 240,
           ),
@@ -65,17 +63,11 @@ class _ForgotPassForm extends State<ForgotPassForm> {
             children: [
 
               Image.asset(
-                "assets/images/vektor_signin.png",
+                "assets/images/Vector_newpass.png",
                 alignment: Alignment.bottomLeft,
-                cacheHeight: 190,
+                cacheHeight: 200,
                 cacheWidth: 350,
               ),
-              Image.asset(
-                  "assets/images/vector_inputdata.png",
-                  alignment: Alignment.bottomLeft,
-                  cacheHeight: 190,
-                  cacheWidth: 350,
-              )
             ],
           )
         ],
@@ -93,7 +85,7 @@ class _ForgotPassForm extends State<ForgotPassForm> {
         contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(32)),
         labelStyle:
-            TextStyle(color: focusNode.hasFocus ? mTitleColor : kPrimaryColor),
+        TextStyle(color: focusNode.hasFocus ? mTitleColor : kPrimaryColor),
         floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
     );

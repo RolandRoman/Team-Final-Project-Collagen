@@ -1,3 +1,5 @@
+import 'package:collagen/Screens/Forgot_Password/ForgotPassScreen.dart';
+import 'package:collagen/Screens/Homepage/HomePageScreen.dart';
 import 'package:collagen/Screens/Register/SignupScreen.dart';
 import 'package:collagen/utils/constants.dart';
 import 'package:flutter/material.dart';
@@ -46,7 +48,7 @@ class _SignInForm extends State<SignInForm> {
             ),
           ),
           buildPassword(),
-          
+
           const SizedBox(height: 20),
           Container(
             width: 400,
@@ -58,7 +60,9 @@ class _SignInForm extends State<SignInForm> {
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, HomePageScreen.routeName);
+              },
               child: const Text(
                 "Login",
                 style: TextStyle(
@@ -129,7 +133,7 @@ class _SignInForm extends State<SignInForm> {
         contentPadding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(32)),
         labelStyle:
-            TextStyle(color: focusNode.hasFocus ? mTitleColor : kPrimaryColor),
+        TextStyle(color: focusNode.hasFocus ? mTitleColor : kPrimaryColor),
         floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
     );

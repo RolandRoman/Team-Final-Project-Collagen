@@ -14,7 +14,7 @@ class ForgotPassScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-            "Lupa Kata Sandi",
+          "Lupa Kata Sandi",
         ),
         // ignore: prefer_const_constructors
         leading: IconButton(
@@ -25,7 +25,7 @@ class ForgotPassScreen extends StatelessWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
-      body: FrogotPassComponent(),
+      body: ForgotPassComponent(),
     );
   }
 }

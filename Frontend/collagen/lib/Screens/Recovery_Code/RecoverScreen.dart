@@ -14,7 +14,7 @@ class RecoverScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-            "Kode  Pemulihan",
+          "Kode  Pemulihan",
         ),
         // ignore: prefer_const_constructors
         leading: IconButton(
