@@ -1,4 +1,0 @@
-#Sun Dec 04 17:40:31 ICT 2022
-base.0=C\:\\Users\\putra\\UNJ\\Semester 3\\Codingan S3\\Final Project\\collagen\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
