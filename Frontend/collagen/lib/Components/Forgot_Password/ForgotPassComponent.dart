@@ -1,5 +1,4 @@
 import 'package:collagen/Components/Forgot_Password/ForgotPassForm.dart';
-import 'package:collagen/size_config.dart';
 import 'package:flutter/cupertino.dart';
 
 class ForgotPassComponent extends StatefulWidget {
@@ -15,10 +14,7 @@ class _ForgotPassComponent extends State<ForgotPassComponent> {
     return SafeArea(
       child: SizedBox(
         width: double.infinity,
-        child: Padding(
-          padding: EdgeInsets.symmetric(
-              horizontal: getProportionateScreenHeight(20)),
-          child: SingleChildScrollView(
+        child: SingleChildScrollView(
             child: Column(
               children: [
 
@@ -49,7 +45,6 @@ class _ForgotPassComponent extends State<ForgotPassComponent> {
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 }

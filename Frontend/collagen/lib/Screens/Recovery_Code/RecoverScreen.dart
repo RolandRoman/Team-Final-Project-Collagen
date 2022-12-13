@@ -1,5 +1,4 @@
 import 'package:collagen/Components/Recovery_Code/RecoverComponent.dart';
-import 'package:collagen/size_config.dart';
 import 'package:flutter/material.dart';
 
 class RecoverScreen extends StatelessWidget {
@@ -9,7 +8,6 @@ class RecoverScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,

@@ -93,15 +93,13 @@ class _SignInForm extends State<SignInForm> {
             ],
           ),
           const SizedBox(
-            height: 30,
+            height: 44,
           ),
           Stack(
             children: [
               Image.asset(
                 "assets/images/vektor_signin.png",
-                alignment: Alignment.bottomLeft,
-                cacheHeight: 190,
-                cacheWidth: 350,
+                scale: 0.8,
               ),
               GestureDetector(
                 onTap: () {
@@ -110,7 +108,9 @@ class _SignInForm extends State<SignInForm> {
                 child: const Text(
                   "Belum memiliki akun? Daftar",
                   style: TextStyle(
-                    height: 15,
+
+                    height: 20.2,
+                    wordSpacing: 2,
                     color: Colors.white,
                     fontSize: 14,
                   ),

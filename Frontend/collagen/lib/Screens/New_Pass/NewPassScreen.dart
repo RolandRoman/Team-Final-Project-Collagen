@@ -1,5 +1,4 @@
 import 'package:collagen/Components/New_Pass/NewPassComponent.dart';
-import 'package:collagen/size_config.dart';
 import 'package:flutter/material.dart';
 
 class NewPassScreen extends StatelessWidget {
@@ -9,7 +8,6 @@ class NewPassScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,

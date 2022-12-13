@@ -1,5 +1,4 @@
 import 'package:collagen/Components/Datainput/InputDataForm.dart';
-import 'package:collagen/size_config.dart';
 import 'package:flutter/cupertino.dart';
 
 class InputDataComponent extends StatefulWidget {
@@ -15,9 +14,6 @@ class _InputDataComponent extends State<InputDataComponent> {
     return SafeArea(
       child: SizedBox(
         width: double.infinity,
-        child: Padding(
-          padding: EdgeInsets.symmetric(
-              horizontal: getProportionateScreenHeight(20)),
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -70,7 +66,6 @@ class _InputDataComponent extends State<InputDataComponent> {
             ),
           ),
         ),
-      ),
     );
   }
 }

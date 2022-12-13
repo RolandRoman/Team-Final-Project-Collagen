@@ -69,13 +69,11 @@ class _InputDataForm extends State<InputDataForm> {
             ),
           ),
           const SizedBox(
-            height: 30,
+            height: 14,
           ),
           Image.asset(
             "assets/images/vector_inputdata.png",
-            alignment: Alignment.bottomLeft,
-            cacheHeight: 150,
-            cacheWidth: 350,
+            scale: 0.8,
           ),
         ],
       ),

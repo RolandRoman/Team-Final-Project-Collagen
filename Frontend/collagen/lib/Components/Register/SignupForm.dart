@@ -1,7 +1,6 @@
 import 'package:collagen/Screens/InputData/InputDataScreen.dart';
 import 'package:collagen/utils/constants.dart';
 import 'package:flutter/material.dart';
-import '../../Screens/Login/LoginScreen.dart';
 
 class SignupForm extends StatefulWidget {
   const SignupForm({super.key});

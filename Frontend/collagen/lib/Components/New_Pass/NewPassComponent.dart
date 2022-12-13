@@ -1,5 +1,4 @@
 import 'package:collagen/Components/New_Pass/NewPassForm.dart';
-import 'package:collagen/size_config.dart';
 import 'package:flutter/cupertino.dart';
 
 class NewPassComponent extends StatefulWidget {
@@ -17,7 +16,7 @@ class _NewPassComponent extends State<NewPassComponent> {
         width: double.infinity,
         child: Padding(
           padding: EdgeInsets.symmetric(
-              horizontal: getProportionateScreenHeight(20)),
+              horizontal: (0)),
           child: SingleChildScrollView(
             child: Column(
               children: [

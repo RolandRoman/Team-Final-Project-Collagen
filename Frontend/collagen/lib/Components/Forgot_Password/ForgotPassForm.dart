@@ -1,7 +1,6 @@
 import 'package:collagen/Screens/Recovery_Code/RecoverScreen.dart';
 import 'package:collagen/utils/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class ForgotPassForm extends StatefulWidget {
   const ForgotPassForm({super.key});
@@ -57,16 +56,13 @@ class _ForgotPassForm extends State<ForgotPassForm> {
           ),
 
           const SizedBox(
-            height: 240,
+            height: 300,
           ),
           Stack(
             children: [
-
               Image.asset(
                 "assets/images/Vector_newpass.png",
-                alignment: Alignment.bottomLeft,
-                cacheHeight: 200,
-                cacheWidth: 350,
+                scale: 0.8,
               ),
             ],
           )

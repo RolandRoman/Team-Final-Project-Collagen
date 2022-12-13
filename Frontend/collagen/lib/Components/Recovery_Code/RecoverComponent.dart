@@ -1,5 +1,4 @@
 import 'package:collagen/Components/Recovery_Code/RecoverForm.dart';
-import 'package:collagen/size_config.dart';
 import 'package:flutter/cupertino.dart';
 
 class RecoverComponent extends StatefulWidget {
@@ -15,9 +14,6 @@ class _RecoverComponent extends State<RecoverComponent> {
     return SafeArea(
       child: SizedBox(
         width: double.infinity,
-        child: Padding(
-          padding: EdgeInsets.symmetric(
-              horizontal: getProportionateScreenHeight(20)),
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -48,7 +44,6 @@ class _RecoverComponent extends State<RecoverComponent> {
             ),
           ),
         ),
-      ),
     );
   }
 }

@@ -1,5 +1,4 @@
 import 'package:collagen/Components/Register/SignupForm.dart';
-import 'package:collagen/size_config.dart';
 import 'package:flutter/cupertino.dart';
 
 class SignupComponent extends StatefulWidget {
@@ -15,14 +14,11 @@ class _SignupComponent extends State<SignupComponent> {
     return SafeArea(
       child: SizedBox(
         width: double.infinity,
-        child: Padding(
-          padding: EdgeInsets.symmetric(
-              horizontal: getProportionateScreenHeight(20)),
           child: SingleChildScrollView(
             child: Column(
               children: [
                 SizedBox(
-                  height: SizeConfig.screenHeight = 0.05,
+                  height: 0.05,
                 ),
                 Image.asset(
                   "assets/images/Logo_Signup.png",
@@ -37,7 +33,6 @@ class _SignupComponent extends State<SignupComponent> {
             ),
           ),
         ),
-      ),
     );
   }
 }

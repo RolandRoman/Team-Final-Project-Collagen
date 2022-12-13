@@ -16,7 +16,7 @@ class _HomePageScreen extends State<HomePageScreen> {
   final pages = [
     HomeBody(),
     FriendBody(),
-    const Center(child: Text('Page 3', style: TextStyle(fontSize: 20),),),
+    null,
     ShopBody(),
     MoreBody(),
   ];

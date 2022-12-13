@@ -57,15 +57,13 @@ class _NewPassForm extends State<NewPassForm> {
             ),
           ),
           const SizedBox(
-            height: 240,
+            height: 300,
           ),
           Stack(
             children: [
               Image.asset(
                 "assets/images/Vector_newpass.png",
-                alignment: Alignment.bottomLeft,
-                cacheHeight: 200,
-                cacheWidth: 350,
+                scale: 0.8,
               ),
             ],
           )

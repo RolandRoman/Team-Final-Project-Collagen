@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../size_config.dart';
-
 class DefaultButtonCustomeColor extends StatelessWidget {
   const DefaultButtonCustomeColor({
     Key? key,
@@ -17,7 +15,7 @@ class DefaultButtonCustomeColor extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: getProportionateScreenHeight(56),
+      height: (56),
       child: TextButton(
         style: TextButton.styleFrom(
           foregroundColor: Colors.white, shape:
@@ -28,7 +26,7 @@ class DefaultButtonCustomeColor extends StatelessWidget {
         child: Text(
           text!,
           style: TextStyle(
-            fontSize: getProportionateScreenWidth(18),
+            fontSize: (18),
             color: Colors.white,
           ),
         ),
