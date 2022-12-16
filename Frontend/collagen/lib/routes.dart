@@ -1,4 +1,5 @@
 import 'package:collagen/Screens/Homepage/HomePageScreen.dart';
+import 'package:collagen/Screens/NavBarHeader/Pesan.dart';
 import 'package:collagen/Screens/New_Pass/NewPassScreen.dart';
 import 'package:collagen/Screens/Recovery_Code/RecoverScreen.dart';
 import 'package:collagen/Screens/Forgot_Password/ForgotPassScreen.dart';
@@ -6,6 +7,8 @@ import 'package:collagen/Screens/InputData/InputDataScreen.dart';
 import 'package:collagen/Screens/Login/LoginScreen.dart';
 import 'package:collagen/Screens/Register/SignupScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:collagen/Screens/NavBarHeader/Notif.dart';
+import 'package:collagen/Screens/NavBarHeader/Search.dart';
 
 final Map<String, WidgetBuilder> routes = {
   LoginScreen.routeName: (context) => LoginScreen(),
@@ -15,4 +18,7 @@ final Map<String, WidgetBuilder> routes = {
   RecoverScreen.routeName: (context) => RecoverScreen(),
   NewPassScreen.routeName: (context) => NewPassScreen(),
   HomePageScreen.routeName: (context) => HomePageScreen(),
+  NotifBody.routeName: (context) => NotifBody(),
+  SearchBody.routeName: (context) => SearchBody(),
+  PesanBody.routeName: (context) => PesanBody(),
 };

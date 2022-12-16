@@ -11,9 +11,14 @@ class _HomeBody extends State<HomeBody> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: GridView(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 1,
+        ),
         children: <Widget>[
           Post1(),
+          Post1(),
+          Post2(),
           Post2(),
         ],
       ),
@@ -27,6 +32,7 @@ class Post1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: <Widget>[
@@ -150,49 +156,56 @@ class Post2 extends StatelessWidget {
             endIndent: 8,
           ),
           Container(
+            alignment: Alignment.center,
             child: Row(
               children: [
-                Column(
-                  children: <Widget>[
-                    TextButton(
-                      child: Icon(Icons.thumb_up_alt_outlined),
-                      onPressed: () {/* ... */},
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  width: 35,
-                ),
-                Column(
-                  children: <Widget>[
-                    TextButton(
-                      child: Icon(Icons.thumb_down_alt_outlined),
-                      onPressed: () {/* ... */},
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  width: 35,
-                ),
-                Column(
-                  children: <Widget>[
-                    TextButton(
-                      child: Icon(Icons.comment_outlined),
-                      onPressed: () {/* ... */},
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  width: 35,
-                ),
-                Column(
-                  children: <Widget>[
-                    TextButton(
-                      child: Icon(Icons.share),
-                      onPressed: () {/* ... */},
-                    ),
-                  ],
-                ),
+                Container(
+                  child: Row(
+                    children: [
+                      Column(
+                        children: <Widget>[
+                          TextButton(
+                            child: Icon(Icons.thumb_up_alt_outlined),
+                            onPressed: () {/* ... */},
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        width: 35,
+                      ),
+                      Column(
+                        children: <Widget>[
+                          TextButton(
+                            child: Icon(Icons.thumb_down_alt_outlined),
+                            onPressed: () {/* ... */},
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        width: 35,
+                      ),
+                      Column(
+                        children: <Widget>[
+                          TextButton(
+                            child: Icon(Icons.comment_outlined),
+                            onPressed: () {/* ... */},
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        width: 35,
+                      ),
+                      Column(
+                        children: <Widget>[
+                          TextButton(
+                            child: Icon(Icons.share),
+                            onPressed: () {/* ... */},
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
           )
