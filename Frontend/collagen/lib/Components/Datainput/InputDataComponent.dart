@@ -17,51 +17,66 @@ class _InputDataComponent extends State<InputDataComponent> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                DefaultTextStyle.merge(
-                  style: const TextStyle(
-                      color: CupertinoColors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: (20)
                   ),
-                  child: Row(
-                    children: const [
-                      Text("Selamat Datang,"),
-                    ],
-                  ),
-                ),
-                DefaultTextStyle.merge(
-                  style: const TextStyle(
-                      color: CupertinoColors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20
-                  ),
-                  child: Row(
-                    children: const [
-                      Text("Username")
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  height: 30,
-                ),
-                Row(
-                  children: const [
-                    Expanded(
-                      child: Text(
-                        "Lengkapi biodata di bawah untuk menyelesaikan proses registrasi.",
-                        style: TextStyle(
+                  child: Column(
+                    children: [
+                      DefaultTextStyle.merge(
+                        style: const TextStyle(
                             color: CupertinoColors.black,
-                            fontSize: 13
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20
                         ),
-                        softWrap: true,
-                        maxLines: 2,
+                        child: Row(
+                          children: const [
+                            Text("Selamat Datang,"),
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
-                ),
+                      DefaultTextStyle.merge(
+                        style: const TextStyle(
+                            color: CupertinoColors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20
+                        ),
+                        child: Row(
+                          children: const [
+                            Text("Username")
+                          ],
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: Text(
+                              "Lengkapi biodata di bawah untuk menyelesaikan proses registrasi.",
+                              style: TextStyle(
+                                  color: CupertinoColors.black,
+                                  fontSize: 13
+                              ),
+                              softWrap: true,
+                              maxLines: 2,
+                            ),
+                          ),
+                        ],
+                      ),
 
-                const SizedBox(height: 20),
-                InputDataForm()
+                      const SizedBox(height: 5),
+                      InputDataForm()
+                    ],
+
+                  ),
+
+                ),
+                Image.asset(
+                  "assets/images/vector_inputdata.png",
+                  scale: 0.8,
+                ),
               ],
             ),
           ),

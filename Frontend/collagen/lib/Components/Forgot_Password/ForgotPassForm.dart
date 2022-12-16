@@ -55,15 +55,9 @@ class _ForgotPassForm extends State<ForgotPassForm> {
             ),
           ),
 
-          const SizedBox(
-            height: 300,
-          ),
+
           Stack(
             children: [
-              Image.asset(
-                "assets/images/Vector_newpass.png",
-                scale: 0.8,
-              ),
             ],
           )
         ],

@@ -71,10 +71,6 @@ class _InputDataForm extends State<InputDataForm> {
           const SizedBox(
             height: 14,
           ),
-          Image.asset(
-            "assets/images/vector_inputdata.png",
-            scale: 0.8,
-          ),
         ],
       ),
     );

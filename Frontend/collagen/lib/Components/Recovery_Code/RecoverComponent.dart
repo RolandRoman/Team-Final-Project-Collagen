@@ -17,29 +17,45 @@ class _RecoverComponent extends State<RecoverComponent> {
           child: SingleChildScrollView(
             child: Column(
               children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: (20)),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
 
-                const SizedBox(
-                  height: 40,
-                ),
-
-                Row(
-                  children: const [
-                    Expanded(
-                      child: Text(
-                        "Kami telah mengirim kode  pemulihan ke sawadikap@gmail.com. Silahkan cek di kotak masuk pada E-mail tersebut.",
-                        style: TextStyle(
-                            color: CupertinoColors.black,
-                            fontSize: 15
+                        const SizedBox(
+                          height: 30,
                         ),
-                        softWrap: true,
-                        maxLines: 3,
-                      ),
-                    ),
-                  ],
-                ),
 
-                const SizedBox(height: 20),
-                RecoverForm()
+                        Row(
+                          children: const [
+                            Expanded(
+                              child: Text(
+                                "Kami telah mengirim kode  pemulihan ke sawadikap@gmail.com. Silahkan cek di kotak masuk pada E-mail tersebut.",
+                                style: TextStyle(
+                                    color: CupertinoColors.black,
+                                    fontSize: 15
+                                ),
+                                softWrap: true,
+                                maxLines: 3,
+                              ),
+                            ),
+                          ],
+                        ),
+
+                        const SizedBox(
+                            height: 10
+                        ),
+                        RecoverForm()
+                      ],
+                    ),
+                  ),
+                ),
+                Image.asset(
+                  "assets/images/Vector_newpass.png",
+                  scale: 0.8,
+                )
               ],
             ),
           ),

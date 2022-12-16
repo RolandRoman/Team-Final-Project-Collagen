@@ -17,30 +17,43 @@ class _ForgotPassComponent extends State<ForgotPassComponent> {
         child: SingleChildScrollView(
             child: Column(
               children: [
-
-                const SizedBox(
-                  height: 40,
-                ),
-
-                Row(
-                  children: const [
-                    Expanded(
-                      child: Text(
-                        "Masukkan email yang terdaftar ketika anda melakukan registrasi akun.",
-                        style: TextStyle(
-                            color: CupertinoColors.black,
-                            fontSize: 15
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: (20)),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        const SizedBox(
+                          height: 40,
                         ),
-                        softWrap: true,
-                        maxLines: 2,
-                      ),
+                        Row(
+                          children: const [
+                            Expanded(
+                              child: Text(
+                                "Masukkan email yang terdaftar ketika anda melakukan registrasi akun.",
+                                style: TextStyle(
+                                    color: CupertinoColors.black,
+                                    fontSize: 15
+                                ),
+                                softWrap: true,
+                                maxLines: 2,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 20),
+                        ForgotPassForm()
+                      ],
                     ),
-                  ],
+                  ),
                 ),
-
-                const SizedBox(height: 20),
-
-                ForgotPassForm()
+                SizedBox(
+                  height: 300,
+                ),
+                Image.asset(
+                  "assets/images/Vector_newpass.png",
+                  scale: 0.8,
+                ),
               ],
             ),
           ),

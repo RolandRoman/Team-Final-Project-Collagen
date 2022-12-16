@@ -1,6 +1,5 @@
 import 'package:collagen/Screens/Forgot_Password/ForgotPassScreen.dart';
 import 'package:collagen/Screens/Homepage/HomePageScreen.dart';
-import 'package:collagen/Screens/Register/SignupScreen.dart';
 import 'package:collagen/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -95,29 +94,7 @@ class _SignInForm extends State<SignInForm> {
           const SizedBox(
             height: 44,
           ),
-          Stack(
-            children: [
-              Image.asset(
-                "assets/images/vektor_signin.png",
-                scale: 0.8,
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, SignupScreen.routeName);
-                },
-                child: const Text(
-                  "Belum memiliki akun? Daftar",
-                  style: TextStyle(
 
-                    height: 20.2,
-                    wordSpacing: 2,
-                    color: Colors.white,
-                    fontSize: 14,
-                  ),
-                ),
-              ),
-            ],
-          )
         ],
       ),
     );

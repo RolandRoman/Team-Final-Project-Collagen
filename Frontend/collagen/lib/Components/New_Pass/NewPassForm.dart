@@ -1,7 +1,6 @@
 import 'package:collagen/Screens/Login/LoginScreen.dart';
 import 'package:collagen/utils/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class NewPassForm extends StatefulWidget {
   const NewPassForm({super.key});
@@ -57,16 +56,8 @@ class _NewPassForm extends State<NewPassForm> {
             ),
           ),
           const SizedBox(
-            height: 300,
+            height: 320,
           ),
-          Stack(
-            children: [
-              Image.asset(
-                "assets/images/Vector_newpass.png",
-                scale: 0.8,
-              ),
-            ],
-          )
         ],
       ),
     );
