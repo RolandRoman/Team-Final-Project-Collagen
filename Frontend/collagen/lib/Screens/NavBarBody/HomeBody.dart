@@ -44,15 +44,20 @@ class Post1 extends StatelessWidget {
           Row(
             children: const [
               Expanded(
-                  child: Text(
-                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 13,
-                    ),
-                    softWrap: true,
-                    maxLines: 10,
-                  )
+                child:Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: (10)),
+                    child: Text(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 13,
+                        ),
+                        softWrap: true,
+                        maxLines: 10,
+                        textAlign: TextAlign.justify
+                    )
+                ),
               )
             ],
           ),
@@ -68,6 +73,7 @@ class Post1 extends StatelessWidget {
           ),
           Container(
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
                   children: <Widget>[
@@ -77,6 +83,7 @@ class Post1 extends StatelessWidget {
                     ),
                   ],
                 ),
+
                 const SizedBox(
                   width: 35,
                 ),
@@ -141,15 +148,20 @@ class Post2 extends StatelessWidget {
           Row(
             children: const [
               Expanded(
-                  child: Text(
-                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 13,
-                    ),
-                    softWrap: true,
-                    maxLines: 10,
-                  )
+                  child:Padding(
+                    padding: EdgeInsets.symmetric(
+                    horizontal: (10)),
+                    child: Text(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 13,
+                        ),
+                        softWrap: true,
+                        maxLines: 10,
+                        textAlign: TextAlign.justify
+                    )
+                  ),
               )
             ],
           ),
@@ -161,61 +173,55 @@ class Post2 extends StatelessWidget {
             endIndent: 8,
           ),
           Container(
-            alignment: Alignment.center,
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  child: Row(
-                    children: [
-                      Column(
-                        children: <Widget>[
-                          TextButton(
-                            child: Icon(Icons.thumb_up_alt_outlined),
-                            onPressed: () {/* ... */},
-                          ),
-                        ],
-                      ),
-                      const SizedBox(
-                        width: 35,
-                      ),
-                      Column(
-                        children: <Widget>[
-                          TextButton(
-                            child: Icon(Icons.thumb_down_alt_outlined),
-                            onPressed: () {/* ... */},
-                          ),
-                        ],
-                      ),
-                      const SizedBox(
-                        width: 35,
-                      ),
-                      Column(
-                        children: <Widget>[
-                          TextButton(
-                            child: Icon(Icons.comment_outlined),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => CommentBody()),
-                              );
-                            },
-                          ),
-                        ],
-                      ),
-                      const SizedBox(
-                        width: 35,
-                      ),
-                      Column(
-                        children: <Widget>[
-                          TextButton(
-                            child: const Icon(Icons.share),
-                            onPressed: () {/* ... */},
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                )
+                Column(
+                  children: <Widget>[
+                    TextButton(
+                      child: Icon(Icons.thumb_up_alt_outlined),
+                      onPressed: () {/* ... */},
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  width: 35,
+                ),
+                Column(
+                  children: <Widget>[
+                    TextButton(
+                      child: Icon(Icons.thumb_down_alt_outlined),
+                      onPressed: () {/* ... */},
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  width: 35,
+                ),
+                Column(
+                  children: <Widget>[
+                    TextButton(
+                      child: Icon(Icons.comment_outlined),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => CommentBody()),
+                        );
+                      },
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  width: 35,
+                ),
+                Column(
+                  children: <Widget>[
+                    TextButton(
+                      child: const Icon(Icons.share),
+                      onPressed: () {/* ... */},
+                    ),
+                  ],
+                ),
               ],
             ),
           )
