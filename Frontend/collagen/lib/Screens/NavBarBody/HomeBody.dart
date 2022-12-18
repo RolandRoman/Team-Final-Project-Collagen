@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../Post/Comment.dart';
 
 class HomeBody extends StatefulWidget {
   const HomeBody({super.key});
@@ -17,8 +18,6 @@ class _HomeBody extends State<HomeBody> {
         ),
         children: <Widget>[
           Post1(),
-          Post1(),
-          Post2(),
           Post2(),
         ],
       ),
@@ -95,7 +94,12 @@ class Post1 extends StatelessWidget {
                   children: <Widget>[
                     TextButton(
                       child: Icon(Icons.comment_outlined),
-                      onPressed: () {/* ... */},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => CommentBody()),
+                        );
+                      },
                     ),
                   ],
                 ),
@@ -188,7 +192,12 @@ class Post2 extends StatelessWidget {
                         children: <Widget>[
                           TextButton(
                             child: Icon(Icons.comment_outlined),
-                            onPressed: () {/* ... */},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => CommentBody()),
+                              );
+                            },
                           ),
                         ],
                       ),
@@ -198,7 +207,7 @@ class Post2 extends StatelessWidget {
                       Column(
                         children: <Widget>[
                           TextButton(
-                            child: Icon(Icons.share),
+                            child: const Icon(Icons.share),
                             onPressed: () {/* ... */},
                           ),
                         ],

@@ -9,6 +9,7 @@ import 'package:collagen/Screens/Register/SignupScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:collagen/Screens/NavBarHeader/Notif.dart';
 import 'package:collagen/Screens/NavBarHeader/Search.dart';
+import 'package:collagen/Screens/Post/Comment.dart';
 
 final Map<String, WidgetBuilder> routes = {
   LoginScreen.routeName: (context) => LoginScreen(),
@@ -21,4 +22,5 @@ final Map<String, WidgetBuilder> routes = {
   NotifBody.routeName: (context) => NotifBody(),
   SearchBody.routeName: (context) => SearchBody(),
   PesanBody.routeName: (context) => PesanBody(),
+  CommentBody.routeName: (context) => CommentBody(),
 };
