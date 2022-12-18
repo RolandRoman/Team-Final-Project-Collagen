@@ -6,8 +6,6 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 
 import 'Models/notification.dart';
 
-
-
 class NotifBody extends StatefulWidget {
   static String routeName = "/notif";
 

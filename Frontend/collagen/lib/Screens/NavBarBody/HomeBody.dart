@@ -11,15 +11,16 @@ class HomeBody extends StatefulWidget {
 class _HomeBody extends State<HomeBody> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: GridView(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 1,
+    return SafeArea(
+      child: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Post1(),
+            Post2(),
+            Post1(),
+            Post2(),
+          ],
         ),
-        children: <Widget>[
-          Post1(),
-          Post2(),
-        ],
       ),
     );
   }
