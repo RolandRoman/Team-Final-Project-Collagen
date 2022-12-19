@@ -21,7 +21,7 @@ class _CommentBody extends State<CommentBody> {
     {
       'name': 'Digra',
       'pic': 'assets/images/Picture1.png',
-      'message': 'I Love you Shafwan',
+      'message': 'That`s Cool,',
       'date': '2021-01-01 12:00:00'
     },
     {
@@ -78,8 +78,17 @@ class _CommentBody extends State<CommentBody> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Comment"),
-        backgroundColor: Colors.transparent,
+        iconTheme: IconThemeData(
+          color: Colors.black, //change your color here
+        ),
+        title: Text("Comment",
+        style: TextStyle(
+          color: Colors.black,
+          fontWeight: FontWeight.bold,
+        ),
+
+        ),
+        backgroundColor: Colors.white,
         centerTitle: true,
       ),
       body: Container(

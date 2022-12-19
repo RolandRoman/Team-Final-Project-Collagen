@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../NavBarHeader/Search.dart';
 import '../Post/Comment.dart';
 
 class HomeBody extends StatefulWidget {
@@ -9,19 +10,20 @@ class HomeBody extends StatefulWidget {
 }
 
 class _HomeBody extends State<HomeBody> {
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            Post1(),
-            Post2(),
-            Post1(),
-            Post2(),
-          ],
-        ),
-      ),
+          child: SingleChildScrollView(
+            child: Column(
+              children :<Widget>[
+                Post1(),
+                Post2(),
+                Post1(),
+                Post2(),
+              ],
+            ),
+          ),
     );
   }
 }
@@ -32,7 +34,6 @@ class Post1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: <Widget>[
@@ -44,9 +45,8 @@ class Post1 extends StatelessWidget {
           Row(
             children: const [
               Expanded(
-                child:Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: (10)),
+                child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: (10)),
                     child: Text(
                         "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
                         style: TextStyle(
@@ -55,9 +55,7 @@ class Post1 extends StatelessWidget {
                         ),
                         softWrap: true,
                         maxLines: 10,
-                        textAlign: TextAlign.justify
-                    )
-                ),
+                        textAlign: TextAlign.justify)),
               )
             ],
           ),
@@ -83,7 +81,6 @@ class Post1 extends StatelessWidget {
                     ),
                   ],
                 ),
-
                 const SizedBox(
                   width: 35,
                 ),
@@ -105,7 +102,8 @@ class Post1 extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => CommentBody()),
+                          MaterialPageRoute(
+                              builder: (context) => CommentBody()),
                         );
                       },
                     ),
@@ -148,9 +146,8 @@ class Post2 extends StatelessWidget {
           Row(
             children: const [
               Expanded(
-                  child:Padding(
-                    padding: EdgeInsets.symmetric(
-                    horizontal: (10)),
+                child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: (10)),
                     child: Text(
                         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
                         style: TextStyle(
@@ -159,13 +156,10 @@ class Post2 extends StatelessWidget {
                         ),
                         softWrap: true,
                         maxLines: 10,
-                        textAlign: TextAlign.justify
-                    )
-                  ),
+                        textAlign: TextAlign.justify)),
               )
             ],
           ),
-          
           Divider(
             color: Colors.grey,
             thickness: 2,
@@ -205,7 +199,8 @@ class Post2 extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => CommentBody()),
+                          MaterialPageRoute(
+                              builder: (context) => CommentBody()),
                         );
                       },
                     ),

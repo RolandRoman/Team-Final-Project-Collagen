@@ -1,5 +1,6 @@
 import 'package:collagen/Screens/InputData/InputDataScreen.dart';
 import 'package:collagen/utils/constants.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class SignupForm extends StatefulWidget {
@@ -99,17 +100,62 @@ class _SignupForm extends State<SignupForm> {
             children: [
               Checkbox(
                   value: setuju,
-                  onChanged: (value){
-                    setState((){
+                  onChanged: (value) {
+                    setState(() {
                       setuju = value;
-                  });
-              }),
+                    });
+                  }),
               Expanded(
-                  child: Text(
-                    "Saya setuju dengan semua syarat dan ketentuan yang berlaku.",
-                    softWrap: true,
-                    maxLines: 2,
-                  )
+                child: RichText(
+                    text: TextSpan(
+                  children: [
+                    TextSpan(
+                        text: "Saya setuju dengan semua",
+                        style: TextStyle(
+                          color: Colors.black,
+                        )),
+                    TextSpan(
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () => {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => InputDataScreen()),
+                                )
+                              },
+                        text: " syarat",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          decoration: TextDecoration.underline,
+                        )),
+                    TextSpan(
+                        text: " dan",
+                        style: TextStyle(
+                          color: Colors.black,
+                        )),
+                    TextSpan(
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () => {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => InputDataScreen()),
+                                )
+                              },
+                        text: " ketentuan",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          decoration: TextDecoration.underline,
+                        )),
+                    TextSpan(
+                        text: " yang berlaku",
+                        style: TextStyle(
+                          color: Colors.black,
+                        )),
+                  ],
+                )),
               )
             ],
           ),
@@ -160,8 +206,7 @@ class _SignupForm extends State<SignupForm> {
         contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
         hintText: 'Contoh: xxxxx_1234@mhs.unj.ac.id',
         labelStyle: TextStyle(
-            color: focusNode.hasFocus ? mSubtitleColor : kPrimaryColor
-        ),
+            color: focusNode.hasFocus ? mSubtitleColor : kPrimaryColor),
         floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
     );

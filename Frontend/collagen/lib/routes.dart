@@ -8,8 +8,9 @@ import 'package:collagen/Screens/Login/LoginScreen.dart';
 import 'package:collagen/Screens/Register/SignupScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:collagen/Screens/NavBarHeader/Notif.dart';
-import 'package:collagen/Screens/NavBarHeader/Search.dart';
 import 'package:collagen/Screens/Post/Comment.dart';
+import 'package:collagen/Screens/NavBarHeader/Search.dart';
+
 
 final Map<String, WidgetBuilder> routes = {
   LoginScreen.routeName: (context) => LoginScreen(),

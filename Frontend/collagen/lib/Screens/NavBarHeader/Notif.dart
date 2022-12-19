@@ -12,10 +12,10 @@ class NotifBody extends StatefulWidget {
   const NotifBody({super.key});
 
   @override
-  _NotifBodyState createState() => _NotifBodyState();
+  _NotifBody createState() => _NotifBody();
 }
 
-class _NotifBodyState extends State<NotifBody> {
+class _NotifBody extends State<NotifBody> {
 
 
   List<dynamic> notifications = [];
