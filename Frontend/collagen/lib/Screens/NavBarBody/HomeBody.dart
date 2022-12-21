@@ -85,9 +85,9 @@ class _HomeBody extends State<HomeBody> {
             child: Column(
               children: <Widget>[
                 Post1(),
+                Post2(),
                 Post1(),
-                Post1(),
-                Post1(),
+                Post2(),
               ],
             ),
           ),

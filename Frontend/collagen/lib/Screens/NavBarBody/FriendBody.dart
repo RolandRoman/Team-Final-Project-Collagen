@@ -48,7 +48,5 @@ class _FriendBody extends State<FriendBody> {
         ),
       ),
     );
-
-
   }
 }

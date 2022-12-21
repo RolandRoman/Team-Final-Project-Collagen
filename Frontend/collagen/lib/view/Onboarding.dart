@@ -185,7 +185,7 @@ class _MyAppState extends State<MyApp> {
                 child: Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    'Membantu anda dalam berbagai permasalahan seperti psikologi, akademik.',
+                    'Membantu anda dalam berbagai permasalahan seperti psikologi, akademik dan lain-lain',
                     style: pageInfoStyle,
                     textAlign: TextAlign.left,
                   ),
@@ -278,7 +278,7 @@ class _MyAppState extends State<MyApp> {
                 color: Colors.transparent,
                 border: Border.all(
                   width: 0.0,
-                  color: Colors.red,
+                  color: Colors.transparent,
                 ),
               ),
               child: ColoredBox(
