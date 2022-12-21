@@ -1,6 +1,6 @@
+import 'package:collagen/Screens/NavBarHeader/Notif.dart';
+import 'package:collagen/Screens/NavBarHeader/Pesan.dart';
 import 'package:flutter/material.dart';
-import '../NavBarHeader/Notif.dart';
-import '../NavBarHeader/Pesan.dart';
 import '../NavBarHeader/Search.dart';
 import '../Post/Comment.dart';
 
