@@ -1,6 +1,6 @@
-import 'package:collagen/Screens/NavBarHeader/Notif.dart';
-import 'package:collagen/Screens/NavBarHeader/Pesan.dart';
 import 'package:flutter/material.dart';
+import '../NavBarHeader/Notif.dart';
+import '../NavBarHeader/Pesan.dart';
 import '../NavBarHeader/Search.dart';
 import '../Post/Comment.dart';
 
@@ -12,86 +12,88 @@ class HomeBody extends StatefulWidget {
 }
 
 class _HomeBody extends State<HomeBody> {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          appBar: PreferredSize(
-            preferredSize: const Size.square(60),
-            child: Container(
-              decoration: const BoxDecoration(boxShadow: [
-                BoxShadow(
-                  color: Colors.grey,
-                  offset: Offset(0, 2.0),
-                  blurRadius: 4.0,
-                )
-              ]),
-              child: AppBar(
-                backgroundColor: Colors.white,
-                title: const Text("Beranda"),
-                titleTextStyle: const TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
-                actions: <Widget>[
-                  IconButton(
-                      icon: const Icon(
-                        Icons.notifications_outlined,
-                        color: Colors.blue,
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => NotifBody()),
-                        );
-                      }),
-                  IconButton(
+        appBar: PreferredSize(
+          preferredSize: const Size.square(60),
+          child: Container(
+            decoration: const BoxDecoration(boxShadow: [
+              BoxShadow(
+                color: Colors.grey,
+                offset: Offset(0, 2.0),
+                blurRadius: 4.0,
+              )
+            ]),
+            child: AppBar(
+              backgroundColor: Colors.white,
+              title: const Text("Beranda"),
+              titleTextStyle: const TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20),
+              actions: <Widget>[
+                IconButton(
                     icon: const Icon(
-                      Icons.search,
+                      Icons.notifications_outlined,
                       color: Colors.blue,
                     ),
                     onPressed: () {
-                      showSearch(
-                        context: context,
-                        delegate: MySearchDelegate(),
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => NotifBody()
+                        ),
                       );
-                    },
+                    }
+                ),
+                IconButton(
+                  icon: const Icon(
+                    Icons.search,
+                    color: Colors.blue,
                   ),
-                  IconButton(
-                      icon: const Icon(
-                        Icons.mail_outline,
-                        color: Colors.blue,
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => PesanBody()),
-                        );
-                      }),
-                ],
-              ),
+                  onPressed: () {
+                    showSearch(
+                      context: context,
+                      delegate: MySearchDelegate(),
+                    );
+                  },
+                ),
+                IconButton(
+                    icon: const Icon(
+                      Icons.mail_outline,
+                      color: Colors.blue,
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => PesanBody()
+                        ),
+                      );
+                    }
+                ),
+              ],
             ),
           ),
-          body: SafeArea(
-            child: SingleChildScrollView(
-              child: Column(
-                children: <Widget>[
-                  Post1(),
-                  Post2(),
-                  Post1(),
-                  Post2(),
-                ],
-              ),
+        ),
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                Post1(),
+                Post1(),
+                Post1(),
+                Post1(),
+              ],
             ),
           ),
-
-
+        ),
       ),
     );
-
   }
 }
 
@@ -108,9 +110,6 @@ class Post1 extends StatelessWidget {
             leading: Image.asset("assets/images/Picture1.png"),
             title: Text('Shafwan Maulana'),
             subtitle: Text('10 menit yang lalu'),
-          ),
-          SizedBox(
-            width: 100,
           ),
           Row(
             children: const [
@@ -170,14 +169,10 @@ class Post1 extends StatelessWidget {
                     TextButton(
                       child: Icon(Icons.comment_outlined),
                       onPressed: () {
-                        Navigator.of(context).push(
+                        Navigator.push(
+                          context,
                           MaterialPageRoute(
-                              builder: (context){
-                                return CommentBody();
-                              },
-                          )
-
-
+                              builder: (context) => CommentBody()),
                         );
                       },
                     ),
