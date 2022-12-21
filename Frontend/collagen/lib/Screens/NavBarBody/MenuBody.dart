@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import '../NavBarHeader/Search.dart';
 
-class FriendBody extends StatefulWidget {
-  const FriendBody({super.key});
+class MoreBody extends StatefulWidget {
+  const MoreBody({super.key});
 
   @override
-  _FriendBody createState() => _FriendBody();
+  _MoreBody createState() => _MoreBody();
 }
 
-class _FriendBody extends State<FriendBody> {
+class _MoreBody extends State<MoreBody> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,28 +26,17 @@ class _FriendBody extends State<FriendBody> {
             child: AppBar(
               backgroundColor: Colors.white,
               title: const Text(
-                  "Teman"
+                  "Menu"
               ),
               titleTextStyle: const TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
                   fontSize: 20
               ),
-              actions: <Widget>[
-                IconButton(icon: const Icon(Icons.search, color: Colors.blue,), onPressed: () {
-                  showSearch(
-                    context: context,
-                    delegate: MySearchDelegate(),
-                  );
-                },
-                ),
-              ],
             ),
           ),
         ),
       ),
     );
-
-
   }
 }

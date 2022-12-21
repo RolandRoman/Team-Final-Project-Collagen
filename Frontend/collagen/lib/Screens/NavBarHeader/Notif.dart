@@ -24,7 +24,6 @@ class _NotifBody extends State<NotifBody> {
     final String response = await rootBundle.loadString('assets/notifications.json');
     final data = await json.decode(response);
 
-
     setState(() {
       notifications = data['notifications']
           .map((data) => InstagramNotification.fromJson(data)).toList();
@@ -51,6 +50,9 @@ class _NotifBody extends State<NotifBody> {
               ),
             ]),
             child: AppBar(
+              iconTheme: IconThemeData(
+                color: Colors.black, //change your color here
+              ),
               elevation: 0,
               backgroundColor: Colors.white,
               title: Text(
@@ -64,7 +66,6 @@ class _NotifBody extends State<NotifBody> {
             ),
             ),
           ),
-
         body: ListView.builder(
 
             itemCount: notifications.length,
