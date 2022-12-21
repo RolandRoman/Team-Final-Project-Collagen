@@ -37,20 +37,6 @@ class _MoreBody extends State<MoreBody> {
                   fontWeight: FontWeight.bold,
                   fontSize: 20
               ),
-              actions: <Widget>[
-                IconButton(icon: const Icon(Icons.notifications_outlined, color: Colors.blue,), onPressed: () {
-                  Navigator.pushNamed(context, NotifBody.routeName);
-                }),
-                IconButton(icon: const Icon(Icons.search, color: Colors.blue,), onPressed: () {
-                  showSearch(
-                    context: context,
-                    delegate: MySearchDelegate(),
-                  );
-                },),
-                IconButton(icon: const Icon(Icons.mail_outline, color: Colors.blue,), onPressed: () {
-                  Navigator.pushNamed(context, PesanBody.routeName);
-                }),
-              ],
             ),
           ),
         ),
