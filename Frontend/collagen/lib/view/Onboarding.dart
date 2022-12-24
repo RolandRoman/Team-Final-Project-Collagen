@@ -1,9 +1,10 @@
+import 'dart:io';
 import 'package:collagen/Screens/Login/LoginScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:onboarding/onboarding.dart';
 
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -28,32 +29,34 @@ class _MyAppState extends State<MyApp> {
             color: Colors.black,
           ),
         ),
-        child: SingleChildScrollView(
-          controller: ScrollController(),
+        child: Container(
           child: Column(
             children: [
               SizedBox(
-                height: 200,
+                height: 160,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 45.0,
                   vertical: 40.0,
                 ),
-                child: Image.asset('assets/images/onb1.png',
+                child: Image.asset(
+                  'assets/images/onb1.png',
                   color: Colors.white,
                 ),
               ),
-              SizedBox(
-                height: 70,
-              ),
               const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 45, vertical: 10 ),
+                padding: EdgeInsets.symmetric(horizontal: 45, vertical: 10),
                 child: Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
                     'Media Sosial',
-                    style: pageTitleStyle,
+                    style: TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      letterSpacing: 0.7,
+                    ),
                     textAlign: TextAlign.left,
                   ),
                 ),
@@ -64,7 +67,11 @@ class _MyAppState extends State<MyApp> {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     'Posting foto favoritmu dan mengobrol seru dengan temanmu',
-                    style: pageInfoStyle,
+                    style: TextStyle(
+                      fontSize: 13,
+                      color: Colors.white,
+                      letterSpacing: 0.7,
+                    ),
                     textAlign: TextAlign.left,
                   ),
                 ),
@@ -89,32 +96,34 @@ class _MyAppState extends State<MyApp> {
             color: Colors.black,
           ),
         ),
-        child: SingleChildScrollView(
-          controller: ScrollController(),
+        child: Container(
           child: Column(
             children: [
               SizedBox(
-                height: 200,
+                height: 160,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 45.0,
                   vertical: 40.0,
                 ),
-                child: Image.asset('assets/images/onb2.png',
+                child: Image.asset(
+                  'assets/images/onb2.png',
                   color: Colors.white,
                 ),
               ),
-              SizedBox(
-                height: 100,
-              ),
               const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 45, vertical: 10 ),
+                padding: EdgeInsets.symmetric(horizontal: 45, vertical: 10),
                 child: Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
                     'Belanja Kebutuhan',
-                    style: pageTitleStyle,
+                    style: TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      letterSpacing: 0.7,
+                    ),
                     textAlign: TextAlign.left,
                   ),
                 ),
@@ -125,7 +134,11 @@ class _MyAppState extends State<MyApp> {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     'Fitur jual beli barang secara online antar mahasiswa se-Indonesia',
-                    style: pageInfoStyle,
+                    style: TextStyle(
+                      fontSize: 13,
+                      color: Colors.white,
+                      letterSpacing: 0.7,
+                    ),
                     textAlign: TextAlign.left,
                   ),
                 ),
@@ -150,32 +163,34 @@ class _MyAppState extends State<MyApp> {
             color: Colors.black,
           ),
         ),
-        child: SingleChildScrollView(
-          controller: ScrollController(),
+        child: Container(
           child: Column(
             children: [
               SizedBox(
-                height: 200,
+                height: 160,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 45.0,
                   vertical: 40.0,
                 ),
-                child: Image.asset('assets/images/onb3.png',
+                child: Image.asset(
+                  'assets/images/onb3.png',
                   color: Colors.white,
                 ),
               ),
-              SizedBox(
-                height: 70,
-              ),
               const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 45, vertical: 10 ),
+                padding: EdgeInsets.symmetric(horizontal: 45, vertical: 10),
                 child: Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
                     'Layanan Konsultasi',
-                    style: pageTitleStyle,
+                    style: TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      letterSpacing: 0.7,
+                    ),
                     textAlign: TextAlign.left,
                   ),
                 ),
@@ -186,7 +201,11 @@ class _MyAppState extends State<MyApp> {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     'Membantu anda dalam berbagai permasalahan seperti psikologi, akademik dan lain-lain',
-                    style: pageInfoStyle,
+                    style: TextStyle(
+                      fontSize: 13,
+                      color: Colors.white,
+                      letterSpacing: 0.7,
+                    ),
                     textAlign: TextAlign.left,
                   ),
                 ),
@@ -207,10 +226,8 @@ class _MyAppState extends State<MyApp> {
 
   Material _skipButton({void Function(int)? setIndex}) {
     return Material(
-      borderRadius: defaultSkipButtonBorderRadius,
-      color: defaultSkipButtonColor,
+      color: Colors.transparent,
       child: InkWell(
-        borderRadius: defaultSkipButtonBorderRadius,
         onTap: () {
           if (setIndex != null) {
             index = 2;
@@ -218,14 +235,13 @@ class _MyAppState extends State<MyApp> {
           }
         },
         child: const Padding(
-          padding: defaultSkipButtonPadding,
+          padding: const EdgeInsets.all(20.0),
           child: Text(
-            'Skip',
+            'Skip ->',
             style: TextStyle(
                 fontSize: 20,
                 backgroundColor: Colors.transparent,
-                color: Colors.white
-            ),
+                color: Colors.white),
           ),
         ),
       ),
@@ -234,22 +250,19 @@ class _MyAppState extends State<MyApp> {
 
   Material get _signupButton {
     return Material(
-      borderRadius: defaultProceedButtonBorderRadius,
-      color: defaultProceedButtonColor,
+      color: Colors.transparent,
       child: InkWell(
-        borderRadius: defaultProceedButtonBorderRadius,
         onTap: () {
           Navigator.pushNamed(context, LoginScreen.routeName);
         },
         child: const Padding(
-          padding: defaultProceedButtonPadding,
+          padding: const EdgeInsets.all(20.0),
           child: Text(
-            'Start',
+            'Start ->',
             style: TextStyle(
-              fontSize: 20,
-              backgroundColor: Colors.transparent,
-              color: Colors.white
-            ),
+                fontSize: 20,
+                backgroundColor: Colors.transparent,
+                color: Colors.white),
           ),
         ),
       ),
@@ -276,10 +289,6 @@ class _MyAppState extends State<MyApp> {
             return DecoratedBox(
               decoration: BoxDecoration(
                 color: Colors.transparent,
-                border: Border.all(
-                  width: 0.0,
-                  color: Colors.transparent,
-                ),
               ),
               child: ColoredBox(
                 color: Color(0xff143EB4),
@@ -288,16 +297,38 @@ class _MyAppState extends State<MyApp> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      CustomIndicator(
-                        netDragPercent: dragDistance,
-                        pagesLength: pagesLength,
-                          indicator: Indicator(
-                            indicatorDesign: IndicatorDesign.polygon(
-                              polygonDesign: PolygonDesign(
-                                polygon: DesignType.polygon_circle,
+                      InkWell(
+                        onTap: () => exit(0),
+                        child: const Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Text(
+                            '<- Exit',
+                            style: TextStyle(
+                                fontSize: 20,
+                                backgroundColor: Colors.transparent,
+                                color: Colors.white),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 0,
+                      ),
+                      SizedBox(
+                        height: 60,
+                        child: CustomIndicator(
+                            netDragPercent: dragDistance,
+                            pagesLength: pagesLength,
+                            indicator: Indicator(
+                              indicatorDesign: IndicatorDesign.polygon(
+                                polygonDesign: PolygonDesign(
+                                  polygon: DesignType.polygon_circle,
+                                ),
                               ),
-                            ),
-                          )
+                            )),
+                      ),
+
+                      SizedBox(
+                        width: 50,
                       ),
                       index == pagesLength - 1
                           ? _signupButton

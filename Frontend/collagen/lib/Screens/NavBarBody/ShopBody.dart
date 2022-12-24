@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../NavBarHeader/Notif.dart';
-import '../NavBarHeader/Pesan.dart';
 import '../NavBarHeader/Search.dart';
 
 class ShopBody extends StatefulWidget {
@@ -42,8 +40,8 @@ class _ShopBody extends State<ShopBody> {
                   showSearch(
                     context: context,
                     delegate: MySearchDelegate(),
-                    );
-                  },
+                  );
+                },
                 ),
               ],
             ),
@@ -105,8 +103,7 @@ class _ShopBody extends State<ShopBody> {
             }),
 
       ),
-      );
+    );
   }
 }
-
 

@@ -1,3 +1,4 @@
+import 'package:collagen/Screens/AddPost/AddPostScreen.dart';
 import 'package:collagen/Screens/NavBarBody/FriendBody.dart';
 import 'package:collagen/Screens/NavBarBody/HomeBody.dart';
 import 'package:collagen/Screens/NavBarBody/MenuBody.dart';
@@ -31,43 +32,54 @@ class _HomePageScreen extends State<HomePageScreen> {
         body: pages[index],
 
         bottomNavigationBar: NavigationBar(
-          height: 60,
-          selectedIndex: index,
-          backgroundColor: Colors.blue,
-          onDestinationSelected: (index) => setState(() => this.index = index),
-          destinations: const [
-            NavigationDestination(
-              icon: Icon(Icons.home_outlined),
-              selectedIcon: Icon(Icons.home),
-              label: ' ',
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.supervisor_account_outlined),
-              selectedIcon: Icon(Icons.supervisor_account_rounded),
-              label: ' ',
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.supervisor_account_outlined),
-              label: ' ',
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.shopping_cart_outlined),
-              selectedIcon: Icon(Icons.shopping_cart_sharp),
-              label: ' ',
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.more_horiz_outlined),
-              selectedIcon: Icon(Icons.more_horiz),
-              label: ' ',
-            ),
-          ],
-        ),
+        height: 60,
+        selectedIndex: index,
+        backgroundColor: Colors.blue,
+        onDestinationSelected: (index) => setState(() => this.index = index),
+        destinations: const [
+          NavigationDestination(
+            icon: Icon(Icons.home_outlined,
+              color: Colors.white,),
+            selectedIcon: Icon(Icons.home,
+              color: Colors.white,),
+            label: ' ',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.supervisor_account_outlined,
+              color: Colors.white,),
+            selectedIcon: Icon(Icons.supervisor_account_rounded,
+              color: Colors.white,),
+            label: ' ',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.supervisor_account_outlined,
+            color: Colors.blue,),
+            label: ' ',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.shopping_cart_outlined,
+              color: Colors.white,),
+            selectedIcon: Icon(Icons.shopping_cart_sharp,
+              color: Colors.white,),
+            label: ' ',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.more_horiz_outlined,
+            color: Colors.white,),
+            selectedIcon: Icon(Icons.more_horiz,
+              color: Colors.white,),
+            label: ' ',
+          ),
+        ],
+      ),
         floatingActionButton: SizedBox(
           width: 70,
           height: 70,
           child: FittedBox(
             child: FloatingActionButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, AddPostScreen.routeName);
+              },
               backgroundColor: Colors.blue,
               foregroundColor: Colors.white,
               elevation: 0,

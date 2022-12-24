@@ -12,7 +12,6 @@ class HomeBody extends StatefulWidget {
 }
 
 class _HomeBody extends State<HomeBody> {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -44,12 +43,9 @@ class _HomeBody extends State<HomeBody> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(
-                            builder: (context) => NotifBody()
-                        ),
+                        MaterialPageRoute(builder: (context) => NotifBody()),
                       );
-                    }
-                ),
+                    }),
                 IconButton(
                   icon: const Icon(
                     Icons.search,
@@ -70,12 +66,9 @@ class _HomeBody extends State<HomeBody> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(
-                            builder: (context) => PesanBody()
-                        ),
+                        MaterialPageRoute(builder: (context) => PesanBody()),
                       );
-                    }
-                ),
+                    }),
               ],
             ),
           ),
@@ -110,6 +103,9 @@ class Post1 extends StatelessWidget {
             leading: Image.asset("assets/images/Picture1.png"),
             title: Text('Shafwan Maulana'),
             subtitle: Text('10 menit yang lalu'),
+          ),
+          SizedBox(
+            width: 100,
           ),
           Row(
             children: const [
@@ -169,11 +165,11 @@ class Post1 extends StatelessWidget {
                     TextButton(
                       child: Icon(Icons.comment_outlined),
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => CommentBody()),
-                        );
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) {
+                            return CommentBody();
+                          },
+                        ));
                       },
                     ),
                   ],
