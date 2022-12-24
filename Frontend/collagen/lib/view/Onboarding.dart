@@ -224,18 +224,61 @@ class _MyAppState extends State<MyApp> {
     index = 0;
   }
 
+  Material _backButton({void Function(int)? setIndex}){
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: () {
+          if(setIndex != null){
+            index = 0;
+            setIndex(0);
+          }
+        },
+        child: const Padding(
+          padding: const EdgeInsets.symmetric(vertical: 20),
+          child: Text(
+            '<- Back',
+            style: TextStyle(
+                fontSize: 20,
+                backgroundColor: Colors.transparent,
+                color: Colors.white),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Material get _exitButton {
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: (){},
+        child: const Padding(
+          padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 30),
+          child: Text(
+            '',
+            style: TextStyle(
+                fontSize: 20,
+                backgroundColor: Colors.transparent,
+                color: Colors.white),
+          ),
+        ),
+      ),
+    );
+  }
+
   Material _skipButton({void Function(int)? setIndex}) {
     return Material(
       color: Colors.transparent,
       child: InkWell(
         onTap: () {
-          if (setIndex != null) {
+          if(setIndex != null){
             index = 2;
             setIndex(2);
           }
         },
         child: const Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.symmetric(vertical: 20),
           child: Text(
             'Skip ->',
             style: TextStyle(
@@ -256,7 +299,7 @@ class _MyAppState extends State<MyApp> {
           Navigator.pushNamed(context, LoginScreen.routeName);
         },
         child: const Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.symmetric(vertical: 20),
           child: Text(
             'Start ->',
             style: TextStyle(
@@ -297,24 +340,13 @@ class _MyAppState extends State<MyApp> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      InkWell(
-                        onTap: () => exit(0),
-                        child: const Padding(
-                          padding: const EdgeInsets.all(20.0),
-                          child: Text(
-                            '<- Exit',
-                            style: TextStyle(
-                                fontSize: 20,
-                                backgroundColor: Colors.transparent,
-                                color: Colors.white),
-                          ),
-                        ),
-                      ),
+                      index == pagesLength - 3
+                          ? _exitButton
+                          : _backButton(setIndex: setIndex),
+
                       SizedBox(
-                        width: 0,
-                      ),
-                      SizedBox(
-                        height: 60,
+                        width: 50,
+                        height:60,
                         child: CustomIndicator(
                             netDragPercent: dragDistance,
                             pagesLength: pagesLength,
@@ -327,9 +359,7 @@ class _MyAppState extends State<MyApp> {
                             )),
                       ),
 
-                      SizedBox(
-                        width: 50,
-                      ),
+
                       index == pagesLength - 1
                           ? _signupButton
                           : _skipButton(setIndex: setIndex)

@@ -115,6 +115,7 @@ class _ChatBody extends State<ChatBody> {
                     fontSize: 16,
                     color: Colors.black,
                   ),
+
                 ),
                 SizedBox(
                   height: 100,

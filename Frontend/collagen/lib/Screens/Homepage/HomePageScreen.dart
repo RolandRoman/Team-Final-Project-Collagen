@@ -1,4 +1,4 @@
-import 'package:collagen/Screens/AddPost/AddPostScreen.dart';
+import 'package:collagen/Screens/Add_Post/AddPostScreen.dart';
 import 'package:collagen/Screens/NavBarBody/FriendBody.dart';
 import 'package:collagen/Screens/NavBarBody/HomeBody.dart';
 import 'package:collagen/Screens/NavBarBody/MenuBody.dart';

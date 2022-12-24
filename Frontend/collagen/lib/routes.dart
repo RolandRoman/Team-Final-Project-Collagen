@@ -1,4 +1,4 @@
-import 'package:collagen/Screens/AddPost/AddPostScreen.dart';
+import 'package:collagen/Screens/Add_Post/AddPostScreen.dart';
 import 'package:collagen/Screens/Homepage/HomePageScreen.dart';
 import 'package:collagen/Screens/NavBarHeader/Pesan.dart';
 import 'package:collagen/Screens/NavBarHeader/Pesan/Chatting.dart';
