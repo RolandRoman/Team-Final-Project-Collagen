@@ -54,10 +54,10 @@ class _FriendBody extends State<FriendBody> {
                 alignment: Alignment.center,
                 height: 40,
                 width: 420,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.blue,
                 ),
-                child: Text(
+                child: const Text(
                   'Permintaan Pertemanan',
                   style: TextStyle(
                       color: Colors.white,
@@ -67,18 +67,18 @@ class _FriendBody extends State<FriendBody> {
               ),
               requestfriend1,
               requestfriend2,
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Container(
                 alignment: Alignment.center,
                 height: 40,
                 width: 420,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.blue,
                   shape: BoxShape.rectangle,
                 ),
-                child: Text(
+                child: const Text(
                   'Daftar Teman',
                   style: TextStyle(
                       color: Colors.white,
@@ -107,13 +107,13 @@ class _FriendBody extends State<FriendBody> {
         child: AppBar(
           backgroundColor: Colors.white,
           title: ListTile(
-            contentPadding: EdgeInsets.symmetric(vertical: 20),
+            contentPadding: const EdgeInsets.symmetric(vertical: 20),
             leading: Image.asset("assets/images/Picture1.png"),
-            title: Text(
+            title: const Text(
               'JukJerus23',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
-            subtitle: Text(
+            subtitle: const Text(
               'Universitas Indonesia',
               style: TextStyle(fontSize: 12),
             ),
@@ -127,13 +127,13 @@ class _FriendBody extends State<FriendBody> {
                   alignment: Alignment.center,
                   height: 30,
                   width: 80,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
                     ),
                     color: Colors.blue,
                   ),
-                  child: Text(
+                  child: const Text(
                     'Terima',
                     style: TextStyle(
                       color: Colors.white,
@@ -147,13 +147,13 @@ class _FriendBody extends State<FriendBody> {
                   alignment: Alignment.center,
                   height: 30,
                   width: 80,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
                     ),
                     color: Colors.grey,
                   ),
-                  child: Text(
+                  child: const Text(
                     'Tolak',
                     style: TextStyle(
                       color: Colors.white,
@@ -181,13 +181,13 @@ class _FriendBody extends State<FriendBody> {
         child: AppBar(
           backgroundColor: Colors.white,
           title: ListTile(
-            contentPadding: EdgeInsets.symmetric(vertical: 20),
+            contentPadding: const EdgeInsets.symmetric(vertical: 20),
             leading: Image.asset("assets/images/Picture1.png"),
-            title: Text(
+            title: const Text(
               'Kasih Dia Tempe',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
-            subtitle: Text(
+            subtitle: const Text(
               'Universitas Indonesia',
               style: TextStyle(fontSize: 12),
             ),
@@ -201,13 +201,13 @@ class _FriendBody extends State<FriendBody> {
                   alignment: Alignment.center,
                   height: 30,
                   width: 80,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
                     ),
                     color: Colors.blue,
                   ),
-                  child: Text(
+                  child: const Text(
                     'Terima',
                     style: TextStyle(
                       color: Colors.white,
@@ -221,13 +221,13 @@ class _FriendBody extends State<FriendBody> {
                   alignment: Alignment.center,
                   height: 30,
                   width: 80,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
                     ),
                     color: Colors.grey,
                   ),
-                  child: Text(
+                  child: const Text(
                     'Tolak',
                     style: TextStyle(
                       color: Colors.white,
@@ -255,13 +255,13 @@ class _FriendBody extends State<FriendBody> {
         child: AppBar(
           backgroundColor: Colors.white,
           title: ListTile(
-            contentPadding: EdgeInsets.symmetric(vertical: 10),
+            contentPadding: const EdgeInsets.symmetric(vertical: 10),
             leading: Image.asset("assets/images/Picture1.png"),
-            title: Text(
+            title: const Text(
               'Ezra',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
-            subtitle: Text(
+            subtitle: const Text(
               'Universitas Indonesia',
               style: TextStyle(fontSize: 12),
             ),

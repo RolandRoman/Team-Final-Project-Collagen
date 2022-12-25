@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, library_private_types_in_public_api
+
 import 'package:collagen/Screens/Recovery_Code/RecoverScreen.dart';
 import 'package:collagen/utils/constants.dart';
 import 'package:flutter/material.dart';
@@ -32,12 +34,12 @@ class _ForgotPassForm extends State<ForgotPassForm> {
           ),
           buildEmail(),
           const SizedBox(height: 20),
-          Container(
+          SizedBox(
             width: 400,
             height: 45,
             child: TextButton(
               style: TextButton.styleFrom(
-                backgroundColor: Color(0xff3167FF),
+                backgroundColor: const Color(0xff3167FF),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
@@ -55,11 +57,6 @@ class _ForgotPassForm extends State<ForgotPassForm> {
             ),
           ),
 
-
-          Stack(
-            children: [
-            ],
-          )
         ],
       ),
     );
@@ -72,7 +69,7 @@ class _ForgotPassForm extends State<ForgotPassForm> {
       style: mTitleStyle,
       decoration: InputDecoration(
         hintText: 'Masukkan email',
-        contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+        contentPadding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(32)),
         labelStyle:
         TextStyle(color: focusNode.hasFocus ? mTitleColor : kPrimaryColor),

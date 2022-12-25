@@ -43,7 +43,7 @@ class _HomeBody extends State<HomeBody> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => NotifBody()),
+                        MaterialPageRoute(builder: (context) => const NotifBody()),
                       );
                     }),
                 IconButton(
@@ -66,7 +66,7 @@ class _HomeBody extends State<HomeBody> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => PesanBody()),
+                        MaterialPageRoute(builder: (context) => const PesanBody()),
                       );
                     }),
               ],
@@ -76,7 +76,7 @@ class _HomeBody extends State<HomeBody> {
         body: SafeArea(
           child: SingleChildScrollView(
             child: Column(
-              children: <Widget>[
+              children: const <Widget>[
                 Post1(),
                 Post2(),
                 Post1(),
@@ -101,10 +101,10 @@ class Post1 extends StatelessWidget {
         children: <Widget>[
           ListTile(
             leading: Image.asset("assets/images/Picture1.png"),
-            title: Text('Shafwan Maulana'),
-            subtitle: Text('10 menit yang lalu'),
+            title: const Text('Shafwan Maulana'),
+            subtitle: const Text('10 menit yang lalu'),
           ),
-          SizedBox(
+          const SizedBox(
             width: 100,
           ),
           Row(
@@ -124,69 +124,67 @@ class Post1 extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           Image.asset("assets/images/PostImage.png"),
-          Divider(
+          const Divider(
             color: Colors.grey,
             thickness: 2,
             indent: 8,
             endIndent: 8,
           ),
-          Container(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                  children: <Widget>[
-                    TextButton(
-                      child: Icon(Icons.thumb_up_alt_outlined),
-                      onPressed: () {/* ... */},
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  width: 35,
-                ),
-                Column(
-                  children: <Widget>[
-                    TextButton(
-                      child: Icon(Icons.thumb_down_alt_outlined),
-                      onPressed: () {/* ... */},
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  width: 35,
-                ),
-                Column(
-                  children: <Widget>[
-                    TextButton(
-                      child: Icon(Icons.comment_outlined),
-                      onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) {
-                            return CommentBody();
-                          },
-                        ));
-                      },
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  width: 35,
-                ),
-                Column(
-                  children: <Widget>[
-                    TextButton(
-                      child: Icon(Icons.share),
-                      onPressed: () {/* ... */},
-                    ),
-                  ],
-                ),
-              ],
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                children: <Widget>[
+                  TextButton(
+                    child: const Icon(Icons.thumb_up_alt_outlined),
+                    onPressed: () {/* ... */},
+                  ),
+                ],
+              ),
+              const SizedBox(
+                width: 35,
+              ),
+              Column(
+                children: <Widget>[
+                  TextButton(
+                    child: const Icon(Icons.thumb_down_alt_outlined),
+                    onPressed: () {/* ... */},
+                  ),
+                ],
+              ),
+              const SizedBox(
+                width: 35,
+              ),
+              Column(
+                children: <Widget>[
+                  TextButton(
+                    child: const Icon(Icons.comment_outlined),
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) {
+                          return CommentBody();
+                        },
+                      ));
+                    },
+                  ),
+                ],
+              ),
+              const SizedBox(
+                width: 35,
+              ),
+              Column(
+                children: <Widget>[
+                  TextButton(
+                    child: const Icon(Icons.share),
+                    onPressed: () {/* ... */},
+                  ),
+                ],
+              ),
+            ],
           )
         ],
       ),
@@ -205,8 +203,8 @@ class Post2 extends StatelessWidget {
         children: <Widget>[
           ListTile(
             leading: Image.asset("assets/images/Picture1.png"),
-            title: Text('Shafwan Maulana'),
-            subtitle: Text('10 menit yang lalu'),
+            title: const Text('Shafwan Maulana'),
+            subtitle: const Text('10 menit yang lalu'),
           ),
           Row(
             children: const [
@@ -225,65 +223,63 @@ class Post2 extends StatelessWidget {
               )
             ],
           ),
-          Divider(
+          const Divider(
             color: Colors.grey,
             thickness: 2,
             indent: 8,
             endIndent: 8,
           ),
-          Container(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                  children: <Widget>[
-                    TextButton(
-                      child: Icon(Icons.thumb_up_alt_outlined),
-                      onPressed: () {/* ... */},
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  width: 35,
-                ),
-                Column(
-                  children: <Widget>[
-                    TextButton(
-                      child: Icon(Icons.thumb_down_alt_outlined),
-                      onPressed: () {/* ... */},
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  width: 35,
-                ),
-                Column(
-                  children: <Widget>[
-                    TextButton(
-                      child: Icon(Icons.comment_outlined),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => CommentBody()),
-                        );
-                      },
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  width: 35,
-                ),
-                Column(
-                  children: <Widget>[
-                    TextButton(
-                      child: const Icon(Icons.share),
-                      onPressed: () {/* ... */},
-                    ),
-                  ],
-                ),
-              ],
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                children: <Widget>[
+                  TextButton(
+                    child: const Icon(Icons.thumb_up_alt_outlined),
+                    onPressed: () {/* ... */},
+                  ),
+                ],
+              ),
+              const SizedBox(
+                width: 35,
+              ),
+              Column(
+                children: <Widget>[
+                  TextButton(
+                    child: const Icon(Icons.thumb_down_alt_outlined),
+                    onPressed: () {/* ... */},
+                  ),
+                ],
+              ),
+              const SizedBox(
+                width: 35,
+              ),
+              Column(
+                children: <Widget>[
+                  TextButton(
+                    child: const Icon(Icons.comment_outlined),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => CommentBody()),
+                      );
+                    },
+                  ),
+                ],
+              ),
+              const SizedBox(
+                width: 35,
+              ),
+              Column(
+                children: <Widget>[
+                  TextButton(
+                    child: const Icon(Icons.share),
+                    onPressed: () {/* ... */},
+                  ),
+                ],
+              ),
+            ],
           )
         ],
       ),

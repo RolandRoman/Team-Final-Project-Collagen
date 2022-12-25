@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, library_private_types_in_public_api
+
 import 'package:collagen/Components/Forgot_Password/ForgotPassForm.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -18,7 +20,7 @@ class _ForgotPassComponent extends State<ForgotPassComponent> {
             child: Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                       horizontal: (20)),
                   child: SingleChildScrollView(
                     child: Column(
@@ -42,12 +44,12 @@ class _ForgotPassComponent extends State<ForgotPassComponent> {
                           ],
                         ),
                         const SizedBox(height: 20),
-                        ForgotPassForm()
+                        const ForgotPassForm()
                       ],
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 300,
                 ),
                 Image.asset(

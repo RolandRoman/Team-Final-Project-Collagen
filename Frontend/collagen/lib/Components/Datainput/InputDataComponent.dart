@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, library_private_types_in_public_api
+
 import 'package:collagen/Components/Datainput/InputDataForm.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -18,7 +20,7 @@ class _InputDataComponent extends State<InputDataComponent> {
             child: Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                       horizontal: (20)
                   ),
                   child: Column(
@@ -67,7 +69,7 @@ class _InputDataComponent extends State<InputDataComponent> {
                       ),
 
                       const SizedBox(height: 5),
-                      InputDataForm()
+                      const InputDataForm()
                     ],
 
                   ),
