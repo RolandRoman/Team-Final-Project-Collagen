@@ -1,6 +1,8 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:chat_bubbles/chat_bubbles.dart';
-import 'package:audioplayers/audioplayers.dart';
+
 
 class ChatBody extends StatefulWidget {
   static String routeName = "/chat";
@@ -12,9 +14,6 @@ class ChatBody extends StatefulWidget {
 }
 
 class _ChatBody extends State<ChatBody> {
-  AudioPlayer audioPlayer = new AudioPlayer();
-  Duration duration = new Duration();
-  Duration position = new Duration();
   bool isPlaying = false;
   bool isLoading = false;
   bool isPause = false;
@@ -40,10 +39,10 @@ class _ChatBody extends State<ChatBody> {
                 Image.asset(
                   "assets/images/Picture1.png",
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
-                Text(
+                const Text(
                   'Shafwan',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 )
@@ -57,16 +56,16 @@ class _ChatBody extends State<ChatBody> {
           SingleChildScrollView(
             child: Column(
               children: <Widget>[
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 DateChip(date: DateTime.utc(2022,12,10) ),
                 BubbleNormal(
                   text: 'Ikut gk did?, kurang 1 nih',
                   isSender: false,
-                  color: Color.fromRGBO(49, 103, 255, 0.4),
+                  color: const Color.fromRGBO(49, 103, 255, 0.4),
                   tail: false,
-                  textStyle: TextStyle(
+                  textStyle: const TextStyle(
                     fontSize: 16,
                     color: Colors.black,
                   ),
@@ -78,7 +77,7 @@ class _ChatBody extends State<ChatBody> {
                   sent: true,
                   seen: true,
                   delivered: true,
-                  textStyle: TextStyle(
+                  textStyle: const TextStyle(
                     fontSize: 16,
                     color: Colors.white,
                   ),
@@ -87,9 +86,9 @@ class _ChatBody extends State<ChatBody> {
                 BubbleNormal(
                   text: 'Itu tugas DRP gimana did? udah ada progress apa belom, deadline senen soalnya',
                   isSender: false,
-                  color: Color.fromRGBO(49, 103, 255, 0.4),
+                  color: const Color.fromRGBO(49, 103, 255, 0.4),
                   tail: false,
-                  textStyle: TextStyle(
+                  textStyle: const TextStyle(
                     fontSize: 16,
                     color: Colors.black,
                   ),
@@ -101,7 +100,7 @@ class _ChatBody extends State<ChatBody> {
                   sent: true,
                   seen: true,
                   delivered: true,
-                  textStyle: TextStyle(
+                  textStyle: const TextStyle(
                     fontSize: 16,
                     color: Colors.white,
                   ),
@@ -109,15 +108,15 @@ class _ChatBody extends State<ChatBody> {
                 BubbleNormal(
                   text: 'Oke diid',
                   isSender: false,
-                  color: Color.fromRGBO(49, 103, 255, 0.4),
+                  color: const Color.fromRGBO(49, 103, 255, 0.4),
                   tail: false,
-                  textStyle: TextStyle(
+                  textStyle: const TextStyle(
                     fontSize: 16,
                     color: Colors.black,
                   ),
 
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 100,
                 )
               ],
@@ -134,57 +133,6 @@ class _ChatBody extends State<ChatBody> {
         ],
       ),
     );
-  }
-
-  void _changeSeek(double value) {
-    setState(() {
-      audioPlayer.seek(new Duration(seconds: value.toInt()));
-    });
-  }
-
-  void _playAudio() async {
-    final url =
-        'https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3';
-    if (isPause) {
-      await audioPlayer.resume();
-      setState(() {
-        isPlaying = true;
-        isPause = false;
-      });
-    } else if (isPlaying) {
-      await audioPlayer.pause();
-      setState(() {
-        isPlaying = false;
-        isPause = true;
-      });
-    } else {
-      setState(() {
-        isLoading = true;
-      });
-      await audioPlayer.play(url);
-      setState(() {
-        isPlaying = true;
-      });
-    }
-
-    audioPlayer.onDurationChanged.listen((Duration d) {
-      setState(() {
-        duration = d;
-        isLoading = false;
-      });
-    });
-    audioPlayer.onAudioPositionChanged.listen((Duration p) {
-      setState(() {
-        position = p;
-      });
-    });
-    audioPlayer.onPlayerCompletion.listen((event) {
-      setState(() {
-        isPlaying = false;
-        duration = new Duration();
-        position = new Duration();
-      });
-    });
   }
 }
 
@@ -244,11 +192,9 @@ class MessageBar extends StatelessWidget {
                           size: 24,
                         ),
                         Expanded(
-                          child: Container(
-                            child: Text(
-                              'Re : ' + replyingTo,
-                              overflow: TextOverflow.ellipsis,
-                            ),
+                          child: Text(
+                            'Re : $replyingTo',
+                            overflow: TextOverflow.ellipsis,
                           ),
                         ),
                         InkWell(
@@ -291,10 +237,10 @@ class MessageBar extends StatelessWidget {
                           hintMaxLines: 1,
                           contentPadding: const EdgeInsets.symmetric(
                               horizontal: 8.0, vertical: 10),
-                          hintStyle: TextStyle(
+                          hintStyle: const TextStyle(
                             fontSize: 16,
                           ),
-                          fillColor: Color.fromRGBO(49, 103, 255, 0.4),
+                          fillColor: const Color.fromRGBO(49, 103, 255, 0.4),
                           filled: true,
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(30.0),
