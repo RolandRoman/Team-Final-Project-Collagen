@@ -1,5 +1,3 @@
-// ignore_for_file: file_names, library_private_types_in_public_api, non_constant_identifier_names, unrelated_type_equality_checks
-
 import 'package:collagen/Screens/Login/LoginScreen.dart';
 import 'package:collagen/utils/constants.dart';
 import 'package:flutter/material.dart';
@@ -13,9 +11,9 @@ class InputDataForm extends StatefulWidget {
 
 List<DropdownMenuItem<String>> get dropdownItems {
   List<DropdownMenuItem<String>> menuItems = [
-    const DropdownMenuItem(value: "Male", child: Text("Male")),
-    const DropdownMenuItem(value: "Female", child: Text("Female")),
-    const DropdownMenuItem(value: "Other", child: Text("Other")),
+    const DropdownMenuItem(child: Text("Male"), value: "Male"),
+    const DropdownMenuItem(child: Text("Female"), value: "Female"),
+    const DropdownMenuItem(child: Text("Other"), value: "Other"),
   ];
   return menuItems;
 }
@@ -48,7 +46,7 @@ class _InputDataForm extends State<InputDataForm> {
           const SizedBox(height: 20),
           buildUniversity(),
           const SizedBox(height: 20),
-          SizedBox(
+          Container(
             width: 400,
             height: 45,
             child: TextButton(

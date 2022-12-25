@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 
-class MoreBody extends StatefulWidget {
-  const MoreBody({super.key});
+class AddFriendScreen extends StatelessWidget {
+  static String routeName = "/add_friend";
 
-  @override
-  _MoreBody createState() => _MoreBody();
-}
+  const AddFriendScreen({super.key});
 
-class _MoreBody extends State<MoreBody> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,23 +16,32 @@ class _MoreBody extends State<MoreBody> {
             decoration: const BoxDecoration(boxShadow: [
               BoxShadow(
                 color: Colors.grey,
-                offset: Offset(0, 2.0),
+                offset: Offset(0, 4.0),
                 blurRadius: 4.0,
-              )
+              ),
             ]),
             child: AppBar(
+              elevation: 0,
               backgroundColor: Colors.white,
               title: const Text(
-                  "Menu"
-              ),
-              titleTextStyle: const TextStyle(
+                "Add Friend",
+                style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
-                  fontSize: 20
+                ),
+              ),
+              centerTitle: true,
+              leading: IconButton(
+                icon: const Icon(
+                  Icons.arrow_back_ios,
+                  color: Colors.black,
+                ),
+                onPressed: () => Navigator.of(context).pop(),
               ),
             ),
           ),
         ),
+        body: null,
       ),
     );
   }
