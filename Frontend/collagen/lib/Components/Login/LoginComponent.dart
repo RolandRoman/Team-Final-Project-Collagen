@@ -62,7 +62,7 @@ class _LoginComponent extends State<LoginComponent> {
                       child: Text(
                         "Belum memiliki akun? Daftar",
                         style: TextStyle(
-                          height: 20.2,
+                          height: 17.2,
                           wordSpacing: 2,
                           color: Colors.white,
                           fontSize: 14,

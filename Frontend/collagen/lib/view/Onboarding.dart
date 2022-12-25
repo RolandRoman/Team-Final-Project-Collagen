@@ -28,11 +28,10 @@ class _MyAppState extends State<MyApp> {
             color: Colors.black,
           ),
         ),
-        child: SingleChildScrollView(
-          controller: ScrollController(),
+        child: Container(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 160,
               ),
               Padding(
@@ -78,7 +77,7 @@ class _MyAppState extends State<MyApp> {
               ),
             ],
           ),
-        )
+        ),
       ),
     ),
     PageModel(
@@ -96,11 +95,10 @@ class _MyAppState extends State<MyApp> {
             color: Colors.black,
           ),
         ),
-        child: SingleChildScrollView(
-          controller: ScrollController(),
+        child: Container(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 160,
               ),
               Padding(
@@ -146,7 +144,7 @@ class _MyAppState extends State<MyApp> {
               ),
             ],
           ),
-        )
+        ),
       ),
     ),
     PageModel(
@@ -164,8 +162,7 @@ class _MyAppState extends State<MyApp> {
             color: Colors.black,
           ),
         ),
-        child: SingleChildScrollView(
-          controller: ScrollController(),
+        child: Container(
           child: Column(
             children: [
               SizedBox(
@@ -214,7 +211,7 @@ class _MyAppState extends State<MyApp> {
               ),
             ],
           ),
-        )
+        ),
       ),
     ),
   ];
