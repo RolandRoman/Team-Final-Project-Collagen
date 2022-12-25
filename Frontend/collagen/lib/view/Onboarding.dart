@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'package:collagen/Screens/Login/LoginScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:onboarding/onboarding.dart';
@@ -29,7 +28,8 @@ class _MyAppState extends State<MyApp> {
             color: Colors.black,
           ),
         ),
-        child: Container(
+        child: SingleChildScrollView(
+          controller: ScrollController(),
           child: Column(
             children: [
               SizedBox(
@@ -78,7 +78,7 @@ class _MyAppState extends State<MyApp> {
               ),
             ],
           ),
-        ),
+        )
       ),
     ),
     PageModel(
@@ -96,7 +96,8 @@ class _MyAppState extends State<MyApp> {
             color: Colors.black,
           ),
         ),
-        child: Container(
+        child: SingleChildScrollView(
+          controller: ScrollController(),
           child: Column(
             children: [
               SizedBox(
@@ -145,7 +146,7 @@ class _MyAppState extends State<MyApp> {
               ),
             ],
           ),
-        ),
+        )
       ),
     ),
     PageModel(
@@ -163,7 +164,8 @@ class _MyAppState extends State<MyApp> {
             color: Colors.black,
           ),
         ),
-        child: Container(
+        child: SingleChildScrollView(
+          controller: ScrollController(),
           child: Column(
             children: [
               SizedBox(
@@ -212,7 +214,7 @@ class _MyAppState extends State<MyApp> {
               ),
             ],
           ),
-        ),
+        )
       ),
     ),
   ];
