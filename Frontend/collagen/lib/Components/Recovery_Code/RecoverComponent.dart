@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, library_private_types_in_public_api
+
 import 'package:collagen/Components/Recovery_Code/RecoverForm.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -18,7 +20,7 @@ class _RecoverComponent extends State<RecoverComponent> {
             child: Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                       horizontal: (20)),
                   child: SingleChildScrollView(
                     child: Column(
@@ -47,7 +49,7 @@ class _RecoverComponent extends State<RecoverComponent> {
                         const SizedBox(
                             height: 10
                         ),
-                        RecoverForm()
+                        const RecoverForm()
                       ],
                     ),
                   ),

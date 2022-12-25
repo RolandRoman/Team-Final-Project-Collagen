@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, library_private_types_in_public_api
+
 import 'package:collagen/Components/New_Pass/NewPassForm.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -15,13 +17,13 @@ class _NewPassComponent extends State<NewPassComponent> {
       child: SizedBox(
         width: double.infinity,
         child: Padding(
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
               horizontal: (0)),
           child: SingleChildScrollView(
             child: Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                       horizontal: (20)),
                   child: SingleChildScrollView(
                     child: Column(
@@ -47,7 +49,7 @@ class _NewPassComponent extends State<NewPassComponent> {
                         ),
 
                         const SizedBox(height: 10),
-                        NewPassForm()
+                        const NewPassForm()
                       ],
                     ),
                   ),

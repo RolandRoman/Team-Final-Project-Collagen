@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, library_private_types_in_public_api
+
 import 'package:collagen/Screens/Login/LoginScreen.dart';
 import 'package:collagen/utils/constants.dart';
 import 'package:flutter/material.dart';
@@ -33,12 +35,12 @@ class _NewPassForm extends State<NewPassForm> {
           buildKode(),
           const SizedBox(height: 20),
 
-          Container(
+          SizedBox(
             width: 400,
             height: 45,
             child: TextButton(
               style: TextButton.styleFrom(
-                backgroundColor: Color(0xff3167FF),
+                backgroundColor: const Color(0xff3167FF),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),

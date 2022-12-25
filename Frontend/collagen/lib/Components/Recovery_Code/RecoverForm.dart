@@ -1,7 +1,8 @@
+// ignore_for_file: file_names, library_private_types_in_public_api
+
 import 'package:collagen/Screens/New_Pass/NewPassScreen.dart';
 import 'package:collagen/utils/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class RecoverForm extends StatefulWidget {
   const RecoverForm({super.key});
@@ -33,12 +34,12 @@ class _RecoverForm extends State<RecoverForm> {
           ),
           buildKode(),
           const SizedBox(height: 20),
-          Container(
+          SizedBox(
             width: 400,
             height: 45,
             child: TextButton(
               style: TextButton.styleFrom(
-                backgroundColor: Color(0xff3167FF),
+                backgroundColor: const Color(0xff3167FF),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
@@ -71,7 +72,7 @@ class _RecoverForm extends State<RecoverForm> {
       style: mTitleStyle,
       decoration: InputDecoration(
         hintText: 'Masukkan kode',
-        contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+        contentPadding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(32)),
         labelStyle:
         TextStyle(color: focusNode.hasFocus ? mTitleColor : kPrimaryColor),

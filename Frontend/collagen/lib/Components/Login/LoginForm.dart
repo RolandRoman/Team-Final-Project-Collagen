@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, library_private_types_in_public_api
+
 import 'package:collagen/Screens/Forgot_Password/ForgotPassScreen.dart';
 import 'package:collagen/Screens/Homepage/HomePageScreen.dart';
 import 'package:collagen/utils/constants.dart';
@@ -49,12 +51,12 @@ class _SignInForm extends State<SignInForm> {
           buildPassword(),
 
           const SizedBox(height: 20),
-          Container(
+          SizedBox(
             width: 400,
             height: 45,
             child: TextButton(
               style: TextButton.styleFrom(
-                backgroundColor: Color(0xff3167FF),
+                backgroundColor: const Color(0xff3167FF),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),

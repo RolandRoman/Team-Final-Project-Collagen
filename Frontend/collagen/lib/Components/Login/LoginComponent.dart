@@ -1,10 +1,13 @@
+// ignore_for_file: file_names, library_private_types_in_public_api
+
 import 'package:collagen/Components/Login/LoginForm.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../Screens/Register/SignupScreen.dart';
 
 class LoginComponent extends StatefulWidget {
+  const LoginComponent({super.key});
+
   @override
   _LoginComponent createState() => _LoginComponent();
 }
@@ -19,15 +22,15 @@ class _LoginComponent extends State<LoginComponent> {
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                     horizontal: (20)),
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 0.05,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 0.05,
                       ),
                       Image.asset(
@@ -53,7 +56,7 @@ class _LoginComponent extends State<LoginComponent> {
                     onTap: () {
                       Navigator.pushNamed(context, SignupScreen.routeName);
                     },
-                    child: Padding(
+                    child: const Padding(
                       padding: EdgeInsets.symmetric(
                         horizontal: (10)),
                       child: Text(
