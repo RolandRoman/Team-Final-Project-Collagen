@@ -12,6 +12,7 @@ class HomeBody extends StatefulWidget {
 }
 
 class _HomeBody extends State<HomeBody> {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -106,23 +107,20 @@ class Post1 extends StatelessWidget {
                 title: ListTile(
                   contentPadding: EdgeInsets.symmetric(vertical: 10),
                   leading: Image.asset("assets/images/Picture1.png"),
-                  title: Text(
-                    'Shafwan Maulana'
-                  ),
-                  subtitle: Text(
-                    '10 menit yang lalu'
-                  ),
+                  title: Text('Shafwan Maulana'),
+                  subtitle: Text('10 menit yang lalu'),
                 ),
                 titleTextStyle: const TextStyle(
-                    color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20),
                 actions: <Widget>[
-                  IconButton(
-                    icon: const Icon(
-                      Icons.more_horiz_rounded,
-                      color: Colors.blue,
+                  FittedBox(
+                    child: TextButton(
+                      onPressed: () {},
+                      child: _PopUpMenu(),
                     ),
-                    onPressed: () {},
-                  ),
+                  )
                 ],
               ),
             ),
@@ -232,23 +230,20 @@ class Post2 extends StatelessWidget {
                 title: ListTile(
                   contentPadding: EdgeInsets.symmetric(vertical: 10),
                   leading: Image.asset("assets/images/Picture1.png"),
-                  title: Text(
-                      'Shafwan Maulana'
-                  ),
-                  subtitle: Text(
-                      '20 menit yang lalu'
-                  ),
+                  title: Text('Shafwan Maulana'),
+                  subtitle: Text('20 menit yang lalu'),
                 ),
                 titleTextStyle: const TextStyle(
-                    color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20),
                 actions: <Widget>[
-                  IconButton(
-                    icon: const Icon(
-                      Icons.more_horiz_rounded,
-                      color: Colors.blue,
+                  FittedBox(
+                    child: TextButton(
+                      onPressed: () {},
+                      child: _PopUpMenu(),
                     ),
-                    onPressed: () {},
-                  ),
+                  )
                 ],
               ),
             ),
@@ -335,3 +330,85 @@ class Post2 extends StatelessWidget {
     );
   }
 }
+
+Widget _PopUpMenu() => PopupMenuButton<int>(
+  onSelected: (result) {},
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.all(
+      Radius.circular(40.0),
+    ),
+  ),
+  elevation: 0,
+  color: Colors.white,
+  itemBuilder: (BuildContext context) {
+    return [
+      PopupMenuItem(
+          value: 0,
+          child: Center(
+            child: Padding(
+                padding: EdgeInsets.only(left: 20.0, bottom: 10),
+                child: Row(
+                  children: const <Widget>[
+                    Icon(Icons.bookmark_border,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Text("Bookmark",
+                      style: TextStyle(
+                          color: Colors.black
+                      ),)
+                  ],
+                )),
+          )),
+      PopupMenuItem(
+          value: 1,
+          child: Center(
+            child: Padding(
+                padding: EdgeInsets.only(left: 20.0, bottom: 10),
+                child: Row(
+                  children: const <Widget>[
+                    Icon(Icons.edit,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Text("Edit",
+                      style: TextStyle(
+                          color: Colors.black
+                      ),)
+                  ],
+                )),
+          )),
+      PopupMenuItem(
+          value: 2,
+          child: Center(
+            child: Padding(
+                padding: EdgeInsets.only(left: 20.0, bottom: 10),
+                child: Row(
+                  children: const <Widget>[
+                    Icon(Icons.delete_outline_outlined,
+                      color: Colors.red,
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Text("Hapus",
+                    style: TextStyle(
+                      color: Colors.red
+                    ),)
+                  ],
+                )),
+          )),
+    ];
+  },
+  child: Padding(
+    padding: EdgeInsets.symmetric(vertical: 10),
+    child: Icon(
+      Icons.more_horiz_rounded,
+      size: 30,
+    ),
+  ),
+);

@@ -123,27 +123,7 @@ class _SignupForm extends State<SignupForm> {
                                       builder: (context) => InputDataScreen()),
                                 )
                               },
-                        text: " syarat",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.underline,
-                        )),
-                    TextSpan(
-                        text: " dan",
-                        style: TextStyle(
-                          color: Colors.black,
-                        )),
-                    TextSpan(
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () => {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => InputDataScreen()),
-                                )
-                              },
-                        text: " ketentuan",
+                        text: " syarat dan ketentuan",
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,

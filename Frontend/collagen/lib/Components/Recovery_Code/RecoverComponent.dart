@@ -1,5 +1,3 @@
-// ignore_for_file: file_names, library_private_types_in_public_api
-
 import 'package:collagen/Components/Recovery_Code/RecoverForm.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -20,7 +18,7 @@ class _RecoverComponent extends State<RecoverComponent> {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(
+                  padding: EdgeInsets.symmetric(
                       horizontal: (20)),
                   child: SingleChildScrollView(
                     child: Column(
@@ -31,16 +29,35 @@ class _RecoverComponent extends State<RecoverComponent> {
                         ),
 
                         Row(
-                          children: const [
+                          children: [
                             Expanded(
-                              child: Text(
-                                "Kami telah mengirim kode  pemulihan ke sawadikap@gmail.com. Silahkan cek di kotak masuk pada E-mail tersebut.",
-                                style: TextStyle(
-                                    color: CupertinoColors.black,
-                                    fontSize: 15
-                                ),
-                                softWrap: true,
-                                maxLines: 3,
+                              child: RichText(
+                                  text: TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text:"Kami telah mengirim kode  pemulihan ke ",
+                                        style: TextStyle(
+                                            color: CupertinoColors.black,
+                                            fontSize: 15
+                                        ),
+                                      ),
+                                      TextSpan(
+                                        text:"sawadikap@gmail.com. ",
+                                        style: TextStyle(
+                                            color: CupertinoColors.black,
+                                            fontSize: 15,
+                                          fontWeight: FontWeight.bold
+                                        ),
+                                      ),
+                                      TextSpan(
+                                        text:"Silahkan cek di kotak masuk pada E-mail tersebut.",
+                                        style: TextStyle(
+                                            color: CupertinoColors.black,
+                                            fontSize: 15
+                                        ),
+                                      ),
+                                    ]
+                                  ),
                               ),
                             ),
                           ],
@@ -49,7 +66,7 @@ class _RecoverComponent extends State<RecoverComponent> {
                         const SizedBox(
                             height: 10
                         ),
-                        const RecoverForm()
+                        RecoverForm()
                       ],
                     ),
                   ),
