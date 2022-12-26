@@ -44,7 +44,7 @@ class _HomeBody extends State<HomeBody> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => NotifBody()),
+                        MaterialPageRoute(builder: (context) => const NotifBody()),
                       );
                     }),
                 IconButton(
@@ -67,7 +67,7 @@ class _HomeBody extends State<HomeBody> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => PesanBody()),
+                        MaterialPageRoute(builder: (context) => const PesanBody()),
                       );
                     }),
               ],
@@ -78,8 +78,8 @@ class _HomeBody extends State<HomeBody> {
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
-                Post1(),
-                Post2(),
+                const Post1(),
+                const Post2(),
               ],
             ),
           ),
@@ -100,15 +100,15 @@ class Post1 extends StatelessWidget {
         children: <Widget>[
           Container(
             child: PreferredSize(
-              preferredSize: Size.fromHeight(50.0),
+              preferredSize: const Size.fromHeight(50.0),
               child: AppBar(
                 elevation: 0,
                 backgroundColor: Colors.white,
                 title: ListTile(
-                  contentPadding: EdgeInsets.symmetric(vertical: 10),
+                  contentPadding: const EdgeInsets.symmetric(vertical: 10),
                   leading: Image.asset("assets/images/Picture1.png"),
-                  title: Text('Shafwan Maulana'),
-                  subtitle: Text('10 menit yang lalu'),
+                  title: const Text('Shafwan Maulana'),
+                  subtitle: const Text('10 menit yang lalu'),
                 ),
                 titleTextStyle: const TextStyle(
                     color: Colors.black,
@@ -142,11 +142,11 @@ class Post1 extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           Image.asset("assets/images/PostImage.png"),
-          Divider(
+          const Divider(
             color: Colors.grey,
             thickness: 2,
             indent: 8,
@@ -159,7 +159,7 @@ class Post1 extends StatelessWidget {
                 Column(
                   children: <Widget>[
                     TextButton(
-                      child: Icon(Icons.thumb_up_alt_outlined),
+                      child: const Icon(Icons.thumb_up_alt_outlined),
                       onPressed: () {/* ... */},
                     ),
                   ],
@@ -170,7 +170,7 @@ class Post1 extends StatelessWidget {
                 Column(
                   children: <Widget>[
                     TextButton(
-                      child: Icon(Icons.thumb_down_alt_outlined),
+                      child: const Icon(Icons.thumb_down_alt_outlined),
                       onPressed: () {/* ... */},
                     ),
                   ],
@@ -181,7 +181,7 @@ class Post1 extends StatelessWidget {
                 Column(
                   children: <Widget>[
                     TextButton(
-                      child: Icon(Icons.comment_outlined),
+                      child: const Icon(Icons.comment_outlined),
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) {
@@ -198,8 +198,8 @@ class Post1 extends StatelessWidget {
                 Column(
                   children: <Widget>[
                     TextButton(
-                      child: Icon(Icons.share),
-                      onPressed: () {/* ... */},
+                      child: _PopUpShare(),
+                      onPressed: () {},
                     ),
                   ],
                 ),
@@ -223,15 +223,15 @@ class Post2 extends StatelessWidget {
         children: <Widget>[
           Container(
             child: PreferredSize(
-              preferredSize: Size.fromHeight(50.0),
+              preferredSize: const Size.fromHeight(50.0),
               child: AppBar(
                 elevation: 0,
                 backgroundColor: Colors.white,
                 title: ListTile(
-                  contentPadding: EdgeInsets.symmetric(vertical: 10),
+                  contentPadding: const EdgeInsets.symmetric(vertical: 10),
                   leading: Image.asset("assets/images/Picture1.png"),
-                  title: Text('Shafwan Maulana'),
-                  subtitle: Text('20 menit yang lalu'),
+                  title: const Text('Shafwan Maulana'),
+                  subtitle: const Text('20 menit yang lalu'),
                 ),
                 titleTextStyle: const TextStyle(
                     color: Colors.black,
@@ -265,7 +265,7 @@ class Post2 extends StatelessWidget {
               )
             ],
           ),
-          Divider(
+          const Divider(
             color: Colors.grey,
             thickness: 2,
             indent: 8,
@@ -278,7 +278,7 @@ class Post2 extends StatelessWidget {
                 Column(
                   children: <Widget>[
                     TextButton(
-                      child: Icon(Icons.thumb_up_alt_outlined),
+                      child: const Icon(Icons.thumb_up_alt_outlined),
                       onPressed: () {/* ... */},
                     ),
                   ],
@@ -289,7 +289,7 @@ class Post2 extends StatelessWidget {
                 Column(
                   children: <Widget>[
                     TextButton(
-                      child: Icon(Icons.thumb_down_alt_outlined),
+                      child: const Icon(Icons.thumb_down_alt_outlined),
                       onPressed: () {/* ... */},
                     ),
                   ],
@@ -300,7 +300,7 @@ class Post2 extends StatelessWidget {
                 Column(
                   children: <Widget>[
                     TextButton(
-                      child: Icon(Icons.comment_outlined),
+                      child: const Icon(Icons.comment_outlined),
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -317,8 +317,8 @@ class Post2 extends StatelessWidget {
                 Column(
                   children: <Widget>[
                     TextButton(
-                      child: const Icon(Icons.share),
-                      onPressed: () {/* ... */},
+                      child: _PopUpShare(),
+                      onPressed: () {},
                     ),
                   ],
                 ),
@@ -333,7 +333,7 @@ class Post2 extends StatelessWidget {
 
 Widget _PopUpMenu() => PopupMenuButton<int>(
   onSelected: (result) {},
-  shape: RoundedRectangleBorder(
+  shape: const RoundedRectangleBorder(
     borderRadius: BorderRadius.all(
       Radius.circular(40.0),
     ),
@@ -346,7 +346,7 @@ Widget _PopUpMenu() => PopupMenuButton<int>(
           value: 0,
           child: Center(
             child: Padding(
-                padding: EdgeInsets.only(left: 20.0, bottom: 10),
+                padding: const EdgeInsets.only(left: 20.0, bottom: 10),
                 child: Row(
                   children: const <Widget>[
                     Icon(Icons.bookmark_border,
@@ -366,7 +366,7 @@ Widget _PopUpMenu() => PopupMenuButton<int>(
           value: 1,
           child: Center(
             child: Padding(
-                padding: EdgeInsets.only(left: 20.0, bottom: 10),
+                padding: const EdgeInsets.only(left: 20.0, bottom: 10),
                 child: Row(
                   children: const <Widget>[
                     Icon(Icons.edit,
@@ -386,7 +386,7 @@ Widget _PopUpMenu() => PopupMenuButton<int>(
           value: 2,
           child: Center(
             child: Padding(
-                padding: EdgeInsets.only(left: 20.0, bottom: 10),
+                padding: const EdgeInsets.only(left: 20.0, bottom: 10),
                 child: Row(
                   children: const <Widget>[
                     Icon(Icons.delete_outline_outlined,
@@ -404,11 +404,52 @@ Widget _PopUpMenu() => PopupMenuButton<int>(
           )),
     ];
   },
-  child: Padding(
+  child: const Padding(
     padding: EdgeInsets.symmetric(vertical: 10),
     child: Icon(
       Icons.more_horiz_rounded,
       size: 30,
+    ),
+  ),
+);
+
+Widget _PopUpShare() => PopupMenuButton<int>(
+  onSelected: (result) {},
+  shape: const RoundedRectangleBorder(
+    borderRadius: BorderRadius.all(
+      Radius.circular(40.0),
+    ),
+  ),
+  elevation: 0,
+  color: Colors.white,
+  itemBuilder: (BuildContext context) {
+    return [
+      PopupMenuItem(
+          value: 0,
+          child: Center(
+            child: Padding(
+                padding: const EdgeInsets.only(left: 20.0, bottom: 10),
+                child: Row(
+                  children: const <Widget>[
+                    Icon(Icons.link,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Text("Copy Link",
+                      style: TextStyle(
+                          color: Colors.black
+                      ),)
+                  ],
+                )),
+          )),
+    ];
+  },
+  child: const Padding(
+    padding: EdgeInsets.symmetric(vertical: 10),
+    child: Icon(
+      Icons.share,
     ),
   ),
 );

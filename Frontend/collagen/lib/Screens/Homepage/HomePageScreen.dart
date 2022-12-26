@@ -19,28 +19,28 @@ class _HomePageScreen extends State<HomePageScreen> {
         onSelected: (result) {
           if (result == 0) {
             Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => AddPostScreen()));
+                .push(MaterialPageRoute(builder: (context) => const AddPostScreen()));
           }
           if (result == 1) {
           Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) => AddPostScreen2()));
+              .push(MaterialPageRoute(builder: (context) => const AddPostScreen2()));
           }
           if (result == 2) {
             Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => AddFriendScreen()));
+                .push(MaterialPageRoute(builder: (context) => const AddFriendScreen()));
           }
         },
     offset: const Offset(-85, -130),
-    shape: RoundedRectangleBorder(
+    shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.all(
         Radius.circular(40.0),
       ),
     ),
     elevation: 0,
-    color: Color(0xff8D9EFF),
+    color: const Color(0xff8D9EFF),
     itemBuilder: (BuildContext context) {
       return [
-        PopupMenuItem(
+        const PopupMenuItem(
             padding: EdgeInsets.symmetric(horizontal: 50),
             value: 0,
             child: Center(
@@ -52,7 +52,7 @@ class _HomePageScreen extends State<HomePageScreen> {
                 ),
               ),
             )),
-        PopupMenuItem(
+        const PopupMenuItem(
             padding: EdgeInsets.symmetric(horizontal: 50),
             value: 1,
             child: Center(
@@ -62,7 +62,7 @@ class _HomePageScreen extends State<HomePageScreen> {
                     color: Colors.white, fontWeight: FontWeight.w700),
               ),
             )),
-        PopupMenuItem(
+        const PopupMenuItem(
             padding: EdgeInsets.symmetric(horizontal: 50),
             value: 2,
             child: Center(
@@ -74,7 +74,7 @@ class _HomePageScreen extends State<HomePageScreen> {
             )),
       ];
     },
-        child: Center(
+        child: const Center(
           child: Icon(
             Icons.add,
             size: 35,
@@ -84,11 +84,11 @@ class _HomePageScreen extends State<HomePageScreen> {
 
   int index = 0;
   final pages = [
-    HomeBody(),
-    FriendBody(),
+    const HomeBody(),
+    const FriendBody(),
     null,
-    ShopBody(),
-    MoreBody(),
+    const ShopBody(),
+    const MoreBody(),
   ];
 
   @override

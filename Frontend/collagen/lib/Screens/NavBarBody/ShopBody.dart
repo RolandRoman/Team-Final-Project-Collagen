@@ -48,8 +48,8 @@ class _ShopBody extends State<ShopBody> {
           ),
         ),
         body: GridView.builder(
-            itemCount: 6,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            itemCount: 1,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               childAspectRatio: 7.5 / 10.0,
               crossAxisCount: 2,
             ),
@@ -67,19 +67,19 @@ class _ShopBody extends State<ShopBody> {
                         children: <Widget>[
                           Expanded(
                               child: Container(
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   image: DecorationImage(
                                       image: AssetImage('assets/images/Market.png'),
                                       fit: BoxFit.fill),
                                 ),
                               )),
-                          Padding(
+                          const Padding(
                               padding: EdgeInsets.only(left: 10.0, bottom: 6, top: 10),
                               child: Text(
                                 "Rp. 9000",
                                 style: TextStyle(fontSize: 16.0),
                               )),
-                          Padding(
+                          const Padding(
                               padding: EdgeInsets.only(left: 10.0, bottom: 10),
                               child: Text(
                                 "Ayam Jago + Kandang ",
