@@ -1,5 +1,7 @@
 import 'package:collagen/Screens/NavBarHeader/Pesan/Chatting.dart';
+import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
+import 'dart:convert';
 
 class PesanBody extends StatefulWidget {
   static String routeName = "/pesan";
@@ -11,6 +13,13 @@ class PesanBody extends StatefulWidget {
 }
 
 class _PesanBody extends State<PesanBody> {
+  final String apiUrl = "https://reqres.in/api/users?per_page=15";
+
+  Future<List<dynamic>> _fecthDataUsers() async {
+    var result = await http.get(apiUrl);
+    return json.decode(result.body)['data'];
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,15 +50,36 @@ class _PesanBody extends State<PesanBody> {
           ),
         ),
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: <Widget>[
-              Friend1(),
-              Friend2(),
-              Friend3()
-            ],
-          ),
+      body: Container(
+        child: FutureBuilder<List<dynamic>>(
+          future: _fecthDataUsers(),
+          builder: (BuildContext context, AsyncSnapshot snapshot) {
+            if (snapshot.hasData) {
+              return ListView.builder(
+                  padding: EdgeInsets.all(10),
+                  itemCount: snapshot.data.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return ListTile(
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ChatBody()),
+                        );
+                      },
+                      leading: CircleAvatar(
+                        radius: 30,
+                        backgroundImage:
+                        NetworkImage(snapshot.data[index]['avatar']),
+                      ),
+                      title: Text(snapshot.data[index]['first_name'] + " " + snapshot.data[index]['last_name']),
+                      subtitle: Text(snapshot.data[index]['email']),
+                    );
+                  });
+            } else {
+              return Center(child: CircularProgressIndicator());
+            }
+          },
         ),
       ),
     );
@@ -76,46 +106,6 @@ class Friend1 extends StatelessWidget {
             leading: Image.asset("assets/images/Picture1.png"),
             title: Text('Shafwan Maulana'),
             subtitle: Text('Test'),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class Friend2 extends StatelessWidget {
-  const Friend2({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        children: <Widget>[
-          ListTile(
-            leading: Image.asset("assets/images/Picture1.png"),
-            title: Text('Shafwan Maulana'),
-            subtitle: Text('10 menit yang lalu'),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class Friend3 extends StatelessWidget {
-  const Friend3({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        children: <Widget>[
-          ListTile(
-            leading: Image.asset("assets/images/Picture1.png"),
-            title: Text('Shafwan Maulana'),
-            subtitle: Text('10 menit yang lalu'),
           ),
         ],
       ),
