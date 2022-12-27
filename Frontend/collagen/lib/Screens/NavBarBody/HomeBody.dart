@@ -13,6 +13,7 @@ class HomeBody extends StatefulWidget {
 
 class _HomeBody extends State<HomeBody> {
 
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -89,8 +90,28 @@ class _HomeBody extends State<HomeBody> {
   }
 }
 
-class Post1 extends StatelessWidget {
+class Post1 extends StatefulWidget {
   const Post1({super.key});
+
+  @override
+  _Post1 createState() => _Post1();
+}
+
+class _Post1 extends State<Post1> {
+  int _likecounter = 0;
+  int _dislikecounter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _likecounter++;
+    });
+  }
+
+  void _incrementCounter2(){
+    setState(() {
+      _dislikecounter++;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -156,23 +177,30 @@ class Post1 extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Column(
+                Row(
                   children: <Widget>[
                     TextButton(
                       child: const Icon(Icons.thumb_up_alt_outlined),
-                      onPressed: () {/* ... */},
+                      onPressed: _incrementCounter,
+
                     ),
+                    Text(
+                      '$_likecounter',
+                    )
                   ],
                 ),
                 const SizedBox(
                   width: 35,
                 ),
-                Column(
+                Row(
                   children: <Widget>[
                     TextButton(
                       child: const Icon(Icons.thumb_down_alt_outlined),
-                      onPressed: () {/* ... */},
+                      onPressed: _incrementCounter2,
                     ),
+                    Text(
+                      '$_dislikecounter'
+                    )
                   ],
                 ),
                 const SizedBox(
@@ -212,8 +240,28 @@ class Post1 extends StatelessWidget {
   }
 }
 
-class Post2 extends StatelessWidget {
+class Post2 extends StatefulWidget {
   const Post2({super.key});
+
+  @override
+  _Post2 createState() => _Post2();
+}
+
+class _Post2 extends State<Post2> {
+  int _likecounter = 0;
+  int _dislikecounter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _likecounter++;
+    });
+  }
+
+  void _incrementCounter2(){
+    setState(() {
+      _dislikecounter++;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -275,23 +323,30 @@ class Post2 extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Column(
+                Row(
                   children: <Widget>[
                     TextButton(
                       child: const Icon(Icons.thumb_up_alt_outlined),
-                      onPressed: () {/* ... */},
+                      onPressed: _incrementCounter,
+
                     ),
+                    Text(
+                      '$_likecounter',
+                    )
                   ],
                 ),
                 const SizedBox(
                   width: 35,
                 ),
-                Column(
+                Row(
                   children: <Widget>[
                     TextButton(
                       child: const Icon(Icons.thumb_down_alt_outlined),
-                      onPressed: () {/* ... */},
+                      onPressed: _incrementCounter2,
                     ),
+                    Text(
+                        '$_dislikecounter'
+                    )
                   ],
                 ),
                 const SizedBox(
