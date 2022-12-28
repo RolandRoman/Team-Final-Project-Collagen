@@ -103,56 +103,64 @@ class _HomePageScreen extends State<HomePageScreen> {
           backgroundColor: Colors.blue,
           onDestinationSelected: (index) => setState(() => this.index = index),
           destinations: const [
-            NavigationDestination(
-              icon: Icon(
-                Icons.home_outlined,
-                color: Colors.white,
+            SizedBox(
+              height: 12,
+              child: NavigationDestination(
+                icon: Icon(
+                  Icons.home_outlined,
+                  color: Colors.white,
+                ),
+                selectedIcon: Icon(
+                  Icons.home,
+                  color: Colors.white,
+                ),
+                label: ' ',
               ),
-              selectedIcon: Icon(
-                Icons.home,
-                color: Colors.white,
-              ),
-              label: ' ',
             ),
-            NavigationDestination(
-              icon: Icon(
-                Icons.supervisor_account_outlined,
-                color: Colors.white,
+            SizedBox(
+              height: 12,
+              child: NavigationDestination(
+                icon: Icon(
+                  Icons.supervisor_account_outlined,
+                  color: Colors.white,
+                ),
+                selectedIcon: Icon(
+                  Icons.supervisor_account_rounded,
+                  color: Colors.white,
+                ),
+                label: ' ',
               ),
-              selectedIcon: Icon(
-                Icons.supervisor_account_rounded,
-                color: Colors.white,
-              ),
-              label: ' ',
             ),
-            NavigationDestination(
-              icon: Icon(
-                Icons.supervisor_account_outlined,
-                color: Colors.blue,
-              ),
-              label: ' ',
+            SizedBox(
+              width: 20,
             ),
-            NavigationDestination(
-              icon: Icon(
-                Icons.shopping_cart_outlined,
-                color: Colors.white,
+            SizedBox(
+              height: 12,
+              child: NavigationDestination(
+                icon: Icon(
+                  Icons.shopping_cart_outlined,
+                  color: Colors.white,
+                ),
+                selectedIcon: Icon(
+                  Icons.shopping_cart_sharp,
+                  color: Colors.white,
+                ),
+                label: ' ',
               ),
-              selectedIcon: Icon(
-                Icons.shopping_cart_sharp,
-                color: Colors.white,
-              ),
-              label: ' ',
             ),
-            NavigationDestination(
-              icon: Icon(
-                Icons.more_horiz_outlined,
-                color: Colors.white,
+            SizedBox(
+              height: 12,
+              child: NavigationDestination(
+                icon: Icon(
+                  Icons.more_horiz_outlined,
+                  color: Colors.white,
+                ),
+                selectedIcon: Icon(
+                  Icons.more_horiz,
+                  color: Colors.white,
+                ),
+                label: ' ',
               ),
-              selectedIcon: Icon(
-                Icons.more_horiz,
-                color: Colors.white,
-              ),
-              label: ' ',
             ),
           ],
         ),

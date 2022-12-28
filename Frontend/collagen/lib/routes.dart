@@ -14,6 +14,7 @@ import 'package:collagen/Screens/NavBarHeader/Notif.dart';
 import 'package:collagen/Screens/Post/Comment.dart';
 import 'package:collagen/Screens/NavBarHeader/Search.dart';
 import 'package:collagen/Screens/Add_Post/AddPostScreen2.dart';
+import 'Screens/NavBarBody/shop/DetailShopBody.dart';
 
 
 final Map<String, WidgetBuilder> routes = {
@@ -31,5 +32,6 @@ final Map<String, WidgetBuilder> routes = {
   AddPostScreen.routeName: (context) => AddPostScreen(),
   AddPostScreen.routeName: (context) => AddPostScreen2(),
   AddPostScreen.routeName: (context) => AddFriendScreen(),
-  ChatBody.routeName: (context) => ChatBody()
+  ChatBody.routeName: (context) => ChatBody(),
+  DetailShopBody.routeName: (context) => DetailShopBody()
 };

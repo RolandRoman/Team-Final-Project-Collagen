@@ -1,5 +1,5 @@
+import 'package:collagen/Screens/NavBarBody/shop/DetailShopBody.dart';
 import 'package:flutter/material.dart';
-
 import '../NavBarHeader/Search.dart';
 
 class ShopBody extends StatefulWidget {
@@ -50,53 +50,61 @@ class _ShopBody extends State<ShopBody> {
         body: GridView.builder(
             itemCount: 1,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              childAspectRatio: 7.5 / 10.0,
+              childAspectRatio: 7 / 10.0,
               crossAxisCount: 2,
             ),
             itemBuilder: (BuildContext context, int index) {
               return Padding(
                   padding: EdgeInsets.all(5),
-                  child: Card(
-                      semanticContainer: true,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      clipBehavior: Clip.antiAlias,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Expanded(
-                              child: Container(
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                      image: AssetImage('assets/images/Market.png'),
-                                      fit: BoxFit.fill),
-                                ),
-                              )),
-                          const Padding(
-                              padding: EdgeInsets.only(left: 10.0, bottom: 6, top: 10),
-                              child: Text(
-                                "Rp. 9000",
-                                style: TextStyle(fontSize: 16.0),
-                              )),
-                          const Padding(
-                              padding: EdgeInsets.only(left: 10.0, bottom: 10),
-                              child: Text(
-                                "Ayam Jago + Kandang ",
-                                style: TextStyle(fontSize: 16.0),
-                              )),
-                          Padding(
-                              padding: EdgeInsets.only(left: 10.0, bottom: 10),
-                              child: Row(
-                                children: const <Widget>[
-                                  Icon(Icons.location_on,
-                                    color: Colors.blue,
-                                  ),
-                                  Text("Jakarta Pusat")
-                                ],
-                              )),
-
-                        ],
+                  child: GestureDetector(
+                    onTap: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DetailShopBody()),
+                      );
+                    },
+                      child: Card(
+                          semanticContainer: true,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          clipBehavior: Clip.antiAlias,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Expanded(
+                                  child: Container(
+                                    decoration: const BoxDecoration(
+                                      image: DecorationImage(
+                                          image: AssetImage('assets/images/Market.png'),
+                                          fit: BoxFit.fill),
+                                    ),
+                                  )),
+                              const Padding(
+                                  padding: EdgeInsets.only(left: 10.0, bottom: 6, top: 10),
+                                  child: Text(
+                                    "Rp. 9000",
+                                    style: TextStyle(fontSize: 16.0),
+                                  )),
+                              const Padding(
+                                  padding: EdgeInsets.only(left: 10.0, bottom: 10),
+                                  child: Text(
+                                    "Ayam Jago + Kandang ",
+                                    style: TextStyle(fontSize: 16.0),
+                                  )),
+                              Padding(
+                                  padding: EdgeInsets.only(left: 10.0, bottom: 10),
+                                  child: Row(
+                                    children: const <Widget>[
+                                      Icon(Icons.location_on,
+                                        color: Color(0xff3167FF),
+                                      ),
+                                      Text("Jakarta Pusat")
+                                    ],
+                                  )),
+                            ],
+                          )
                       )
                   )
               );
