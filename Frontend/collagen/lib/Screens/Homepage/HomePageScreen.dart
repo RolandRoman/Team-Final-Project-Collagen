@@ -10,6 +10,8 @@ import '../Add_Post/AddPostScreen2.dart';
 class HomePageScreen extends StatefulWidget {
   static String routeName = "/homepage";
 
+  HomePageScreen();
+
   @override
   _HomePageScreen createState() => _HomePageScreen();
 }
@@ -18,62 +20,60 @@ class _HomePageScreen extends State<HomePageScreen> {
   Widget _offsetPopup() => PopupMenuButton<int>(
         onSelected: (result) {
           if (result == 0) {
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => const AddPostScreen()));
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const AddPostScreen()));
           }
           if (result == 1) {
-          Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) => const AddPostScreen2()));
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const AddPostScreen2()));
           }
           if (result == 2) {
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => const AddFriendScreen()));
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const AddFriendScreen()));
           }
         },
-    offset: const Offset(-85, -130),
-    shape: const RoundedRectangleBorder(
-      borderRadius: BorderRadius.all(
-        Radius.circular(40.0),
-      ),
-    ),
-    elevation: 0,
-    color: const Color(0xff8D9EFF),
-    itemBuilder: (BuildContext context) {
-      return [
-        const PopupMenuItem(
-            padding: EdgeInsets.symmetric(horizontal: 50),
-            value: 0,
-            child: Center(
+        offset: const Offset(-85, -130),
+        shape: const RoundedRectangleBorder(
+          side: BorderSide(
+            color: Colors.black,
+          ),
+          borderRadius: BorderRadius.all(
+            Radius.circular(40.0),
+          ),
+        ),
+        elevation: 0,
+        color: Colors.white,
+        itemBuilder: (BuildContext context) {
+          return [
+            const PopupMenuItem(
+                padding: EdgeInsets.symmetric(horizontal: 50),
+                value: 0,
               child: Text(
                 "Tambahkan Postingan",
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontWeight: FontWeight.w700,
                 ),
-              ),
-            )),
-        const PopupMenuItem(
-            padding: EdgeInsets.symmetric(horizontal: 50),
-            value: 1,
-            child: Center(
+              ),),
+            const PopupMenuItem(
+                padding: EdgeInsets.symmetric(horizontal: 50),
+                value: 1,
               child: Text(
                 "Jual Barang",
                 style: TextStyle(
-                    color: Colors.white, fontWeight: FontWeight.w700),
-              ),
-            )),
-        const PopupMenuItem(
-            padding: EdgeInsets.symmetric(horizontal: 50),
-            value: 2,
-            child: Center(
+                    color: Colors.black, fontWeight: FontWeight.w700),
+              ),),
+            const PopupMenuItem(
+              padding: EdgeInsets.symmetric(horizontal: 50),
+              value: 2,
               child: Text(
                 "Tambahkan Teman",
-                style: TextStyle(
-                    color: Colors.white, fontWeight: FontWeight.w700),
+                style:
+                    TextStyle(color: Colors.black, fontWeight: FontWeight.w700),
               ),
-            )),
-      ];
-    },
+            ),
+          ];
+        },
         child: const Center(
           child: Icon(
             Icons.add,
@@ -100,7 +100,7 @@ class _HomePageScreen extends State<HomePageScreen> {
         bottomNavigationBar: NavigationBar(
           height: 60,
           selectedIndex: index,
-          backgroundColor: Colors.blue,
+          backgroundColor: Color(0xff3167FF),
           onDestinationSelected: (index) => setState(() => this.index = index),
           destinations: const [
             SizedBox(

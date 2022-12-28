@@ -48,48 +48,60 @@ class _FriendBody extends State<FriendBody> {
               ),
             ),
           ),
-          body: Column(
-            children: [
-              Container(
-                alignment: Alignment.center,
-                height: 40,
-                width: 420,
-                decoration: const BoxDecoration(
-                  color: Colors.blue,
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                Container(
+                  alignment: Alignment.center,
+                  height: 40,
+                  width: 420,
+                  decoration: const BoxDecoration(
+                    color: Color(0xff3167FF),
+                  ),
+                  child: const Text(
+                    'Permintaan Pertemanan',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20),
+                  ),
                 ),
-                child: const Text(
-                  'Permintaan Pertemanan',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20),
+                requestfriend1,
+                requestfriend2,
+                requestfriend1,
+                requestfriend2,
+
+                const SizedBox(
+                  height: 5,
                 ),
-              ),
-              requestfriend1,
-              requestfriend2,
-              const SizedBox(
-                height: 5,
-              ),
-              Container(
-                alignment: Alignment.center,
-                height: 40,
-                width: 420,
-                decoration: const BoxDecoration(
-                  color: Colors.blue,
-                  shape: BoxShape.rectangle,
+                Container(
+                  alignment: Alignment.center,
+                  height: 40,
+                  width: 420,
+                  decoration: const BoxDecoration(
+                    color: Color(0xff3167FF),
+                  ),
+                  child: const Text(
+                    'Daftar Teman',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20),
+                  ),
                 ),
-                child: const Text(
-                  'Daftar Teman',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20),
-                ),
-              ),
-              friend1,
-              friend1,
-            ],
-          )),
+                friend1,
+                friend1,
+                friend1,
+                friend1,
+                friend1,
+                friend1,
+                friend1,
+                friend1,
+
+              ],
+            ),
+          )
+      ),
     );
   }
 

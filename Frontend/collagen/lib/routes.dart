@@ -33,5 +33,5 @@ final Map<String, WidgetBuilder> routes = {
   AddPostScreen.routeName: (context) => AddPostScreen2(),
   AddPostScreen.routeName: (context) => AddFriendScreen(),
   ChatBody.routeName: (context) => ChatBody(),
-  DetailShopBody.routeName: (context) => DetailShopBody()
+  DetailShopBody.routeName: (context) => DetailShopBody(),
 };

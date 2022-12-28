@@ -56,11 +56,69 @@ class _InputDataForm extends State<InputDataForm> {
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
-              onPressed: () {
-                Navigator.pushNamed(context, LoginScreen.routeName);
-              },
+              onPressed: () => showDialog<String>(
+                context: context,
+                builder: (BuildContext context) => AlertDialog(
+                  title: const Text('Apakah anda yakin ingin menyimpan?',
+                  textAlign: TextAlign.center,
+                 ),
+                  actions: <Widget>[
+                    Center(
+                      child: Column(
+                        children: [
+                          Container(
+                            width: 180,
+                            height: 45,
+                            child: TextButton(
+                              style: TextButton.styleFrom(
+                                backgroundColor: const Color(0xff3167FF),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                              ),
+                              onPressed: () {
+                                Navigator.pushNamed(context, LoginScreen.routeName);
+                              },
+                              child: const Text('Simpan',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20
+                              ),),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Container(
+                            width: 180,
+                            height: 45,
+                            child: TextButton(
+                              style: TextButton.styleFrom(
+                                backgroundColor: const Color.fromRGBO(20, 62, 180, 0.5),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                              ),
+                              onPressed: () => Navigator.pop(context, 'Batal'),
+                              child: const Text('Batal',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20
+                                ),),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+
+                  ],
+
+                ),
+              ),
               child: const Text(
-                "Simpan",
+                "Save",
                 style: TextStyle(
                   color: Color(0xffffffff),
                   fontSize: 20,
