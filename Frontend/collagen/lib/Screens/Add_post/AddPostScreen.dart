@@ -24,24 +24,95 @@ class AddPostScreen extends StatelessWidget {
               elevation: 0,
               backgroundColor: Colors.white,
               title: const Text(
-                "Create Post",
+                "Buat Postingan",
                 style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              centerTitle: true,
+              centerTitle: false,
               leading: IconButton(
                 icon: const Icon(
-                  Icons.arrow_back_ios,
-                  color: Colors.black,
+                  Icons.arrow_back,
+                  color: Colors.blue,
                 ),
                 onPressed: () => Navigator.of(context).pop(),
               ),
             ),
           ),
         ),
-        body: null,
+        body: Stack(
+          children: [
+            SingleChildScrollView(
+              child: Column(
+                children: [
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    children: [
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Image.asset(
+                        "assets/images/Picture1.png",
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      const Text(
+                        'Shafwan Ramadhan',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      Spacer(),
+                      TextButton(
+                          onPressed: () {},
+                          child: Container(
+                            alignment: Alignment.center,
+                            height: 30,
+                            width: 80,
+                            decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(10),
+                              ),
+                              color: Color(0xff3167FF),
+                            ),
+                            child: const Text(
+                              'Post',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                              ),
+                            ),
+                          )),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Expanded(
+                          child: TextFormField(
+                            cursorColor: Colors.black,
+                            keyboardType: TextInputType.text,
+                            decoration: const InputDecoration(
+                                border: InputBorder.none,
+                                focusedBorder: InputBorder.none,
+                                enabledBorder: InputBorder.none,
+                                errorBorder: InputBorder.none,
+                                disabledBorder: InputBorder.none,
+                                contentPadding:
+                                EdgeInsets.only(left: 15, bottom: 15, top: 20, right: 15),
+                                hintText: "Apa Yang anda pikirkan?"
+                            ),
+                            style: TextStyle(fontSize: 20),
+                          )
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

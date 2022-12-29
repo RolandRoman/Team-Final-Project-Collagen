@@ -42,7 +42,7 @@ class _DetailShopBody extends State<DetailShopBody> {
         ),
       ),
       body: Card(
-          child: Column(
+        child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
@@ -90,7 +90,7 @@ class _DetailShopBody extends State<DetailShopBody> {
                       )),
                   Row(
                     children: [
-                      Padding(
+                      const Padding(
                           padding: EdgeInsets.only(left: 10.0, right: 130),
                           child: Text(
                             "Ayam Jago + Kandang ",
@@ -133,7 +133,7 @@ class _DetailShopBody extends State<DetailShopBody> {
               ),
             ),
           ),
-          Padding(
+          const Padding(
               padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
               child: SizedBox(
                 width: 200,
