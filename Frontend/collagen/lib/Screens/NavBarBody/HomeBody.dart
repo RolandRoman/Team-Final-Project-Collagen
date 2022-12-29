@@ -388,6 +388,9 @@ class _Post2 extends State<Post2> {
 Widget _PopUpMenu() => PopupMenuButton<int>(
   onSelected: (result) {},
   shape: const RoundedRectangleBorder(
+    side: BorderSide(
+        color: Colors.black
+    ),
     borderRadius: BorderRadius.all(
       Radius.circular(40.0),
     ),
@@ -400,7 +403,7 @@ Widget _PopUpMenu() => PopupMenuButton<int>(
           value: 0,
           child: Center(
             child: Padding(
-                padding: const EdgeInsets.only(left: 20.0, bottom: 10),
+                padding: const EdgeInsets.only(left: 10.0, bottom: 10),
                 child: Row(
                   children: const <Widget>[
                     Icon(Icons.bookmark_border,
@@ -420,7 +423,7 @@ Widget _PopUpMenu() => PopupMenuButton<int>(
           value: 1,
           child: Center(
             child: Padding(
-                padding: const EdgeInsets.only(left: 20.0, bottom: 10),
+                padding: const EdgeInsets.only(left: 10.0, bottom: 10),
                 child: Row(
                   children: const <Widget>[
                     Icon(Icons.edit,
@@ -440,7 +443,7 @@ Widget _PopUpMenu() => PopupMenuButton<int>(
           value: 2,
           child: Center(
             child: Padding(
-                padding: const EdgeInsets.only(left: 20.0, bottom: 10),
+                padding: const EdgeInsets.only(left: 10.0, bottom: 10),
                 child: Row(
                   children: const <Widget>[
                     Icon(Icons.delete_outline_outlined,
@@ -470,6 +473,9 @@ Widget _PopUpMenu() => PopupMenuButton<int>(
 Widget _PopUpShare() => PopupMenuButton<int>(
   onSelected: (result) {},
   shape: const RoundedRectangleBorder(
+    side: BorderSide(
+      color: Colors.black
+    ),
     borderRadius: BorderRadius.all(
       Radius.circular(40.0),
     ),
@@ -482,7 +488,7 @@ Widget _PopUpShare() => PopupMenuButton<int>(
           value: 0,
           child: Center(
             child: Padding(
-                padding: const EdgeInsets.only(left: 20.0, bottom: 10),
+                padding: const EdgeInsets.only(left: 10.0),
                 child: Row(
                   children: const <Widget>[
                     Icon(Icons.link,

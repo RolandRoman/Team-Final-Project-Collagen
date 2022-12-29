@@ -242,7 +242,7 @@ class MessageBar extends StatelessWidget {
                           hintText: "Tulis Pesan",
                           hintMaxLines: 1,
                           contentPadding: const EdgeInsets.symmetric(
-                              horizontal: 8.0, vertical: 10),
+                              horizontal: 10.0, vertical: 10),
                           hintStyle: const TextStyle(
                             fontSize: 16,
                           ),

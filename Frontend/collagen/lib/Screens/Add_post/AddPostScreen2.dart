@@ -31,7 +31,7 @@ class _AddPostSreen2 extends State<AddPostScreen2> {
           child: Container(
             decoration: const BoxDecoration(boxShadow: [
               BoxShadow(
-                color: Colors.grey,
+                color: Color.fromRGBO(49, 103, 255, 0.3),
                 offset: Offset(0, 4.0),
                 blurRadius: 4.0,
               ),

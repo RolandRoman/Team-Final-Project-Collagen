@@ -26,7 +26,7 @@ class _MoreBody extends State<MoreBody> {
             child: AppBar(
               backgroundColor: Colors.white,
               title: const Text(
-                  "Menu"
+                  "Profile"
               ),
               titleTextStyle: const TextStyle(
                   color: Colors.black,

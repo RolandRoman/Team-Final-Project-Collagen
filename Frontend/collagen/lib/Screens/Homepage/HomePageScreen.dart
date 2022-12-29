@@ -2,7 +2,7 @@ import 'package:collagen/Screens/Add_Post/AddFriendScreen.dart';
 import 'package:collagen/Screens/Add_Post/AddPostScreen.dart';
 import 'package:collagen/Screens/NavBarBody/FriendBody.dart';
 import 'package:collagen/Screens/NavBarBody/HomeBody.dart';
-import 'package:collagen/Screens/NavBarBody/MenuBody.dart';
+import 'package:collagen/Screens/NavBarBody/ProfileBody.dart';
 import 'package:collagen/Screens/NavBarBody/ShopBody.dart';
 import 'package:flutter/material.dart';
 import '../Add_Post/AddPostScreen2.dart';
@@ -152,11 +152,11 @@ class _HomePageScreen extends State<HomePageScreen> {
               height: 12,
               child: NavigationDestination(
                 icon: Icon(
-                  Icons.more_horiz_outlined,
+                  Icons.account_circle_outlined,
                   color: Colors.white,
                 ),
                 selectedIcon: Icon(
-                  Icons.more_horiz,
+                  Icons.account_circle,
                   color: Colors.white,
                 ),
                 label: ' ',

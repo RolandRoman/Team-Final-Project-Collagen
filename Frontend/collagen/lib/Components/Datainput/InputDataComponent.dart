@@ -71,9 +71,7 @@ class _InputDataComponent extends State<InputDataComponent> {
                       const SizedBox(height: 5),
                       const InputDataForm()
                     ],
-
                   ),
-
                 ),
                 Image.asset(
                   "assets/images/vector_inputdata.png",

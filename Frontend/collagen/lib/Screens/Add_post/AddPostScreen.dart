@@ -15,8 +15,8 @@ class AddPostScreen extends StatelessWidget {
           child: Container(
             decoration: const BoxDecoration(boxShadow: [
               BoxShadow(
-                color: Colors.grey,
-                offset: Offset(0, 4.0),
+                color: Color.fromRGBO(49, 103, 255, 0.3),
+                offset: Offset(0, 5.0),
                 blurRadius: 4.0,
               ),
             ]),
@@ -62,9 +62,12 @@ class AddPostScreen extends StatelessWidget {
                       ),
                       const Text(
                         'Shafwan Ramadhan',
-                        style: TextStyle(fontSize: 20),
+                        style: TextStyle(fontSize: 20,
+                        fontWeight: FontWeight.bold),
                       ),
-                      Spacer(),
+                      SizedBox(
+                      width: 50,
+                      ),
                       TextButton(
                           onPressed: () {},
                           child: Container(
