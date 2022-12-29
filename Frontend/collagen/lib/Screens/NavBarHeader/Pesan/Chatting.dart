@@ -35,7 +35,7 @@ class _ChatBody extends State<ChatBody> {
             elevation: 0,
             backgroundColor: Colors.blue,
             title: Row(
-              children: [
+              children: <Widget>[
                 Image.asset(
                   "assets/images/Picture1.png",
                 ),
@@ -45,9 +45,15 @@ class _ChatBody extends State<ChatBody> {
                 const Text(
                   'Shafwan',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                )
+                ),
               ],
             ),
+            actions: <Widget>[
+              TextButton(
+                  onPressed: () {},
+                  child: _PopUpMenu(),
+              )
+            ],
           ),
         ),
       ),
@@ -287,3 +293,82 @@ class MessageBar extends StatelessWidget {
     );
   }
 }
+
+Widget _PopUpMenu() => PopupMenuButton<int>(
+  onSelected: (result) {},
+  shape: const RoundedRectangleBorder(
+    borderRadius: BorderRadius.all(
+      Radius.circular(40.0),
+    ),
+  ),
+  elevation: 0,
+  color: Colors.white,
+  itemBuilder: (BuildContext context) {
+    return [
+      PopupMenuItem(
+          value: 0,
+          child: Center(
+            child: Padding(
+                padding: const EdgeInsets.only(left: 20.0, bottom: 10),
+                child: Row(
+                  children: const <Widget>[
+                    Text("Lihat Profil",
+                      style: TextStyle(
+                          color: Colors.black
+                      ),)
+                  ],
+                )),
+          )),
+      PopupMenuItem(
+          value: 1,
+          child: Center(
+            child: Padding(
+                padding: const EdgeInsets.only(left: 20.0, bottom: 10),
+                child: Row(
+                  children: const <Widget>[
+                    Text("Cari",
+                      style: TextStyle(
+                          color: Colors.black
+                      ),)
+                  ],
+                )),
+          )),
+      PopupMenuItem(
+          value: 2,
+          child: Center(
+            child: Padding(
+                padding: const EdgeInsets.only(left: 20.0, bottom: 10),
+                child: Row(
+                  children: const <Widget>[
+                    Text("Bersihkan Pesan",
+                      style: TextStyle(
+                          color: Colors.black
+                      ),)
+                  ],
+                )),
+          )),
+      PopupMenuItem(
+          value: 3,
+          child: Center(
+            child: Padding(
+                padding: const EdgeInsets.only(left: 20.0, bottom: 10),
+                child: Row(
+                  children: const <Widget>[
+                    Text("Bisukan Notifikasi",
+                      style: TextStyle(
+                          color: Colors.black
+                      ),)
+                  ],
+                )),
+          )),
+    ];
+  },
+  child: const Padding(
+    padding: EdgeInsets.symmetric(vertical: 10),
+    child: Icon(
+      Icons.more_vert_rounded,
+      size: 30,
+      color: Colors.white,
+    ),
+  ),
+);
