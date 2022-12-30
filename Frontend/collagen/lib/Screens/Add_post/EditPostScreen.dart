@@ -38,7 +38,68 @@ class EditPostScreen extends StatelessWidget {
                   Icons.arrow_back,
                   color: Colors.blue,
                 ),
-                onPressed: () => Navigator.of(context).pop(),
+                onPressed: () => showDialog<String>(
+                  context: context,
+                  builder: (BuildContext context) => AlertDialog(
+                    title: const Text('Apakah anda yakin ingin membuang postingan ini?',
+                      textAlign: TextAlign.center,
+                    ),
+                    actions: <Widget>[
+                      Center(
+                        child: Column(
+                          children: [
+                            Container(
+                              width: 230,
+                              height: 45,
+                              child: TextButton(
+                                style: TextButton.styleFrom(
+                                  backgroundColor: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    side: BorderSide(color: Colors.black),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                ),
+                                onPressed: () => Navigator.pop(context, 'Lanjut'),
+                                child: const Text('Lanjut Mengedit',
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20
+                                  ),),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Container(
+                              width: 230,
+                              height: 45,
+                              child: TextButton(
+                                style: TextButton.styleFrom(
+                                  backgroundColor: Colors.red,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                ),
+                                onPressed: () {
+                                  Navigator.pushNamed(context, HomePageScreen.routeName);
+                                },
+                                child: const Text('Batal',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20
+                                  ),),
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+
+                    ],
+
+                  ),
+                ),
               ),
             ),
           ),
@@ -74,7 +135,7 @@ class EditPostScreen extends StatelessWidget {
                           onPressed: () => showDialog<String>(
                             context: context,
                             builder: (BuildContext context) => AlertDialog(
-                              content: const Text('Apakah anda yakin membagikan postingan ini?'),
+                              content: const Text('Apakah anda yakin mengedit postingan ini?'),
                               actions: <Widget>[
                                 TextButton(
                                   onPressed: () => Navigator.pop(context, 'Cancel'),
