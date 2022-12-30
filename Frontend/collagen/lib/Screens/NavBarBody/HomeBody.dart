@@ -422,14 +422,14 @@ Widget _PopUpMenu(context) => PopupMenuButton<int>(
                 child: Row(
                   children: const <Widget>[
                     Icon(Icons.bookmark_border,
-                      color: Colors.black,
+                      color: Colors.blue,
                     ),
                     SizedBox(
                       width: 5,
                     ),
                     Text("Bookmark",
                       style: TextStyle(
-                          color: Colors.black
+                        color: Colors.blue,
                       ),)
                   ],
                 )),
@@ -442,14 +442,14 @@ Widget _PopUpMenu(context) => PopupMenuButton<int>(
                 child: Row(
                   children: const <Widget>[
                     Icon(Icons.edit,
-                      color: Colors.black,
+                      color: Colors.blue,
                     ),
                     SizedBox(
                       width: 5,
                     ),
                     Text("Edit",
                       style: TextStyle(
-                          color: Colors.black
+                        color: Colors.blue,
                       ),)
                   ],
                 )),

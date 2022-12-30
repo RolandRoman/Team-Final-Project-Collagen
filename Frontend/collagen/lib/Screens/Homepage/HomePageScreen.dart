@@ -51,7 +51,7 @@ class _HomePageScreen extends State<HomePageScreen> {
               child: Text(
                 "Tambahkan Postingan",
                 style: TextStyle(
-                  color: Colors.black,
+                  color: Colors.blue,
                   fontWeight: FontWeight.w700,
                 ),
               ),),
@@ -61,7 +61,7 @@ class _HomePageScreen extends State<HomePageScreen> {
               child: Text(
                 "Jual Barang",
                 style: TextStyle(
-                    color: Colors.black, fontWeight: FontWeight.w700),
+                    color: Colors.blue, fontWeight: FontWeight.w700),
               ),),
             const PopupMenuItem(
               padding: EdgeInsets.symmetric(horizontal: 50),
@@ -69,7 +69,7 @@ class _HomePageScreen extends State<HomePageScreen> {
               child: Text(
                 "Tambahkan Teman",
                 style:
-                    TextStyle(color: Colors.black, fontWeight: FontWeight.w700),
+                    TextStyle(color: Colors.blue, fontWeight: FontWeight.w700),
               ),
             ),
           ];
