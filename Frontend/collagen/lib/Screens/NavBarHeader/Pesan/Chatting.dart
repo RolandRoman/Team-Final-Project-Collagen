@@ -33,7 +33,7 @@ class _ChatBody extends State<ChatBody> {
           ]),
           child: AppBar(
             elevation: 0,
-            backgroundColor: Colors.blue,
+            backgroundColor: Color(0xff3167FF),
             title: Row(
               children: <Widget>[
                 Image.asset(

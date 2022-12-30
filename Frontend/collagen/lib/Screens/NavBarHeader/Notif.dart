@@ -71,21 +71,8 @@ class _NotifBody extends State<NotifBody> {
             itemCount: notifications.length,
             itemBuilder: (context, index) {
               return Slidable(
-                actionPane: SlidableDrawerActionPane(),
-                actionExtentRatio: 0.25,
                 child: notificationItem(notifications[index]),
-                secondaryActions: <Widget>[
-                  Container(
-                      height: 60,
-                      color: Colors.grey.shade500,
-                      child: Icon(Icons.info_outline, color: Colors.white,)
-                  ),
-                  Container(
-                      height: 60,
-                      color: Colors.red,
-                      child: Icon(Icons.delete_outline_sharp, color: Colors.white,)
-                  ),
-                ],
+
               );
             }
         )

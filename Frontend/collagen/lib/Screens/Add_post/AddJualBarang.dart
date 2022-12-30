@@ -1,14 +1,15 @@
 import 'package:collagen/Screens/Homepage/HomePageScreen.dart';
 import 'package:flutter/material.dart';
 
-class AddPostScreen2 extends StatefulWidget {
-  const AddPostScreen2({super.key});
+class AddJualBarang extends StatefulWidget {
+  static String routeName = "/add_shop";
+
 
   @override
-  _AddPostSreen2 createState() => _AddPostSreen2();
+  _AddJualBarang createState() => _AddJualBarang();
 }
 
-class _AddPostSreen2 extends State<AddPostScreen2> {
+class _AddJualBarang extends State<AddJualBarang> {
   String? judul;
   String? harga;
   String? deskripsi;

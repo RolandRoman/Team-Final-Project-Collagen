@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../Homepage/HomePageScreen.dart';
 
-class AddPostScreen extends StatelessWidget {
-  static String routeName = "/add_post";
+class EditPostScreen extends StatelessWidget {
+  static String routeName = "/edit_post";
 
-  const AddPostScreen({super.key});
+  const EditPostScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class AddPostScreen extends StatelessWidget {
               elevation: 0,
               backgroundColor: Colors.white,
               title: const Text(
-                "Buat Postingan",
+                "Edit Postingan",
                 style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
@@ -65,10 +65,10 @@ class AddPostScreen extends StatelessWidget {
                       const Text(
                         'Shafwan Ramadhan',
                         style: TextStyle(fontSize: 20,
-                        fontWeight: FontWeight.bold),
+                            fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
-                      width: 50,
+                        width: 50,
                       ),
                       TextButton(
                           onPressed: () => showDialog<String>(
@@ -138,26 +138,26 @@ class AddPostScreen extends StatelessWidget {
                     height: 50,
                   ),
                   SizedBox(
-                    width: 400,
-                    child: Row(
-                      children: [
-                        IconButton(
-                            alignment: AlignmentDirectional.centerStart,
-                            onPressed: (){},
-                            icon: Icon(Icons.image)
-                        ),
-                        IconButton(
-                            alignment: AlignmentDirectional.centerStart,
-                            onPressed: (){},
-                            icon: Icon(Icons.videocam_sharp)
-                        ),
-                        IconButton(
-                            alignment: AlignmentDirectional.centerStart,
-                            onPressed: (){},
-                            icon: Icon(Icons.emoji_emotions)
-                        ),
-                      ],
-                    )
+                      width: 400,
+                      child: Row(
+                        children: [
+                          IconButton(
+                              alignment: AlignmentDirectional.centerStart,
+                              onPressed: (){},
+                              icon: Icon(Icons.image)
+                          ),
+                          IconButton(
+                              alignment: AlignmentDirectional.centerStart,
+                              onPressed: (){},
+                              icon: Icon(Icons.videocam_sharp)
+                          ),
+                          IconButton(
+                              alignment: AlignmentDirectional.centerStart,
+                              onPressed: (){},
+                              icon: Icon(Icons.emoji_emotions)
+                          ),
+                        ],
+                      )
                   ),
 
                 ],

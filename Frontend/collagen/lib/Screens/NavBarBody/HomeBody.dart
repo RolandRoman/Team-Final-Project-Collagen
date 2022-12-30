@@ -1,3 +1,4 @@
+import 'package:collagen/Screens/Add_post/EditPostScreen.dart';
 import 'package:collagen/Screens/NavBarHeader/Notif.dart';
 import 'package:collagen/Screens/NavBarHeader/Pesan.dart';
 import 'package:flutter/material.dart';
@@ -97,6 +98,7 @@ class Post1 extends StatefulWidget {
 }
 
 class _Post1 extends State<Post1> {
+
   int _likecounter = 0;
   int _dislikecounter = 0;
 
@@ -138,7 +140,7 @@ class _Post1 extends State<Post1> {
                   FittedBox(
                     child: TextButton(
                       onPressed: () {},
-                      child: _PopUpMenu(),
+                      child: _PopUpMenu(context),
                     ),
                   )
                 ],
@@ -288,7 +290,7 @@ class _Post2 extends State<Post2> {
                   FittedBox(
                     child: TextButton(
                       onPressed: () {},
-                      child: _PopUpMenu(),
+                      child: _PopUpMenu(context),
                     ),
                   )
                 ],
@@ -385,8 +387,21 @@ class _Post2 extends State<Post2> {
   }
 }
 
-Widget _PopUpMenu() => PopupMenuButton<int>(
-  onSelected: (result) {},
+Widget _PopUpMenu(context) => PopupMenuButton<int>(
+  onSelected: (result) {
+    if (result == 0) {
+      Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => const EditPostScreen()));
+    }
+    if (result == 1) {
+      Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => const EditPostScreen()));
+    }
+    if (result == 2) {
+      Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => const EditPostScreen()));
+    }
+  },
   shape: const RoundedRectangleBorder(
     side: BorderSide(
         color: Colors.black

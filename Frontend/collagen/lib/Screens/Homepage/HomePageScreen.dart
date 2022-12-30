@@ -1,11 +1,11 @@
 import 'package:collagen/Screens/Add_Post/AddFriendScreen.dart';
 import 'package:collagen/Screens/Add_Post/AddPostScreen.dart';
+import 'package:collagen/Screens/Add_post/AddJualBarang.dart';
 import 'package:collagen/Screens/NavBarBody/FriendBody.dart';
 import 'package:collagen/Screens/NavBarBody/HomeBody.dart';
 import 'package:collagen/Screens/NavBarBody/ProfileBody.dart';
 import 'package:collagen/Screens/NavBarBody/ShopBody.dart';
 import 'package:flutter/material.dart';
-import '../Add_Post/AddPostScreen2.dart';
 
 class HomePageScreen extends StatefulWidget {
   static String routeName = "/homepage";
@@ -25,7 +25,7 @@ class _HomePageScreen extends State<HomePageScreen> {
           }
           if (result == 1) {
             Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => const AddPostScreen2()));
+                builder: (context) => AddJualBarang()));
           }
           if (result == 2) {
             Navigator.of(context).push(MaterialPageRoute(
@@ -97,72 +97,79 @@ class _HomePageScreen extends State<HomePageScreen> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: pages[index],
-        bottomNavigationBar: NavigationBar(
-          height: 60,
-          selectedIndex: index,
-          backgroundColor: Color(0xff3167FF),
-          onDestinationSelected: (index) => setState(() => this.index = index),
-          destinations: const [
-            SizedBox(
-              height: 12,
-              child: NavigationDestination(
-                icon: Icon(
-                  Icons.home_outlined,
-                  color: Colors.white,
+        bottomNavigationBar: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [Color(0xff3167FF), Color(0xff0591DB)])
+          ),          child: NavigationBar(
+            height: 60,
+            selectedIndex: index,
+            backgroundColor: Colors.transparent,
+            onDestinationSelected: (index) => setState(() => this.index = index),
+            destinations: const [
+              SizedBox(
+                height: 12,
+                child: NavigationDestination(
+                  icon: Icon(
+                    Icons.home_outlined,
+                    color: Colors.white,
+                  ),
+                  selectedIcon: Icon(
+                    Icons.home,
+                    color: Colors.white,
+                  ),
+                  label: ' ',
                 ),
-                selectedIcon: Icon(
-                  Icons.home,
-                  color: Colors.white,
-                ),
-                label: ' ',
               ),
-            ),
-            SizedBox(
-              height: 12,
-              child: NavigationDestination(
-                icon: Icon(
-                  Icons.supervisor_account_outlined,
-                  color: Colors.white,
+              SizedBox(
+                height: 12,
+                child: NavigationDestination(
+                  icon: Icon(
+                    Icons.supervisor_account_outlined,
+                    color: Colors.white,
+                  ),
+                  selectedIcon: Icon(
+                    Icons.supervisor_account_rounded,
+                    color: Colors.white,
+                  ),
+                  label: ' ',
                 ),
-                selectedIcon: Icon(
-                  Icons.supervisor_account_rounded,
-                  color: Colors.white,
-                ),
-                label: ' ',
               ),
-            ),
-            SizedBox(
-              width: 20,
-            ),
-            SizedBox(
-              height: 12,
-              child: NavigationDestination(
-                icon: Icon(
-                  Icons.shopping_cart_outlined,
-                  color: Colors.white,
-                ),
-                selectedIcon: Icon(
-                  Icons.shopping_cart_sharp,
-                  color: Colors.white,
-                ),
-                label: ' ',
+              SizedBox(
+                width: 20,
               ),
-            ),
-            SizedBox(
-              height: 12,
-              child: NavigationDestination(
-                icon: Icon(
-                  Icons.account_circle_outlined,
-                  color: Colors.white,
+              SizedBox(
+                height: 12,
+                child: NavigationDestination(
+                  icon: Icon(
+                    Icons.shopping_cart_outlined,
+                    color: Colors.white,
+                  ),
+                  selectedIcon: Icon(
+                    Icons.shopping_cart_sharp,
+                    color: Colors.white,
+                  ),
+                  label: ' ',
                 ),
-                selectedIcon: Icon(
-                  Icons.account_circle,
-                  color: Colors.white,
-                ),
-                label: ' ',
               ),
-            ),
-          ],
+              SizedBox(
+                height: 12,
+                child: NavigationDestination(
+                  icon: Icon(
+                    Icons.account_circle_outlined,
+                    color: Colors.white,
+                  ),
+                  selectedIcon: Icon(
+                    Icons.account_circle,
+                    color: Colors.white,
+                  ),
+                  label: ' ',
+                ),
+              ),
+            ],
+          ),
         ),
         floatingActionButton: SizedBox(
           width: 70,
@@ -170,8 +177,6 @@ class _HomePageScreen extends State<HomePageScreen> {
           child: FittedBox(
             child: FloatingActionButton(
               onPressed: () {},
-              backgroundColor: Colors.blue,
-              foregroundColor: Colors.white,
               elevation: 0,
               shape: const CircleBorder(
                 side: BorderSide(color: Colors.white, width: 4.0),
