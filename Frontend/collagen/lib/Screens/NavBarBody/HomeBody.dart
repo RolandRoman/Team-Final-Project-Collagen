@@ -200,7 +200,7 @@ class _Post1 extends State<Post1> {
                       onPressed: _incrementCounter2,
                     ),
                     Text(
-                      '$_dislikecounter'
+                        '$_dislikecounter'
                     )
                   ],
                 ),
@@ -468,9 +468,9 @@ Widget _PopUpMenu(context) => PopupMenuButton<int>(
                       width: 5,
                     ),
                     Text("Hapus",
-                    style: TextStyle(
-                      color: Colors.red
-                    ),)
+                      style: TextStyle(
+                          color: Colors.red
+                      ),)
                   ],
                 )),
           )),
@@ -489,7 +489,7 @@ Widget _PopUpShare() => PopupMenuButton<int>(
   onSelected: (result) {},
   shape: const RoundedRectangleBorder(
     side: BorderSide(
-      color: Colors.black
+        color: Colors.black
     ),
     borderRadius: BorderRadius.all(
       Radius.circular(40.0),

@@ -15,6 +15,7 @@ import 'package:collagen/Screens/NavBarHeader/Notif.dart';
 import 'package:collagen/Screens/Post/Comment.dart';
 import 'package:collagen/Screens/NavBarHeader/Search.dart';
 import 'Screens/Add_post/EditPostScreen.dart';
+import 'Screens/NavBarBody/ProfileBody.dart';
 import 'Screens/NavBarBody/shop/DetailShopBody.dart';
 
 
@@ -36,4 +37,5 @@ final Map<String, WidgetBuilder> routes = {
   ChatBody.routeName: (context) => ChatBody(),
   DetailShopBody.routeName: (context) => DetailShopBody(),
   AddJualBarang.routeName: (context) => AddJualBarang(),
+  ProfileBody.routeName: (context) => ProfileBody(),
 };
