@@ -1,8 +1,6 @@
 import 'package:collagen/Screens/Homepage/HomePageScreen.dart';
 import 'package:flutter/material.dart';
 
-import '../ProfileBody.dart';
-
 class FriendProfileBody extends StatefulWidget {
   const FriendProfileBody({super.key});
 
