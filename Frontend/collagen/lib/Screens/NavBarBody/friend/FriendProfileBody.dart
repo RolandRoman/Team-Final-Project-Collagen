@@ -30,7 +30,7 @@ class _FriendProfileBody extends State<FriendProfileBody> {
               titleTextStyle: const TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
-                  fontSize: 20),
+                  fontSize: 26),
             ),
           ),
         ),
@@ -214,7 +214,8 @@ class _FriendProfileBody extends State<FriendProfileBody> {
                         horizontal: (10), vertical: 5),
                     child: Text(
                       'Teman',
-                      style: TextStyle(fontSize: 30),
+                      style: TextStyle(fontSize: 20,
+                      fontWeight: FontWeight.bold),
                     ),
                   ),
                   Padding(
@@ -249,7 +250,7 @@ class _FriendProfileBody extends State<FriendProfileBody> {
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 20),
+                                    fontSize: 18),
                               )
                             ],
                           ),
@@ -272,7 +273,7 @@ class _FriendProfileBody extends State<FriendProfileBody> {
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 20),
+                                    fontSize: 18),
                               )
                             ],
                           ),
@@ -295,7 +296,7 @@ class _FriendProfileBody extends State<FriendProfileBody> {
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 20),
+                                    fontSize: 18),
                               )
                             ],
                           ),
@@ -318,7 +319,7 @@ class _FriendProfileBody extends State<FriendProfileBody> {
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 20),
+                                    fontSize: 18),
                               )
                             ],
                           ),
@@ -341,7 +342,7 @@ class _FriendProfileBody extends State<FriendProfileBody> {
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 20),
+                                    fontSize: 18),
                               )
                             ],
                           ),
@@ -352,135 +353,7 @@ class _FriendProfileBody extends State<FriendProfileBody> {
                 ),
               ),
               SizedBox(
-                height: 15,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: (30)),
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 180,
-                        width: 160,
-                        child: Card(
-                          color: Colors.white,
-                          child: Column(
-                            children: [
-                              Image.asset('assets/images/Market.png'),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Text(
-                                'Digra Izham',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      Container(
-                        height: 180,
-                        width: 160,
-                        child: Card(
-                          color: Colors.white,
-                          child: Column(
-                            children: [
-                              Image.asset('assets/images/Market.png'),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Text(
-                                'Digra Izham',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      Container(
-                        height: 180,
-                        width: 160,
-                        child: Card(
-                          color: Colors.white,
-                          child: Column(
-                            children: [
-                              Image.asset('assets/images/Market.png'),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Text(
-                                'Digra Izham',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      Container(
-                        height: 180,
-                        width: 160,
-                        child: Card(
-                          color: Colors.white,
-                          child: Column(
-                            children: [
-                              Image.asset('assets/images/Market.png'),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Text(
-                                'Digra Izham',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      Container(
-                        height: 180,
-                        width: 160,
-                        child: Card(
-                          color: Colors.white,
-                          child: Column(
-                            children: [
-                              Image.asset('assets/images/Market.png'),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Text(
-                                'Digra Izham',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 10,
+                height: 25,
               ),
               Center(
                 child: TextButton(
