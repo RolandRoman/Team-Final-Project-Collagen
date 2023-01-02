@@ -139,8 +139,15 @@ class _Post1 extends State<Post1> {
                 actions: <Widget>[
                   FittedBox(
                     child: TextButton(
-                      onPressed: () {},
-                      child: _PopUpMenu(context),
+                      onPressed: () {
+                        showModalBottomSheet(
+                            context: context,
+                            builder: ((builder) => bottomsheet(context))
+                        );
+                      },
+                      child: Icon(
+                        Icons.more_horiz_rounded,
+                      )
                     ),
                   )
                 ],
@@ -200,7 +207,7 @@ class _Post1 extends State<Post1> {
                       onPressed: _incrementCounter2,
                     ),
                     Text(
-                      '$_dislikecounter'
+                        '$_dislikecounter'
                     )
                   ],
                 ),
@@ -289,8 +296,15 @@ class _Post2 extends State<Post2> {
                 actions: <Widget>[
                   FittedBox(
                     child: TextButton(
-                      onPressed: () {},
-                      child: _PopUpMenu(context),
+                      onPressed: () {
+                        showModalBottomSheet(
+                            context: context,
+                            builder: ((builder) => bottomsheet(context))
+                            );
+                      },
+                        child: Icon(
+                          Icons.more_horiz_rounded,
+                        )
                     ),
                   )
                 ],
@@ -387,109 +401,100 @@ class _Post2 extends State<Post2> {
   }
 }
 
-Widget _PopUpMenu(context) => PopupMenuButton<int>(
-  onSelected: (result) {
-    if (result == 0) {
-      Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => const EditPostScreen()));
-    }
-    if (result == 1) {
-      Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => const EditPostScreen()));
-    }
-    if (result == 2) {
-      Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => const EditPostScreen()));
-    }
-  },
-  shape: const RoundedRectangleBorder(
-    side: BorderSide(
-        color: Colors.black
-    ),
-    borderRadius: BorderRadius.all(
-      Radius.circular(40.0),
-    ),
-  ),
-  elevation: 0,
-  color: Colors.white,
-  itemBuilder: (BuildContext context) {
-    return [
-      PopupMenuItem(
-          value: 0,
-          child: Center(
-            child: Padding(
-                padding: const EdgeInsets.only(left: 10.0, bottom: 10),
-                child: Row(
-                  children: const <Widget>[
-                    Icon(Icons.bookmark_border,
-                      color: Colors.blue,
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Text("Bookmark",
-                      style: TextStyle(
+Widget bottomsheet(BuildContext context){
+  return Container(
+    height: 180,
+    width: MediaQuery.of(context).size.width,
+    margin: EdgeInsets.all(20),
+    child: Column(
+      children: [
+        Center(
+          child: Container(
+            width: 80,
+            height: 1,
+            decoration: const BoxDecoration(boxShadow: [
+              BoxShadow(
+                color: Colors.grey,
+                blurRadius: 1.0,
+              ),
+            ]),
+          ),
+        ),
+        TextButton(
+            onPressed: (){},
+            child: Center(
+              child: Padding(
+                  padding: const EdgeInsets.only(left: 10.0, bottom: 10),
+                  child: Row(
+                    children: const <Widget>[
+                      Icon(Icons.bookmark_border,
                         color: Colors.blue,
-                      ),)
-                  ],
-                )),
-          )),
-      PopupMenuItem(
-          value: 1,
-          child: Center(
-            child: Padding(
-                padding: const EdgeInsets.only(left: 10.0, bottom: 10),
-                child: Row(
-                  children: const <Widget>[
-                    Icon(Icons.edit,
-                      color: Colors.blue,
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Text("Edit",
-                      style: TextStyle(
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text("Bookmark",
+                        style: TextStyle(
+                          color: Colors.blue,
+                        ),)
+                    ],
+                  )),
+            )),
+        TextButton(
+            onPressed: (){
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const EditPostScreen()));
+            },
+            child: Center(
+              child: Padding(
+                  padding: const EdgeInsets.only(left: 10.0, bottom: 10),
+                  child: Row(
+                    children: const <Widget>[
+                      Icon(Icons.edit,
                         color: Colors.blue,
-                      ),)
-                  ],
-                )),
-          )),
-      PopupMenuItem(
-          value: 2,
-          child: Center(
-            child: Padding(
-                padding: const EdgeInsets.only(left: 10.0, bottom: 10),
-                child: Row(
-                  children: const <Widget>[
-                    Icon(Icons.delete_outline_outlined,
-                      color: Colors.red,
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Text("Hapus",
-                    style: TextStyle(
-                      color: Colors.red
-                    ),)
-                  ],
-                )),
-          )),
-    ];
-  },
-  child: const Padding(
-    padding: EdgeInsets.symmetric(vertical: 10),
-    child: Icon(
-      Icons.more_horiz_rounded,
-      size: 30,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text("Edit",
+                        style: TextStyle(
+                          color: Colors.blue,
+                        ),)
+                    ],
+                  )),
+            )),
+        TextButton(
+            onPressed: (){},
+            child: Center(
+              child: Padding(
+                  padding: const EdgeInsets.only(left: 10.0, bottom: 10),
+                  child: Row(
+                    children: const <Widget>[
+                      Icon(Icons.delete_outline_outlined,
+                        color: Colors.red,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text("Hapus",
+                        style: TextStyle(
+                            color: Colors.red
+                        ),)
+                    ],
+                  )),
+            )),
+
+      ],
     ),
-  ),
-);
+  );
+}
+
 
 Widget _PopUpShare() => PopupMenuButton<int>(
   onSelected: (result) {},
   shape: const RoundedRectangleBorder(
     side: BorderSide(
-      color: Colors.black
+        color: Colors.black
     ),
     borderRadius: BorderRadius.all(
       Radius.circular(40.0),

@@ -17,8 +17,8 @@ class _SignInForm extends State<SignInForm> {
   String? username;
   String? password;
 
-  TextEditingController txtUserName = TextEditingController(),
-      txtPassword = TextEditingController();
+  TextEditingController txtUserName = TextEditingController();
+  TextEditingController txtPassword = TextEditingController();
 
   FocusNode focusNode = FocusNode();
 
