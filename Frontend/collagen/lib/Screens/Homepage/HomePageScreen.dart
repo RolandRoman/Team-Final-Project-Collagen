@@ -1,4 +1,3 @@
-import 'package:collagen/Screens/Add_Post/AddFriendScreen.dart';
 import 'package:collagen/Screens/Add_Post/AddPostScreen.dart';
 import 'package:collagen/Screens/Add_post/AddJualBarang.dart';
 import 'package:collagen/Screens/NavBarBody/FriendBody.dart';
@@ -6,6 +5,8 @@ import 'package:collagen/Screens/NavBarBody/HomeBody.dart';
 import 'package:collagen/Screens/NavBarBody/ProfileBody.dart';
 import 'package:collagen/Screens/NavBarBody/ShopBody.dart';
 import 'package:flutter/material.dart';
+
+import '../NavBarHeader/Search.dart';
 
 class HomePageScreen extends StatefulWidget {
   static String routeName = "/homepage";
@@ -28,8 +29,10 @@ class _HomePageScreen extends State<HomePageScreen> {
                 builder: (context) => AddJualBarang()));
           }
           if (result == 2) {
-            Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => const AddFriendScreen()));
+            showSearch(
+              context: context,
+              delegate: MySearchDelegate(),
+            );
           }
         },
         offset: const Offset(-85, -130),
@@ -98,7 +101,7 @@ class _HomePageScreen extends State<HomePageScreen> {
       home: Scaffold(
         body: pages[index],
         bottomNavigationBar: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,

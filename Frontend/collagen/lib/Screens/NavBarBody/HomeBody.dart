@@ -78,9 +78,9 @@ class _HomeBody extends State<HomeBody> {
         body: SafeArea(
           child: SingleChildScrollView(
             child: Column(
-              children: <Widget>[
-                const Post1(),
-                const Post2(),
+              children: const <Widget>[
+                Post1(),
+                Post2(),
               ],
             ),
           ),
@@ -188,8 +188,8 @@ class _Post1 extends State<Post1> {
                 Row(
                   children: <Widget>[
                     TextButton(
-                      child: const Icon(Icons.thumb_up_alt_outlined),
                       onPressed: _incrementCounter,
+                      child: const Icon(Icons.thumb_up_alt_outlined),
 
                     ),
                     Text(
