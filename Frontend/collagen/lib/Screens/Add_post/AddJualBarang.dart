@@ -84,7 +84,10 @@ class _AddJualBarang extends State<AddJualBarang> {
                       padding: EdgeInsets.only(top: 80),
                       child: GestureDetector(
                         onTap: (){
-
+                            showModalBottomSheet(
+                                context: context,
+                                builder: ((builder) => bottomsheet(context))
+                            );
                         },
                         child: Column(
                           children: [
@@ -169,6 +172,54 @@ class _AddJualBarang extends State<AddJualBarang> {
             ],
           ),
         )
+      ),
+    );
+  }
+
+  Widget bottomsheet(BuildContext context){
+    return Container(
+      height: 160,
+      width: MediaQuery.of(context).size.width,
+      margin: EdgeInsets.all(20),
+      child: Column(
+        children: [
+          Center(
+            child: Container(
+              width: 80,
+              height: 1,
+              decoration: const BoxDecoration(boxShadow: [
+                BoxShadow(
+                  color: Colors.grey,
+                  blurRadius: 1.0,
+                ),
+              ]),
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            'Pilih Foto',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.black
+            ),
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          TextButton.icon(
+            onPressed: (){},
+            icon: Icon(Icons.photo),
+            label: Text('Galerry'),
+          ),
+          TextButton.icon(
+            onPressed: (){},
+            icon: Icon(Icons.add_a_photo_outlined),
+            label: Text('Camera'),
+          ),
+        ],
       ),
     );
   }
