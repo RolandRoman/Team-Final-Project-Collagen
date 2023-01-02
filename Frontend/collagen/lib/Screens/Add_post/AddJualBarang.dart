@@ -82,18 +82,23 @@ class _AddJualBarang extends State<AddJualBarang> {
                     height: 200,
                     child: Container(
                       padding: EdgeInsets.only(top: 80),
-                      child: Column(
-                        children: [
-                          Icon(Icons.add_a_photo_outlined),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            'Tambahkan Foto',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          )
-                        ],
-                      ),
+                      child: GestureDetector(
+                        onTap: (){
+
+                        },
+                        child: Column(
+                          children: [
+                            Icon(Icons.add_a_photo_outlined),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              'Tambahkan Foto',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            )
+                          ],
+                        ),
+                      )
                     )),
               ),
               const SizedBox(height: 20),

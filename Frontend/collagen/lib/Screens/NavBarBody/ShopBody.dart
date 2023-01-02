@@ -10,6 +10,7 @@ class ShopBody extends StatefulWidget {
 }
 
 class _ShopBody extends State<ShopBody> {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -118,15 +119,15 @@ class Shop1 extends StatelessWidget {
                   children: <Widget>[
                     Expanded(
                         child: Container(
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage('assets/images/Market.png'),
-                                fit: BoxFit.fill),
-                          ),
-                        )),
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/images/Market.png'),
+                            fit: BoxFit.fill),
+                      ),
+                    )),
                     const Padding(
                         padding:
-                        EdgeInsets.only(left: 10.0, bottom: 6, top: 10),
+                            EdgeInsets.only(left: 10.0, bottom: 6, top: 10),
                         child: Text(
                           "Rp. 9000",
                           style: TextStyle(fontSize: 16.0),
@@ -178,15 +179,15 @@ class Shop2 extends StatelessWidget {
                   children: <Widget>[
                     Expanded(
                         child: Container(
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage('assets/images/Market2.png'),
-                                fit: BoxFit.fill),
-                          ),
-                        )),
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/images/Market2.png'),
+                            fit: BoxFit.fill),
+                      ),
+                    )),
                     const Padding(
                         padding:
-                        EdgeInsets.only(left: 10.0, bottom: 6, top: 10),
+                            EdgeInsets.only(left: 10.0, bottom: 6, top: 10),
                         child: Text(
                           "Rp. 9000",
                           style: TextStyle(fontSize: 16.0),
@@ -238,15 +239,15 @@ class Shop3 extends StatelessWidget {
                   children: <Widget>[
                     Expanded(
                         child: Container(
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage('assets/images/Market3.png'),
-                                fit: BoxFit.fill),
-                          ),
-                        )),
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/images/Market3.png'),
+                            fit: BoxFit.fill),
+                      ),
+                    )),
                     const Padding(
                         padding:
-                        EdgeInsets.only(left: 10.0, bottom: 6, top: 10),
+                            EdgeInsets.only(left: 10.0, bottom: 6, top: 10),
                         child: Text(
                           "Rp. 9000",
                           style: TextStyle(fontSize: 16.0),
@@ -298,15 +299,15 @@ class Shop4 extends StatelessWidget {
                   children: <Widget>[
                     Expanded(
                         child: Container(
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage('assets/images/Market4.png'),
-                                fit: BoxFit.fill),
-                          ),
-                        )),
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/images/Market4.png'),
+                            fit: BoxFit.fill),
+                      ),
+                    )),
                     const Padding(
                         padding:
-                        EdgeInsets.only(left: 10.0, bottom: 6, top: 10),
+                            EdgeInsets.only(left: 10.0, bottom: 6, top: 10),
                         child: Text(
                           "Rp. 9000",
                           style: TextStyle(fontSize: 16.0),
@@ -332,4 +333,3 @@ class Shop4 extends StatelessWidget {
                 ))));
   }
 }
-
