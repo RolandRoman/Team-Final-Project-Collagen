@@ -26,6 +26,11 @@ class _FriendProfileBody extends State<FriendProfileBody> {
             ]),
             child: AppBar(
               backgroundColor: Colors.white,
+              leading: IconButton(
+                icon: const Icon(Icons.arrow_back_ios, color: Colors.black,),
+                onPressed: () => Navigator.of(context).pop(),
+              ),
+              automaticallyImplyLeading: false,
               title: const Text("Profile"),
               titleTextStyle: const TextStyle(
                   color: Colors.black,
@@ -38,7 +43,7 @@ class _FriendProfileBody extends State<FriendProfileBody> {
           child: Column(
             children: [
               Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey,
@@ -173,8 +178,10 @@ class _FriendProfileBody extends State<FriendProfileBody> {
                                           ),
                                           Text(
                                             'Teman',
-                                            style:
-                                            TextStyle(color: Colors.blue),
+                                            style: TextStyle(
+                                              color: Colors.blue,
+                                              fontSize: 17
+                                            ),
                                           ),
                                           SizedBox(
                                             width: 5,
@@ -208,18 +215,18 @@ class _FriendProfileBody extends State<FriendProfileBody> {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const [
                   Padding(
-                    padding: const EdgeInsets.symmetric(
+                    padding: EdgeInsets.symmetric(
                         horizontal: (10), vertical: 5),
                     child: Text(
                       'Teman',
-                      style: TextStyle(fontSize: 20,
+                      style: TextStyle(fontSize: 22,
                       fontWeight: FontWeight.bold),
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: (15)),
+                    padding: EdgeInsets.symmetric(horizontal: (15)),
                     child: Text(
                       '30 Teman',
                       style: TextStyle(fontSize: 15),

@@ -42,7 +42,7 @@ class _ProfileBody extends State<ProfileBody> {
           child: Column(
             children: [
               Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey,
@@ -150,18 +150,18 @@ class _ProfileBody extends State<ProfileBody> {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const [
                   Padding(
-                    padding: const EdgeInsets.symmetric(
+                    padding: EdgeInsets.symmetric(
                         horizontal: (10), vertical: 5),
                     child: Text(
                       'Teman',
-                      style: TextStyle(fontSize: 25,
+                      style: TextStyle(fontSize: 22,
                       fontWeight: FontWeight.bold),
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: (15)),
+                    padding: EdgeInsets.symmetric(horizontal: (15)),
                     child: Text(
                       '30 Teman',
                       style: TextStyle(fontSize: 15),
