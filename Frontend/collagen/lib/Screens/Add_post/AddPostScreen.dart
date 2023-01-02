@@ -143,12 +143,22 @@ class AddPostScreen extends StatelessWidget {
                       children: [
                         IconButton(
                             alignment: AlignmentDirectional.centerStart,
-                            onPressed: (){},
+                            onPressed: () {
+                              showModalBottomSheet(
+                                  context: context,
+                                  builder: ((builder) => bottomsheet(context))
+                              );
+                            },
                             icon: Icon(Icons.image)
                         ),
                         IconButton(
                             alignment: AlignmentDirectional.centerStart,
-                            onPressed: (){},
+                            onPressed: () {
+                              showModalBottomSheet(
+                                  context: context,
+                                  builder: ((builder) => bottomsheet2(context))
+                              );
+                            },
                             icon: Icon(Icons.videocam_sharp)
                         ),
                         IconButton(
@@ -172,3 +182,101 @@ class AddPostScreen extends StatelessWidget {
     );
   }
 }
+
+Widget bottomsheet(BuildContext context){
+  return Container(
+    height: 160,
+    width: MediaQuery.of(context).size.width,
+    margin: EdgeInsets.all(20),
+    child: Column(
+      children: [
+        Center(
+          child: Container(
+            width: 80,
+            height: 1,
+            decoration: const BoxDecoration(boxShadow: [
+              BoxShadow(
+                color: Colors.grey,
+                blurRadius: 1.0,
+              ),
+            ]),
+          ),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Text(
+          'Pilih Foto',
+          style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.black
+          ),
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        TextButton.icon(
+          onPressed: (){},
+          icon: Icon(Icons.photo),
+          label: Text('Galerry'),
+        ),
+        TextButton.icon(
+          onPressed: (){},
+          icon: Icon(Icons.add_a_photo_outlined),
+          label: Text('Camera'),
+        ),
+      ],
+    ),
+  );
+}
+
+Widget bottomsheet2(BuildContext context){
+  return Container(
+    height: 160,
+    width: MediaQuery.of(context).size.width,
+    margin: EdgeInsets.all(20),
+    child: Column(
+      children: [
+        Center(
+          child: Container(
+            width: 80,
+            height: 1,
+            decoration: const BoxDecoration(boxShadow: [
+              BoxShadow(
+                color: Colors.grey,
+                blurRadius: 1.0,
+              ),
+            ]),
+          ),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Text(
+          'Pilih Video',
+          style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.black
+          ),
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        TextButton.icon(
+          onPressed: (){},
+          icon: Icon(Icons.photo),
+          label: Text('Galerry'),
+        ),
+        TextButton.icon(
+          onPressed: (){},
+          icon: Icon(Icons.add_a_photo_outlined),
+          label: Text('Camera'),
+        ),
+      ],
+    ),
+  );
+}
+
+
