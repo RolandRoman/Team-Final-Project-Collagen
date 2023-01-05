@@ -1,4 +1,5 @@
 import 'package:collagen/Screens/NavBarBody/friend/FriendProfileBody.dart';
+import 'package:collagen/Components/Register/syarat_dan_ketentuan/PolicyDialog.dart';
 import 'package:flutter/material.dart';
 
 import 'HomeBody.dart';
@@ -35,6 +36,20 @@ class _ProfileBody extends State<ProfileBody> {
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
                   fontSize: 26),
+              actions: [
+                IconButton(
+                  icon: const Icon(
+                    Icons.menu,
+                    color: Colors.black,
+                  ),
+                  onPressed: () {
+                    showModalBottomSheet(
+                        context: context,
+                        builder: ((builder) => bottomsheet(context))
+                    );
+                  },
+                ),
+              ],
             ),
           ),
         ),
@@ -414,4 +429,87 @@ class _ProfileBody extends State<ProfileBody> {
       ),
     );
   }
+}
+
+Widget bottomsheet(BuildContext context){
+  return Container(
+    height: 120,
+    width: MediaQuery.of(context).size.width,
+    margin: EdgeInsets.all(20),
+    child: Column(
+      children: [
+        Center(
+          child: Container(
+            width: 80,
+            height: 1,
+            decoration: const BoxDecoration(boxShadow: [
+              BoxShadow(
+                color: Colors.grey,
+                blurRadius: 1.0,
+              ),
+            ]),
+          ),
+        ),
+        TextButton(
+            onPressed: (){
+              showDialog(
+                context: context,
+                builder: (context) {
+                  return PolicyDialog(
+                    mdFileName: 'kp.md',
+                  );
+                },
+              );
+            },
+            child: Center(
+              child: Padding(
+                  padding: const EdgeInsets.only(left: 10.0, bottom: 10),
+                  child: Row(
+                    children: const <Widget>[
+                      Icon(Icons.privacy_tip,
+                        color: Colors.blue,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text("Kebijakan Privasi",
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),)
+                    ],
+                  )),
+            )),
+        TextButton(
+            onPressed: (){
+              showDialog(
+                context: context,
+                builder: (context) {
+                  return PolicyDialog(
+                    mdFileName: 'snk.md',
+                  );
+                },
+              );
+            },
+            child: Center(
+              child: Padding(
+                  padding: const EdgeInsets.only(left: 10.0, bottom: 10),
+                  child: Row(
+                    children: const <Widget>[
+                      Icon(Icons.privacy_tip,
+                        color: Colors.blue,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text("Syarat dan Ketentuan",
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),)
+                    ],
+                  )),
+            )),
+
+      ],
+    ),
+  );
 }
