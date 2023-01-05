@@ -6,17 +6,17 @@ Syarat dan ketentuan berikut menjelaskan peraturan dan ketentuan penggunaan Webs
 
 Dengan mengakses website ini, kami menganggap Anda telah menyetujui syarat dan ketentuan ini. Jangan lanjutkan penggunaan Collagen jika Anda menolak untuk menyetujui semua syarat dan ketentuan yang tercantum di halaman ini.
 
-Cookie:
+### Cookie:
 Website ini menggunakan cookie untuk mempersonalisasi pengalaman online Anda. Dengan mengakses Collagen, Anda menyetujui penggunaan cookie yang diperlukan.
 
 Cookie merupakan file teks yang ditempatkan pada hard disk Anda oleh server halaman web. Cookie tidak dapat digunakan untuk menjalankan program atau mengirimkan virus ke komputer Anda. Cookie yang diberikan telah disesuaikan untuk Anda dan hanya dapat dibaca oleh web server pada domain yang mengirimkan cookie tersebut kepada Anda.
 
 Kami dapat menggunakan cookie untuk mengumpulkan, menyimpan, dan melacak informasi untuk keperluan statistik dan pemasaran untuk mengoperasikan website kami. Ada beberapa Cookie wajib yang diperlukan untuk pengoperasian website kami. Cookie ini tidak memerlukan persetujuan Anda karena akan selalu aktif. Perlu diketahui bahwa dengan menyetujui Cookie wajib, Anda juga menyetujui Cookie pihak ketiga, yang mungkin digunakan melalui layanan yang disediakan oleh pihak ketiga jika Anda menggunakan layanan tersebut di website kami, misalnya, jendela tampilan video yang disediakan oleh pihak ketiga dan terintegrasi dengan website kami.
 
-Lisensi:
+### Lisensi:
 Kecuali dinyatakan lain, Collagen dan/atau pemberi lisensinya memiliki hak kekayaan intelektual atas semua materi di Collagen. Semua hak kekayaan intelektual dilindungi undang-undang. Anda dapat mengaksesnya dari Collagen untuk penggunaan pribadi Anda sendiri dengan batasan yang diatur dalam syarat dan ketentuan ini.
 
-Anda dilarang untuk:
+### Anda dilarang untuk:
 
 Menyalin atau menerbitkan ulang materi dari Collagen
 Menjual, menyewakan, atau mensublisensikan materi dari Collagen
@@ -28,7 +28,7 @@ Beberapa bagian website ini menawarkan kesempatan bagi pengguna untuk memposting
 
 Collagen berhak memantau semua Komentar dan menghapus Komentar apa pun yang dianggap tidak pantas, menyinggung, atau menyebabkan pelanggaran terhadap Syarat dan Ketentuan ini.
 
-Anda menjamin dan menyatakan bahwa:
+### Anda menjamin dan menyatakan bahwa:
 
 Anda berhak memposting Komentar di website kami serta memiliki semua lisensi dan persetujuan yang diperlukan untuk melakukannya;
 Komentar tidak melanggar hak kekayaan intelektual apa pun, termasuk tetapi tidak terbatas pada, hak cipta, paten, atau merek dagang pihak ketiga mana pun;
@@ -68,18 +68,18 @@ Dengan menggunakan Uniform Resource Locator yang ditautkan; atau
 Dengan menggunakan deskripsi lain dari Website kami yang ditautkan yang masuk akal dalam konteks dan format konten di website pihak yang menautkan.
 Tidak ada penggunaan logo Collagen atau karya seni lainnya yang diizinkan untuk menautkan perjanjian lisensi merek dagang.
 
-Tanggung jawab atas Konten:
+### Tanggung jawab atas Konten:
 Kami tidak akan bertanggung jawab atas konten yang muncul di Website Anda. Anda setuju untuk melindungi dan membela kami terhadap semua klaim yang diajukan atas Website Anda. Tidak ada tautan yang muncul di Website mana pun yang dapat dianggap sebagai memfitnah, cabul, atau kriminal, atau yang menyalahi, atau melanggar, atau mendukung pelanggaran lain terhadap hak pihak ketiga.
 
-Pernyataan Kepemilikan Hak:
+### Pernyataan Kepemilikan Hak:
 Kami berhak meminta Anda menghapus semua tautan atau tautan tertentu yang menuju ke Website kami. Anda setuju untuk segera menghapus semua tautan ke Website kami sesuai permintaan. Kami juga berhak mengubah syarat ketentuan ini dan kebijakan penautannya kapan saja. Dengan terus menautkan ke Website kami, Anda setuju untuk terikat dan mematuhi syarat dan ketentuan penautan ini.
 
-Penghapusan tautan dari website kami:
+### Penghapusan tautan dari website kami:
 Jika Anda menemukan tautan di Website kami yang bersifat menyinggung karena alasan apa pun, Anda bebas menghubungi dan memberi tahu kami kapan saja. Kami akan mempertimbangkan permintaan untuk menghapus tautan, tetapi kami tidak berkewajiban untuk menanggapi Anda secara langsung.
 
 Kami tidak memastikan bahwa informasi di website ini benar. Kami tidak menjamin kelengkapan atau keakuratannya, dan kami juga tidak berjanji untuk memastikan bahwa website tetap tersedia atau materi di website selalu diperbarui.
 
-Penolakan:
+### Penolakan:
 Sejauh diizinkan oleh undang-undang yang berlaku, kami mengecualikan semua representasi, jaminan, dan ketentuan yang berkaitan dengan website kami dan penggunaan website ini. Tidak ada bagian dari penolakan ini yang akan:
 
 membatasi atau mengecualikan tanggung jawab kami atau Anda terhadap kematian atau cedera pribadi;
