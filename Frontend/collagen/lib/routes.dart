@@ -1,4 +1,3 @@
-import 'package:collagen/Screens/Add_Post/AddFriendScreen.dart';
 import 'package:collagen/Screens/Add_Post/AddPostScreen.dart';
 import 'package:collagen/Screens/Add_post/AddJualBarang.dart';
 import 'package:collagen/Screens/Homepage/HomePageScreen.dart';
@@ -33,7 +32,6 @@ final Map<String, WidgetBuilder> routes = {
   CommentBody.routeName: (context) => CommentBody(),
   AddPostScreen.routeName: (context) => AddPostScreen(),
   EditPostScreen.routeName: (context) => AddPostScreen(),
-  AddPostScreen.routeName: (context) => AddFriendScreen(),
   ChatBody.routeName: (context) => ChatBody(),
   DetailShopBody.routeName: (context) => DetailShopBody(),
   AddJualBarang.routeName: (context) => AddJualBarang(),

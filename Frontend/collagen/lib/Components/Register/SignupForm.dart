@@ -1,3 +1,4 @@
+import 'package:collagen/Components/Register/syarat_dan_ketentuan/PolicyDialog.dart';
 import 'package:collagen/Screens/InputData/InputDataScreen.dart';
 import 'package:collagen/utils/constants.dart';
 import 'package:flutter/gestures.dart';
@@ -110,24 +111,48 @@ class _SignupForm extends State<SignupForm> {
                     text: TextSpan(
                   children: [
                     TextSpan(
-                        text: "Saya setuju dengan semua",
+                        text: "Saya setuju dengan semua ",
                         style: TextStyle(
                           color: Colors.black,
                         )),
                     TextSpan(
                         recognizer: TapGestureRecognizer()
-                          ..onTap = () => {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => InputDataScreen()),
-                                )
+                          ..onTap = () {
+                            showDialog(
+                              context: context,
+                              builder: (context) {
+                                return PolicyDialog(
+                                  mdFileName: 'snk.md',
+                                );
                               },
-                        text: " syarat dan ketentuan",
+                            );
+                          },
+                        text: "syarat dan ketentuan",
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.underline,
+                        )),
+                    TextSpan(
+                        text: " serta ",
+                        style: TextStyle(
+                          color: Colors.black,
+                        )),
+                    TextSpan(
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            showDialog(
+                              context: context,
+                              builder: (context) {
+                                return PolicyDialog(
+                                  mdFileName: 'kp.md',
+                                );
+                              },
+                            );
+                          },
+                        text: "Kebijakan privasi",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
                         )),
                     TextSpan(
                         text: " yang berlaku",
