@@ -1,3 +1,4 @@
+import 'package:collagen/Components/Register/syarat_dan_ketentuan/snkDialog.dart';
 import 'package:collagen/Screens/InputData/InputDataScreen.dart';
 import 'package:collagen/utils/constants.dart';
 import 'package:flutter/gestures.dart';
@@ -116,13 +117,16 @@ class _SignupForm extends State<SignupForm> {
                         )),
                     TextSpan(
                         recognizer: TapGestureRecognizer()
-                          ..onTap = () => {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => InputDataScreen()),
-                                )
+                          ..onTap = () {
+                            showDialog(
+                              context: context,
+                              builder: (context) {
+                                return PolicyDialog(
+                                  mdFileName: 'snk.md',
+                                );
                               },
+                            );
+                          },
                         text: " syarat dan ketentuan",
                         style: TextStyle(
                           color: Colors.black,
