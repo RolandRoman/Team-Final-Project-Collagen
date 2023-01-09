@@ -20,7 +20,7 @@ class _SignupForm extends State<SignupForm> {
 
   TextEditingController txtUserName = TextEditingController();
   TextEditingController txtTelephoneNumber = TextEditingController();
-  TextEditingController txtEmailMahasiswa = TextEditingController();
+  TextEditingController txtEmail = TextEditingController();
   TextEditingController txtPassword = TextEditingController();
 
   FocusNode focusNode = FocusNode();
@@ -32,7 +32,7 @@ class _SignupForm extends State<SignupForm> {
       child: Column(
         children: [
           DefaultTextStyle.merge(
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.black, fontSize: 15, fontWeight: FontWeight.bold),
             child: Row(
               children: const [
@@ -41,9 +41,9 @@ class _SignupForm extends State<SignupForm> {
             ),
           ),
           buildUserName(),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           DefaultTextStyle.merge(
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.black, fontSize: 15, fontWeight: FontWeight.bold),
             child: Row(
               children: const [
@@ -52,20 +52,20 @@ class _SignupForm extends State<SignupForm> {
             ),
           ),
           buildTelephoneNumber(),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           DefaultTextStyle.merge(
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.black, fontSize: 15, fontWeight: FontWeight.bold),
             child: Row(
               children: const [
-                Text("E-mail Mahasiswa"),
+                Text("E-mail"),
               ],
             ),
           ),
           buildEmailMahasiswa(),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           DefaultTextStyle.merge(
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.black, fontSize: 15, fontWeight: FontWeight.bold),
             child: Row(
               children: const [
@@ -74,13 +74,13 @@ class _SignupForm extends State<SignupForm> {
             ),
           ),
           buildPassword(),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Container(
             width: 400,
             height: 45,
             child: TextButton(
               style: TextButton.styleFrom(
-                backgroundColor: Color(0xff3167FF),
+                backgroundColor: const Color(0xff3167FF),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
@@ -110,7 +110,7 @@ class _SignupForm extends State<SignupForm> {
                 child: RichText(
                     text: TextSpan(
                   children: [
-                    TextSpan(
+                    const TextSpan(
                         text: "Saya setuju dengan semua ",
                         style: TextStyle(
                           color: Colors.black,
@@ -128,11 +128,11 @@ class _SignupForm extends State<SignupForm> {
                             );
                           },
                         text: "syarat dan ketentuan",
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
                         )),
-                    TextSpan(
+                    const TextSpan(
                         text: " serta ",
                         style: TextStyle(
                           color: Colors.black,
@@ -150,11 +150,11 @@ class _SignupForm extends State<SignupForm> {
                             );
                           },
                         text: "Kebijakan privasi",
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
                         )),
-                    TextSpan(
+                    const TextSpan(
                         text: " yang berlaku",
                         style: TextStyle(
                           color: Colors.black,
@@ -178,7 +178,7 @@ class _SignupForm extends State<SignupForm> {
       keyboardType: TextInputType.text,
       style: mTitleStyle,
       decoration: InputDecoration(
-        contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+        contentPadding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
         hintText: 'Masukkan Nama Pengguna',
         labelStyle:
             TextStyle(color: focusNode.hasFocus ? mTitleColor : kPrimaryColor),
@@ -193,7 +193,7 @@ class _SignupForm extends State<SignupForm> {
       keyboardType: TextInputType.text,
       style: mTitleStyle,
       decoration: InputDecoration(
-        contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+        contentPadding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
         hintText: 'Masukkan Nomor Telepon',
         labelStyle: TextStyle(
             color: focusNode.hasFocus ? mSubtitleColor : kPrimaryColor),
@@ -204,11 +204,11 @@ class _SignupForm extends State<SignupForm> {
 
   TextFormField buildEmailMahasiswa() {
     return TextFormField(
-      controller: txtEmailMahasiswa,
+      controller: txtEmail,
       keyboardType: TextInputType.text,
       style: mTitleStyle,
       decoration: InputDecoration(
-        contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+        contentPadding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
         hintText: 'Contoh: xxxxx_1234@mhs.unj.ac.id',
         labelStyle: TextStyle(
             color: focusNode.hasFocus ? mSubtitleColor : kPrimaryColor),
@@ -223,7 +223,7 @@ class _SignupForm extends State<SignupForm> {
       obscureText: true,
       style: mTitleStyle,
       decoration: InputDecoration(
-        contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+        contentPadding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
         hintText: 'Masukkan Kata Sandi',
         labelStyle: TextStyle(
             color: focusNode.hasFocus ? mSubtitleColor : kPrimaryColor),

@@ -14,13 +14,18 @@ class SignInForm extends StatefulWidget {
 }
 
 class _SignInForm extends State<SignInForm> {
-  String? username;
-  String? password;
 
-  TextEditingController txtUserName = TextEditingController();
+  TextEditingController txtEmail = TextEditingController();
   TextEditingController txtPassword = TextEditingController();
 
   FocusNode focusNode = FocusNode();
+  @override
+  void dispose(){
+    txtEmail.dispose();
+    txtPassword.dispose();
+
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,9 +37,12 @@ class _SignInForm extends State<SignInForm> {
                 color: Colors.black, fontSize: 15, fontWeight: FontWeight.bold),
             child: Row(
               children: const [
-                Text("Nama Pengguna"),
+                Text("Email Pengguna"),
               ],
             ),
+          ),
+          const SizedBox(
+            height: 5,
           ),
           buildUserName(),
 
@@ -47,6 +55,9 @@ class _SignInForm extends State<SignInForm> {
                 Text("Kata Sandi"),
               ],
             ),
+          ),
+          const SizedBox(
+            height: 5,
           ),
           buildPassword(),
 
@@ -102,11 +113,12 @@ class _SignInForm extends State<SignInForm> {
 
   TextFormField buildUserName() {
     return TextFormField(
-      controller: txtUserName,
+      controller: txtEmail,
+      textInputAction: TextInputAction.next,
       keyboardType: TextInputType.text,
       style: mTitleStyle,
       decoration: InputDecoration(
-        hintText: 'Masukkan Nama Pengguna',
+        hintText: 'Masukkan Email',
         contentPadding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(32)),
         labelStyle:
@@ -119,6 +131,7 @@ class _SignInForm extends State<SignInForm> {
   TextFormField buildPassword() {
     return TextFormField(
       controller: txtPassword,
+      textInputAction: TextInputAction.done,
       obscureText: true,
       style: mTitleStyle,
       decoration: InputDecoration(

@@ -73,76 +73,74 @@ class _ProfileBody extends State<ProfileBody> {
                   children: [
                     Row(
                       children: [
-                        Container(
-                          child: Padding(
-                            padding:
-                                EdgeInsets.only(left: 10, top: 20, bottom: 20),
-                            child: Row(
-                              children: [
-                                Image.asset(
-                                  "assets/images/Picture1.png",
-                                  scale: 0.45,
-                                ),
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Title(
-                                      color: Colors.white,
-                                      child: const Text(
-                                        "Muhammad Shafwan Maulana",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.bold),
-                                        textAlign: TextAlign.left,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 8,
-                                    ),
-                                    const Text(
-                                      "Universitas Indonesia",
+                        Padding(
+                          padding:
+                              const EdgeInsets.only(left: 10, top: 20, bottom: 20),
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                "assets/images/Picture1.png",
+                                scale: 0.45,
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Title(
+                                    color: Colors.white,
+                                    child: const Text(
+                                      "Muhammad Shafwan Maulana",
                                       style: TextStyle(
-                                          fontSize: 15, color: Colors.white),
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
                                       textAlign: TextAlign.left,
                                     ),
-                                    SizedBox(
-                                      height: 8,
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  const Text(
+                                    "Universitas Indonesia",
+                                    style: TextStyle(
+                                        fontSize: 15, color: Colors.white),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  ElevatedButton(
+                                    onPressed: () {},
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.white,
                                     ),
-                                    ElevatedButton(
-                                      onPressed: () {},
-                                      style: ElevatedButton.styleFrom(
-                                        backgroundColor: Colors.white,
-                                      ),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: const [
-                                          Icon(
-                                            Icons.edit,
-                                            size: 20.0,
-                                            color: Colors.blue,
-                                          ),
-                                          SizedBox(
-                                            width: 5,
-                                          ),
-                                          Text(
-                                            'Profile',
-                                            style:
-                                                TextStyle(color: Colors.blue),
-                                          ),
-                                          SizedBox(
-                                            width: 5,
-                                          )
-                                        ],
-                                      ),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: const [
+                                        Icon(
+                                          Icons.edit,
+                                          size: 20.0,
+                                          color: Colors.blue,
+                                        ),
+                                        SizedBox(
+                                          width: 5,
+                                        ),
+                                        Text(
+                                          'Profile',
+                                          style:
+                                              TextStyle(color: Colors.blue),
+                                        ),
+                                        SizedBox(
+                                          width: 5,
+                                        )
+                                      ],
                                     ),
-                                  ],
-                                ),
-                              ],
-                            ),
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
                         ),
                       ],
@@ -150,7 +148,7 @@ class _ProfileBody extends State<ProfileBody> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
@@ -195,7 +193,7 @@ class _ProfileBody extends State<ProfileBody> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => FriendProfileBody()),
+                                builder: (context) => const FriendProfileBody()),
                           );
                         },
                         child:                       SizedBox(
@@ -206,10 +204,10 @@ class _ProfileBody extends State<ProfileBody> {
                             child: Column(
                               children: [
                                 Image.asset('assets/images/Market.png'),
-                                SizedBox(
+                                const SizedBox(
                                   height: 5,
                                 ),
-                                Text(
+                                const Text(
                                   'Digra Izham',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
@@ -227,7 +225,7 @@ class _ProfileBody extends State<ProfileBody> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => FriendProfileBody()),
+                                builder: (context) => const FriendProfileBody()),
                           );
                         },
                         child:                       SizedBox(
@@ -238,10 +236,10 @@ class _ProfileBody extends State<ProfileBody> {
                             child: Column(
                               children: [
                                 Image.asset('assets/images/Market.png'),
-                                SizedBox(
+                                const SizedBox(
                                   height: 5,
                                 ),
-                                Text(
+                                const Text(
                                   'Digra Izham',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
@@ -259,7 +257,7 @@ class _ProfileBody extends State<ProfileBody> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => FriendProfileBody()),
+                                builder: (context) => const FriendProfileBody()),
                           );
                         },
                         child:                       SizedBox(
@@ -270,10 +268,10 @@ class _ProfileBody extends State<ProfileBody> {
                             child: Column(
                               children: [
                                 Image.asset('assets/images/Market.png'),
-                                SizedBox(
+                                const SizedBox(
                                   height: 5,
                                 ),
-                                Text(
+                                const Text(
                                   'Digra Izham',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
@@ -291,7 +289,7 @@ class _ProfileBody extends State<ProfileBody> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => FriendProfileBody()),
+                                builder: (context) => const FriendProfileBody()),
                           );
                         },
                         child:                       SizedBox(
@@ -302,10 +300,10 @@ class _ProfileBody extends State<ProfileBody> {
                             child: Column(
                               children: [
                                 Image.asset('assets/images/Market.png'),
-                                SizedBox(
+                                const SizedBox(
                                   height: 5,
                                 ),
-                                Text(
+                                const Text(
                                   'Digra Izham',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
@@ -323,7 +321,7 @@ class _ProfileBody extends State<ProfileBody> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => FriendProfileBody()),
+                                builder: (context) => const FriendProfileBody()),
                           );
                         },
                         child:                       SizedBox(
@@ -334,10 +332,10 @@ class _ProfileBody extends State<ProfileBody> {
                             child: Column(
                               children: [
                                 Image.asset('assets/images/Market.png'),
-                                SizedBox(
+                                const SizedBox(
                                   height: 5,
                                 ),
-                                Text(
+                                const Text(
                                   'Digra Izham',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
@@ -355,7 +353,7 @@ class _ProfileBody extends State<ProfileBody> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => FriendProfileBody()),
+                                builder: (context) => const FriendProfileBody()),
                           );
                         },
                         child:                       SizedBox(
@@ -366,10 +364,10 @@ class _ProfileBody extends State<ProfileBody> {
                             child: Column(
                               children: [
                                 Image.asset('assets/images/Market.png'),
-                                SizedBox(
+                                const SizedBox(
                                   height: 5,
                                 ),
-                                Text(
+                                const Text(
                                   'Digra Izham',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
@@ -386,13 +384,13 @@ class _ProfileBody extends State<ProfileBody> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               Center(
                 child: TextButton(
                   onPressed: () {},
-                  child: Text(
+                  child: const Text(
                     'Lihat Semua',
                     style: TextStyle(
                         color: Color(0xff3169FF), fontWeight: FontWeight.bold),
@@ -409,9 +407,9 @@ class _ProfileBody extends State<ProfileBody> {
                   ),
                 ]),
               ),
-              Padding(
+              const Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: (10), vertical: 10),
+                    EdgeInsets.symmetric(horizontal: (10), vertical: 10),
                 child: SizedBox(
                   width: 400,
                   child: Text('Postingan',
@@ -421,8 +419,8 @@ class _ProfileBody extends State<ProfileBody> {
                     ),),
                 ),
               ),
-              Post1(),
-              Post2()
+              const Post1(),
+              const Post2()
             ],
           ),
         ),
@@ -435,81 +433,104 @@ Widget bottomsheet(BuildContext context){
   return Container(
     height: 120,
     width: MediaQuery.of(context).size.width,
-    margin: EdgeInsets.all(20),
-    child: Column(
-      children: [
-        Center(
-          child: Container(
-            width: 80,
-            height: 1,
-            decoration: const BoxDecoration(boxShadow: [
-              BoxShadow(
-                color: Colors.grey,
-                blurRadius: 1.0,
-              ),
-            ]),
+    margin: const EdgeInsets.all(20),
+    child: SingleChildScrollView(
+      child: Column(
+        children: [
+          Center(
+            child: Container(
+              width: 80,
+              height: 1,
+              decoration: const BoxDecoration(boxShadow: [
+                BoxShadow(
+                  color: Colors.grey,
+                  blurRadius: 1.0,
+                ),
+              ]),
+            ),
           ),
-        ),
-        TextButton(
-            onPressed: (){
-              showDialog(
-                context: context,
-                builder: (context) {
-                  return PolicyDialog(
-                    mdFileName: 'kp.md',
-                  );
-                },
-              );
-            },
-            child: Center(
-              child: Padding(
+          TextButton(
+              onPressed: (){
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return PolicyDialog(
+                      mdFileName: 'kp.md',
+                    );
+                  },
+                );
+              },
+              child: Center(
+                child: Padding(
+                    padding: const EdgeInsets.only(left: 10.0, bottom: 10),
+                    child: Row(
+                      children: const <Widget>[
+                        Icon(Icons.privacy_tip,
+                          color: Colors.blue,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Text("Kebijakan Privasi",
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),)
+                      ],
+                    )),
+              )),
+          TextButton(
+              onPressed: (){
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return PolicyDialog(
+                      mdFileName: 'snk.md',
+                    );
+                  },
+                );
+              },
+              child: Center(
+                child: Padding(
+                    padding: const EdgeInsets.only(left: 10.0, bottom: 10),
+                    child: Row(
+                      children: const <Widget>[
+                        Icon(Icons.privacy_tip,
+                          color: Colors.blue,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Text("Syarat dan Ketentuan",
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),)
+                      ],
+                    )),
+              )),
+          TextButton(
+              onPressed: (){},
+              child: Center(
+                child: Padding(
                   padding: const EdgeInsets.only(left: 10.0, bottom: 10),
                   child: Row(
-                    children: const <Widget>[
-                      Icon(Icons.privacy_tip,
+                    children: const <Widget> [
+                      Icon(Icons.logout,
                         color: Colors.blue,
                       ),
                       SizedBox(
                         width: 5,
                       ),
-                      Text("Kebijakan Privasi",
+                      Text("Log Out",
                         style: TextStyle(
                           color: Colors.black,
                         ),)
                     ],
-                  )),
-            )),
-        TextButton(
-            onPressed: (){
-              showDialog(
-                context: context,
-                builder: (context) {
-                  return PolicyDialog(
-                    mdFileName: 'snk.md',
-                  );
-                },
-              );
-            },
-            child: Center(
-              child: Padding(
-                  padding: const EdgeInsets.only(left: 10.0, bottom: 10),
-                  child: Row(
-                    children: const <Widget>[
-                      Icon(Icons.privacy_tip,
-                        color: Colors.blue,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text("Syarat dan Ketentuan",
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),)
-                    ],
-                  )),
-            )),
-
-      ],
-    ),
+                  ),
+                ),
+              )
+          )
+        ],
+      ),
+    )
   );
 }
