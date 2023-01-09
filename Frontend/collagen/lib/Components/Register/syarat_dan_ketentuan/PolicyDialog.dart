@@ -6,7 +6,7 @@ class PolicyDialog extends StatelessWidget {
   PolicyDialog({
     this.radius = 8,
     required this.mdFileName,
-  })  : assert(mdFileName.contains('.md'), 'The file must contain the .md extension'),
+  })  : assert(mdFileName.contains('.md')),
         super();
 
   final double radius;
