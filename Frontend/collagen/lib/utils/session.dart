@@ -1,4 +1,4 @@
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:shared_preferences/shared_preferences.dart'show SharedPreferences;
 
 class Session {
   static final String ACCOUNT_SESSION_KEY = 'accountModel';
