@@ -122,6 +122,112 @@ class CommonProvider extends ChangeNotifier {
         return true;
       }
     }
+    
+    Future<dynamic> getuser(String contentId) async {
+    final url = Uri.parse("${api_service.SOCMED_END_POINT}/user");
+    final response = await http.get(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    });
+
+    print('${url} ${response.body}');
+    if (response.statusCode == 200) {
+      final result = json.decode(response.body);
+      return result.fromJson(result);
+    } else {
+      return null;
+      throw Exception();
+    }
+  }
+
+  Future<dynamic> getuserid(String contentId) async {
+    final url = Uri.parse("${api_service.SOCMED_END_POINT}/user/{id}");
+    final response = await http.get(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    });
+
+    print('${url} ${response.body}');
+    if (response.statusCode == 200) {
+      final result = json.decode(response.body);
+      return result.fromJson(result);
+    } else {
+      return null;
+      throw Exception();
+    }
+  }
+
+  Future<dynamic> userid(String email, String password, String username) async {
+    final url = Uri.parse('${api_service.SOCMED_END_POINT}/user/{id}');
+    final response = await http.patch(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    }, body: {
+      'email': email,
+      'password': password,
+      'username': username
+    });
+
+    print('${url} response.body');
+
+    final result = json.decode(response.body);
+    if (response.statusCode == 200) {
+      return true;
+    }
+    return false;
+  }
+    
+   // DELETE
+    
+    Future<dynamic> getuserbiodata(String contentId) async {
+    final url = Uri.parse("${api_service.SOCMED_END_POINT}/user-biodata");
+    final response = await http.get(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    });
+
+    print('${url} ${response.body}');
+    if (response.statusCode == 200) {
+      final result = json.decode(response.body);
+      return result.fromJson(result);
+    } else {
+      return null;
+      throw Exception();
+    }
+  }
+
+  Future<dynamic> getuserbiodataid(String contentId) async {
+    final url = Uri.parse('${api_service.SOCMED_END_POINT}/user-biodata/{id}');
+    final response = await http.get(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    });
+
+    print('${url} ${response.body}');
+    if (response.statusCode == 200) {
+      final result = json.decode(response.body);
+      return result.fromJson(result);
+    } else {
+      return null;
+      throw Exception();
+    }
+  }
+
+  Future<dynamic> user_biodata(String name, String birthday, String gender) async {
+    final url = Uri.parse('${api_service.SOCMED_END_POINT}/user-bioata/{id}');
+    final response = await http.patch(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    }, body: {
+      'name': name,
+      'date_of_birth': birthday,
+      'gender': gender,
+      'university_id': 0,
+      'major_id': 0
+    });
+
+    print('${url} response.body');
+
+    final result = json.decode(response.body);
+    if (response.statusCode == 200) {
+      return true;
+    }
+    return false;
+  }
 
     Future<dynamic> university(String name) async {
       final url = Uri.parse('${api_service.SOCMED_END_POINT}/user/university');
