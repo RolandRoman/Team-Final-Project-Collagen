@@ -122,97 +122,399 @@ class CommonProvider extends ChangeNotifier {
         return true;
       }
     }
+    
+    Future<dynamic> getuser(String contentId) async {
+    final url = Uri.parse("${api_service.SOCMED_END_POINT}/user");
+    final response = await http.get(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    });
 
-    Future<dynamic> university(String name) async {
-      final url = Uri.parse('${api_service.SOCMED_END_POINT}/user/university');
-      final response = await http.post(url, body: {
-        'name': name,
-      });
-
-      print('${url} response.body');
-
+    print('${url} ${response.body}');
+    if (response.statusCode == 200) {
       final result = json.decode(response.body);
-      if (response.statusCode == 200) {
-        if (result['success']) {
-          await Session.set(Session.NAME_KEY, name);
-          await Session.set(
-              Session.REASON, result['reason'] == null ? '' : result['reason']);
-
-          //await getMyProfile();
-          return true;
-        }
-        return true;
-      }
-    }
-
-    Future<dynamic> major(String name) async {
-      final url = Uri.parse('${api_service.SOCMED_END_POINT}/user/major');
-      final response = await http.post(url, body: {
-        'name': name,
-      });
-
-      print('${url} response.body');
-
-      final result = json.decode(response.body);
-      if (response.statusCode == 200) {
-        if (result['success']) {
-          await Session.set(Session.NAME_KEY, name);
-          await Session.set(
-              Session.REASON, result['reason'] == null ? '' : result['reason']);
-
-          //await getMyProfile();
-          return true;
-        }
-        return true;
-      }
-    }
-
-    Future<dynamic> friendslist(String name) async {
-      final url = Uri.parse('${api_service.SOCMED_END_POINT}/user/friend-list');
-      final response = await http.post(url,
-          body: {'user_id': 0, 'target_user_id': 0, 'is_friend': true});
-
-      print('${url} response.body');
-
-      final result = json.decode(response.body);
-      if (response.statusCode == 200) {
-        if (result['success']) {
-          await Session.set(
-              Session.REASON, result['reason'] == null ? '' : result['reason']);
-
-          return true;
-        }
-        return true;
-      }
-    }
-
-    Future<dynamic> blocklist(String name) async {
-      final url = Uri.parse('${api_service.SOCMED_END_POINT}/user/block-list');
-      final response = await http.post(url,
-          body: {'user_id': 0, 'target_user_id': 0, 'is_blocked': true});
-
-      print('${url} response.body');
-
-      final result = json.decode(response.body);
-      if (response.statusCode == 200) {
-        if (result['success']) {
-          await Session.set(
-              Session.REASON, result['reason'] == null ? '' : result['reason']);
-
-          return true;
-        }
-        return true;
-      }
+      return result.fromJson(result);
+    } else {
+      return null;
+      throw Exception();
     }
   }
 
+  Future<dynamic> getuserid(String contentId) async {
+    final url = Uri.parse("${api_service.SOCMED_END_POINT}/user/{id}");
+    final response = await http.get(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    });
 
-
-   // }else{
-   //   throw Exception();
-    */
+    print('${url} ${response.body}');
+    if (response.statusCode == 200) {
+      final result = json.decode(response.body);
+      return result.fromJson(result);
+    } else {
+      return null;
+      throw Exception();
+    }
   }
-   return null;
- }
+
+  Future<dynamic> userid(String email, String password, String username) async {
+    final url = Uri.parse('${api_service.SOCMED_END_POINT}/user/{id}');
+    final response = await http.patch(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    }, body: {
+      'email': email,
+      'password': password,
+      'username': username
+    });
+
+    print('${url} response.body');
+
+    final result = json.decode(response.body);
+    if (response.statusCode == 200) {
+      return true;
+    }
+    return false;
+  }
+    
+  //DELETE
+    
+  Future<dynamic> getuserbiodata(String contentId) async {
+    final url = Uri.parse("${api_service.SOCMED_END_POINT}/user-biodata");
+    final response = await http.get(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    });
+
+    print('${url} ${response.body}');
+    if (response.statusCode == 200) {
+      final result = json.decode(response.body);
+      return result.fromJson(result);
+    } else {
+      return null;
+      throw Exception();
+    }
+  }
+
+  Future<dynamic> getuserbiodataid(String contentId) async {
+    final url = Uri.parse('${api_service.SOCMED_END_POINT}/user-biodata/{id}');
+    final response = await http.get(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    });
+
+    print('${url} ${response.body}');
+    if (response.statusCode == 200) {
+      final result = json.decode(response.body);
+      return result.fromJson(result);
+    } else {
+      return null;
+      throw Exception();
+    }
+  }
+
+  Future<dynamic> user_biodata(String name, String birthday, String gender) async {
+    final url = Uri.parse('${api_service.SOCMED_END_POINT}/user-bioata/{id}');
+    final response = await http.patch(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    }, body: {
+      'name': name,
+      'date_of_birth': birthday,
+      'gender': gender,
+      'university_id': 0,
+      'major_id': 0
+    });
+
+    print('${url} response.body');
+
+    final result = json.decode(response.body);
+    if (response.statusCode == 200) {
+      return true;
+    }
+    return false;
+  }
+    
+
+  Future<dynamic> university(String name) async {
+    final url = Uri.parse('${api_service.SOCMED_END_POINT}/user/university');
+    final response = await http.post(url, body: {
+       'name': name,
+    });
+
+    print('${url} response.body');
+
+    final result = json.decode(response.body);
+    if (response.statusCode == 200) {
+      if (result['success']) {
+        await Session.set(Session.NAME_KEY, name);
+        await Session.set(Session.REASON, result['reason'] == null ? '' : result['reason']);
+
+       return true;
+      }
+      return true;
+    }
+  }
+
+  Future<dynamic> getuniversity() async {
+    final url = Uri.parse('${api_service.SOCMED_END_POINT}/university');
+    final response = await http.get(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    });
+
+    print('${url} ${response.body}');
+    if (response.statusCode == 200) {
+      final result = json.decode(response.body);
+      return result.fromJson(result);
+    } else {
+      return null;
+      throw Exception();
+    }
+  }
+
+  Future<dynamic> getuniversityid() async {
+    final url = Uri.parse('${api_service.SOCMED_END_POINT}/university/{id}');
+    final response = await http.get(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    });
+
+    print('${url} ${response.body}');
+    if (response.statusCode == 200) {
+      final result = json.decode(response.body);
+      return result.fromJson(result);
+    } else {
+      return null;
+      throw Exception();
+    }
+  }
+
+  Future<dynamic> university_id(String name) async {
+    final url = Uri.parse('${api_service.SOCMED_END_POINT}/university/{id}');
+    final response = await http.patch(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    }, body: {
+      'name': name,
+    });
+
+    print('${url} response.body');
+
+    final result = json.decode(response.body);
+    if (response.statusCode == 200) {
+      return true;
+    }
+    return false;
+  }
+
+  //DELETE
+
+  Future<dynamic> major(String name) async {
+    final url = Uri.parse('${api_service.SOCMED_END_POINT}/user/major');
+    final response = await http.post(url, body: {
+      'name': name,
+    });
+
+    print('${url} response.body');
+
+    final result = json.decode(response.body);
+    if (response.statusCode == 200) {
+      if (result['success']) {
+        await Session.set(Session.NAME_KEY, name);
+        await Session.set(
+            Session.REASON, result['reason'] == null ? '' : result['reason']);
+
+        //await getMyProfile();
+        return true;
+      }
+      return true;
+    }
+  }
+
+  Future<dynamic> getmajor() async {
+    final url = Uri.parse('${api_service.SOCMED_END_POINT}/major');
+    final response = await http.get(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    });
+
+    print('${url} ${response.body}');
+    if (response.statusCode == 200) {
+      final result = json.decode(response.body);
+      return result.fromJson(result);
+    } else {
+      return null;
+      throw Exception();
+    }
+  }
+
+  Future<dynamic> getmajorid() async {
+    final url = Uri.parse('${api_service.SOCMED_END_POINT}/major/{id}');
+    final response = await http.get(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    });
+
+    print('${url} ${response.body}');
+    if (response.statusCode == 200) {
+      final result = json.decode(response.body);
+      return result.fromJson(result);
+    } else {
+      return null;
+      throw Exception();
+    }
+  }
+
+  Future<dynamic> majorid(String name) async {
+    final url = Uri.parse('${api_service.SOCMED_END_POINT}/majory/{id}');
+    final response = await http.patch(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    }, body: {
+      'name': name,
+    });
+
+    print('${url} response.body');
+
+    final result = json.decode(response.body);
+    if (response.statusCode == 200) {
+      return true;
+    }
+    return false;
+  }
+
+  //DELETE
+
+  Future<dynamic> friendslist(String name) async {
+    final url = Uri.parse('${api_service.SOCMED_END_POINT}/user/friend-list');
+    final response = await http.post(url,
+        body: {'user_id': 0, 'target_user_id': 0, 'is_friend': true});
+
+    print('${url} response.body');
+
+    final result = json.decode(response.body);
+    if (response.statusCode == 200) {
+      if (result['success']) {
+        await Session.set(
+            Session.REASON, result['reason'] == null ? '' : result['reason']);
+
+        return true;
+      }
+      return true;
+    }
+  }
+
+  Future<dynamic> getfriendlist() async {
+    final url = Uri.parse('${api_service.SOCMED_END_POINT}/friend-list');
+    final response = await http.get(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    });
+
+    print('${url} ${response.body}');
+    if (response.statusCode == 200) {
+      final result = json.decode(response.body);
+      return result.fromJson(result);
+    } else {
+      return null;
+      throw Exception();
+    }
+  }
+
+  Future<dynamic> getfriend_target() async {
+    final url = Uri.parse(
+        '${api_service.SOCMED_END_POINT}/friend-list/{user_id}&{target_user_id }');
+    final response = await http.get(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    });
+
+    print('${url} ${response.body}');
+    if (response.statusCode == 200) {
+      final result = json.decode(response.body);
+      return result.fromJson(result);
+    } else {
+      return null;
+      throw Exception();
+    }
+  }
+
+  Future<dynamic> friendlist_targetlist(String name) async {
+    final url = Uri.parse(
+        '${api_service.SOCMED_END_POINT}/friend-list/{user_id}&{target_user_id}');
+    final response = await http.patch(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    }, body: {
+      'is friend': true
+    });
+
+    print('${url} response.body');
+
+    final result = json.decode(response.body);
+    if (response.statusCode == 200) {
+      return true;
+    }
+    return false;
+  }
+
+  Future<dynamic> blocklist(String name) async {
+    final url = Uri.parse('${api_service.SOCMED_END_POINT}/user/block-list');
+    final response = await http.post(url,
+        body: {'user_id': 0, 'target_user_id': 0, 'is_blocked': true});
+
+    print('${url} response.body');
+
+    final result = json.decode(response.body);
+    if (response.statusCode == 200) {
+      if (result['success']) {
+        await Session.set(
+            Session.REASON, result['reason'] == null ? '' : result['reason']);
+
+        return true;
+      }
+      return true;
+    }
+  }
+
+  Future<dynamic> getblocklist() async {
+    final url = Uri.parse('${api_service.SOCMED_END_POINT}/block-list');
+    final response = await http.get(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    });
+
+    print('${url} ${response.body}');
+    if (response.statusCode == 200) {
+      final result = json.decode(response.body);
+      return result.fromJson(result);
+    } else {
+      return null;
+      throw Exception();
+    }
+  }
+
+  Future<dynamic> getblock_target(String userid, String targetid) async {
+    final url = Uri.parse(
+        '${api_service.SOCMED_END_POINT}/block-list/{user_id}&{target_user_id}');
+    final response = await http.get(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    });
+
+    print('${url} ${response.body}');
+    if (response.statusCode == 200) {
+      final result = json.decode(response.body);
+      return result.fromJson(result);
+    } else {
+      return null;
+      throw Exception();
+    }
+  }
+
+  Future<dynamic> blocklist_targetlist(String name) async {
+    final url = Uri.parse(
+        '${api_service.SOCMED_END_POINT}/block-list/{user_id}&{target_user_id}');
+    final response = await http.patch(url, headers: {
+      "Authorization": "Bearer ${await Session.get(Session.TOKEN_SESSION_KEY)}"
+    }, body: {
+      'is friend': true
+    });
+
+    print('${url} response.body');
+
+    final result = json.decode(response.body);
+    if (response.statusCode == 200) {
+      return true;
+    }
+    return false;
+  }
+
+  //DELETE
+
 
 }
