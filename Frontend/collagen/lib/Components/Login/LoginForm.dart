@@ -18,6 +18,27 @@ class _SignInForm extends State<SignInForm> {
   TextEditingController txtEmail = TextEditingController();
   TextEditingController txtPassword = TextEditingController();
 
+  valid login(String email, password) async {
+
+    try {
+      Response response = await post {
+        Url.parse('https://reqres.in/api/login'),
+        body: {
+          'email' : email.
+          'password' : password
+        }
+      };
+
+      if(response.statusCode == 200){
+        print('Akun berhasil LogIn');
+
+      }else {
+        print('failed');
+      }
+    }catch(e){
+      print(e.to.String());
+    }
+  }
   FocusNode focusNode = FocusNode();
   @override
   void dispose(){
